@@ -21,7 +21,7 @@ export default function DataIA() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-dark to-gray-dark text-white">
+      <section className="relative py-20 data-ia-header service-header text-white">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Exploitation de données avec l'IA</h1>

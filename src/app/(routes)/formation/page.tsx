@@ -21,7 +21,7 @@ export default function Formation() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-dark to-gray-dark text-white">
+      <section className="relative py-20 formation-header service-header text-white">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Formations pour les décideurs</h1>

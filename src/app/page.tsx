@@ -19,19 +19,26 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-dark to-gray-dark text-white">
+      <section className="relative py-20 hero-pattern text-white">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Solutions IT & IA Innovantes</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Solutions IT & IA pour votre entreprise</h1>
             <p className="text-xl mb-8">
               Nous vous accompagnons dans votre transformation numérique avec des services de consulting IT, 
               d'exploitation de données par l'IA et des formations pour les décideurs.
             </p>
-            <Link href="#services">
-              <Button className="bg-primary-green hover:bg-primary-yellow hover:text-dark text-dark font-medium px-6 py-3 rounded-full">
-                Découvrir nos services
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/#contact">
+                <Button className="bg-primary-green text-dark hover:bg-primary-yellow px-8 py-3 rounded-full text-lg">
+                  Contactez-nous
+                </Button>
+              </Link>
+              <Link href="/#services">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-dark px-8 py-3 rounded-full text-lg">
+                  Nos services
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

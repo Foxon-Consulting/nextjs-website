@@ -126,4 +126,74 @@
   body {
     @apply bg-background text-foreground;
   }
+  :root {
+    --primary-green: 120 246 94;
+    --primary-yellow: 241 245 92;
+    --dark: 18 18 18;
+    --gray-dark: 51 51 51;
+    --light: 255 255 255;
+    --gray: 245 245 245;
+    --gray-light: 238 238 238;
+  }
+}
+
+@layer components {
+  .hero-pattern {
+    background-color: #121212;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+  }
+  
+  .hero-pattern::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 246, 94, 0.2) 0%, rgba(241, 245, 92, 0.2) 100%);
+    z-index: 1;
+  }
+  
+  .hero-pattern > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .service-header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/backgrounds/grid-pattern.svg');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .consulting-header {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/consulting-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .data-ia-header {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/data-ia-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .formation-header {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/formation-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
