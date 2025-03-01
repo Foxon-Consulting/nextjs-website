@@ -117,7 +117,7 @@ export default function DataIA() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
                 <CardTitle className="text-center">Collecte</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -130,7 +130,7 @@ export default function DataIA() {
             
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
                 <CardTitle className="text-center">Traitement</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -143,7 +143,7 @@ export default function DataIA() {
             
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
                 <CardTitle className="text-center">Analyse</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -156,7 +156,7 @@ export default function DataIA() {
             
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
                 <CardTitle className="text-center">Visualisation</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -307,15 +307,15 @@ export default function DataIA() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-green to-primary-yellow">
+      <section className="py-16 gradient-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-dark">Prêt à valoriser vos données avec l'IA ?</h2>
-          <p className="text-xl mb-8 text-dark max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Prêt à valoriser vos données avec l'IA ?</h2>
+          <p className="text-xl mb-8 text-gray-900 max-w-3xl mx-auto">
             Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir 
             comment notre expertise en IA peut transformer vos données en avantage concurrentiel.
           </p>
           <Link href="/#contact">
-            <Button className="bg-dark text-white hover:bg-gray-dark px-8 py-3 rounded-full text-lg">
+            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-3 rounded-full text-lg">
               Contactez-nous
             </Button>
           </Link>

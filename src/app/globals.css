@@ -127,8 +127,8 @@
     @apply bg-background text-foreground;
   }
   :root {
-    --primary-green: 120 246 94;
     --primary-yellow: 241 245 92;
+    --primary-green: 0 246 94;
     --dark: 18 18 18;
     --gray-dark: 51 51 51;
     --light: 255 255 255;
@@ -140,8 +140,9 @@
 @layer components {
   .hero-pattern {
     background-color: #121212;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: url('/images/backgrounds/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
   }
   
@@ -180,20 +181,32 @@
   }
   
   .consulting-header {
-    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/consulting-bg.jpg');
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(51, 51, 51, 0.8) 100%), url('/images/backgrounds/consulting-bg.jpg');
     background-size: cover;
     background-position: center;
   }
   
   .data-ia-header {
-    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/data-ia-bg.jpg');
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(51, 51, 51, 0.8) 100%), url('/images/backgrounds/data-ia-bg.jpg');
     background-size: cover;
     background-position: center;
   }
   
   .formation-header {
-    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%), url('/images/backgrounds/formation-bg.jpg');
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(51, 51, 51, 0.8) 100%), url('/images/backgrounds/formation-bg.jpg');
     background-size: cover;
     background-position: center;
+  }
+  
+  .btn-primary {
+    @apply bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-[#00f65e] text-[#00f65e] hover:bg-[#00f65e] hover:text-gray-900 transition-colors;
+  }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-r from-[#00f65e] to-[#f1f55c];
   }
 }

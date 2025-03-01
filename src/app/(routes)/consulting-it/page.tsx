@@ -248,15 +248,15 @@ export default function ConsultingIT() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-green to-primary-yellow">
+      <section className="py-16 gradient-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-dark">Prêt à transformer votre infrastructure IT ?</h2>
-          <p className="text-xl mb-8 text-dark max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Prêt à transformer votre infrastructure IT ?</h2>
+          <p className="text-xl mb-8 text-gray-900 max-w-3xl mx-auto">
             Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir 
             comment notre expertise peut vous aider à atteindre vos objectifs.
           </p>
           <Link href="/#contact">
-            <Button className="bg-dark text-white hover:bg-gray-dark px-8 py-3 rounded-full text-lg">
+            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-3 rounded-full text-lg">
               Contactez-nous
             </Button>
           </Link>

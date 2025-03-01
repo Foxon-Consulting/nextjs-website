@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
+          <Image src="/images/logo/logo-dark.png" alt="Logo" width={150} height={40} className="h-10 w-auto" />
         </Link>
         
         {/* Navigation pour desktop */}
@@ -81,7 +81,10 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <nav className="flex flex-col space-y-4 mt-6">
+            <div className="flex justify-center mb-6">
+              <Image src="/images/logo/logo-dark.png" alt="Logo" width={150} height={40} className="h-10 w-auto" />
+            </div>
+            <nav className="flex flex-col space-y-4">
               <Link href="/" className="text-sm font-medium hover:text-primary-green transition-colors">
                 Accueil
               </Link>

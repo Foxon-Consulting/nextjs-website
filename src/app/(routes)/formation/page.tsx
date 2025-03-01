@@ -38,7 +38,7 @@ export default function Formation() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Nos formations</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Nos formations</h2>
               <p className="text-lg text-gray-600 mb-8">
                 Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre 
                 les enjeux et les opportunités des technologies modernes sans nécessairement maîtriser 
@@ -51,7 +51,7 @@ export default function Formation() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">L'IA au service des décideurs</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">L'IA au service des décideurs</h3>
                     <p className="text-gray-600">
                       Comprendre les fondamentaux de l'IA, ses applications concrètes et son impact stratégique sur votre entreprise.
                     </p>
@@ -63,7 +63,7 @@ export default function Formation() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Automatisation des processus</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">Automatisation des processus</h3>
                     <p className="text-gray-600">
                       Découvrir les outils modernes d'automatisation (n8n, crewai, etc.) et leur potentiel pour optimiser vos processus métier.
                     </p>
@@ -75,7 +75,7 @@ export default function Formation() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Transformation numérique</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">Transformation numérique</h3>
                     <p className="text-gray-600">
                       Comprendre les enjeux de la transformation numérique et élaborer une stratégie adaptée à votre entreprise.
                     </p>
@@ -87,7 +87,7 @@ export default function Formation() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Data-driven decision making</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">Data-driven decision making</h3>
                     <p className="text-gray-600">
                       Apprendre à exploiter les données pour prendre des décisions stratégiques éclairées.
                     </p>
@@ -108,11 +108,13 @@ export default function Formation() {
       </section>
 
       {/* Catalog Section */}
-      <section className="py-16 bg-gray">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Catalogue de formations</h2>
-            <p className="text-xl text-gray-600">Découvrez nos formations adaptées à vos besoins</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Notre catalogue de formations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des formations conçues spécifiquement pour les décideurs et adaptées à vos besoins
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,7 +170,7 @@ export default function Formation() {
                   </div>
                   <div className="flex items-center">
                     <span className="text-sm font-medium mr-2">Public :</span>
-                    <span className="text-sm text-gray-500">Managers, responsables de département</span>
+                    <span className="text-sm text-gray-500">Dirigeants, managers, décideurs</span>
                   </div>
                 </div>
               </CardContent>
@@ -183,8 +185,8 @@ export default function Formation() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Apprenez à exploiter les données pour prendre des décisions stratégiques 
-                  éclairées et améliorer la performance de votre entreprise.
+                  Apprenez à exploiter vos données pour prendre des décisions stratégiques 
+                  éclairées et développer un avantage concurrentiel.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center">
@@ -197,7 +199,7 @@ export default function Formation() {
                   </div>
                   <div className="flex items-center">
                     <span className="text-sm font-medium mr-2">Public :</span>
-                    <span className="text-sm text-gray-500">Dirigeants, managers, analystes</span>
+                    <span className="text-sm text-gray-500">Dirigeants, managers, décideurs</span>
                   </div>
                 </div>
               </CardContent>
@@ -206,148 +208,132 @@ export default function Formation() {
         </div>
       </section>
 
-      {/* Methodology Section */}
+      {/* Methodology */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Notre méthodologie pédagogique</h2>
-            <p className="text-xl text-gray-600">Une approche pratique et adaptée aux décideurs</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Notre approche pédagogique</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Une méthodologie éprouvée pour garantir l'acquisition de compétences concrètes
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                alt="Méthodologie pédagogique" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Simplification</h3>
+              <p className="text-gray-600">
+                Nous rendons accessibles des concepts techniques complexes grâce à des explications 
+                claires et des analogies pertinentes.
+              </p>
             </div>
             
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="text-primary-green text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Vulgarisation et synthèse</h3>
-                  <p className="text-gray-600">
-                    Nous simplifions les concepts techniques complexes pour les rendre accessibles aux décideurs, 
-                    sans sacrifier la pertinence et la profondeur des sujets abordés.
-                  </p>
-                </div>
+            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                2
               </div>
-              
-              <div className="flex items-start">
-                <div className="text-primary-green text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Cas pratiques et exemples concrets</h3>
-                  <p className="text-gray-600">
-                    Nos formations s'appuient sur des cas réels et des exemples concrets pour illustrer 
-                    les concepts et faciliter leur application dans votre contexte professionnel.
-                  </p>
-                </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Cas pratiques</h3>
+              <p className="text-gray-600">
+                Nous utilisons des études de cas réels et des exemples concrets adaptés 
+                à votre secteur d'activité.
+              </p>
+            </div>
+            
+            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                3
               </div>
-              
-              <div className="flex items-start">
-                <div className="text-primary-green text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Ateliers interactifs</h3>
-                  <p className="text-gray-600">
-                    Nos formations incluent des ateliers interactifs pour mettre en pratique les concepts 
-                    abordés et favoriser l'apprentissage par l'expérience.
-                  </p>
-                </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Ateliers interactifs</h3>
+              <p className="text-gray-600">
+                Nous favorisons l'apprentissage par la pratique avec des ateliers 
+                collaboratifs et des mises en situation.
+              </p>
+            </div>
+            
+            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
+              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                4
               </div>
-              
-              <div className="flex items-start">
-                <div className="text-primary-green text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Suivi personnalisé</h3>
-                  <p className="text-gray-600">
-                    Nous proposons un suivi personnalisé après la formation pour vous accompagner 
-                    dans la mise en œuvre des concepts et des outils dans votre entreprise.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Suivi personnalisé</h3>
+              <p className="text-gray-600">
+                Nous proposons un accompagnement post-formation pour vous aider 
+                à mettre en pratique les connaissances acquises.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray">
+      {/* FAQ */}
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
-            <p className="text-xl text-gray-600">Réponses à vos interrogations sur nos formations</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Questions fréquentes</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Tout ce que vous devez savoir sur nos formations
+            </p>
           </div>
           
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="bg-white rounded-lg shadow-md p-6">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Faut-il avoir des connaissances techniques pour suivre vos formations ?</AccordionTrigger>
-                <AccordionContent>
-                  Non, nos formations sont spécifiquement conçues pour les décideurs qui n'ont pas nécessairement 
-                  de background technique. Nous vulgarisons les concepts complexes pour les rendre accessibles à tous.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Les formations sont-elles personnalisables ?</AccordionTrigger>
-                <AccordionContent>
-                  Oui, nous pouvons adapter nos formations à vos besoins spécifiques et à votre contexte d'entreprise. 
-                  Contactez-nous pour discuter de vos besoins particuliers.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Proposez-vous des formations en intra-entreprise ?</AccordionTrigger>
-                <AccordionContent>
-                  Oui, nous proposons des formations en intra-entreprise, adaptées à votre contexte et à vos enjeux spécifiques. 
-                  Ces formations peuvent être organisées dans vos locaux ou à distance.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Quelle est la taille idéale d'un groupe pour une formation ?</AccordionTrigger>
-                <AccordionContent>
-                  Pour garantir une interaction optimale et un apprentissage efficace, nous recommandons des groupes 
-                  de 6 à 12 personnes. Cependant, nous pouvons nous adapter à vos contraintes.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Proposez-vous un suivi après la formation ?</AccordionTrigger>
-                <AccordionContent>
-                  Oui, nous proposons un suivi personnalisé après la formation pour vous accompagner dans la mise en œuvre 
-                  des concepts et des outils dans votre entreprise. Ce suivi peut prendre la forme de sessions de coaching 
-                  individuelles ou collectives.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Faut-il avoir des connaissances techniques préalables ?</h3>
+              <p className="text-gray-600">
+                Non, nos formations sont spécialement conçues pour les décideurs sans bagage technique. 
+                Nous adaptons notre langage et nos explications pour rendre les concepts accessibles à tous.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Les formations peuvent-elles être personnalisées ?</h3>
+              <p className="text-gray-600">
+                Absolument ! Nous pouvons adapter le contenu, la durée et les exemples utilisés 
+                pour répondre parfaitement aux spécificités de votre entreprise et de votre secteur.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Proposez-vous des formations en intra-entreprise ?</h3>
+              <p className="text-gray-600">
+                Oui, nous intervenons directement dans vos locaux ou à distance pour former 
+                vos équipes. C'est souvent la solution privilégiée pour aborder des problématiques 
+                spécifiques à votre organisation.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Quel est le nombre idéal de participants ?</h3>
+              <p className="text-gray-600">
+                Pour garantir une interaction optimale et un apprentissage efficace, 
+                nous recommandons des groupes de 6 à 12 participants. Cela permet à chacun 
+                de participer activement tout en bénéficiant de la richesse des échanges.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Quel suivi est proposé après la formation ?</h3>
+              <p className="text-gray-600">
+                Nous offrons une session de suivi à distance quelques semaines après la formation 
+                pour répondre à vos questions et vous aider à surmonter les éventuels obstacles 
+                rencontrés dans la mise en pratique.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-green to-primary-yellow">
+      {/* Call to Action */}
+      <section className="py-16 gradient-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-dark">Prêt à développer vos compétences ?</h2>
-          <p className="text-xl mb-8 text-dark max-w-3xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de vos besoins en formation et découvrir 
-            comment notre expertise peut vous aider à relever les défis de la transformation numérique.
+          <h2 className="text-3xl font-bold mb-6 text-white">Prêt à développer vos compétences ?</h2>
+          <p className="text-xl mb-8 text-white max-w-3xl mx-auto">
+            Contactez notre équipe pour discuter de vos besoins en formation et découvrir 
+            comment nous pouvons vous aider à atteindre vos objectifs.
           </p>
-          <Link href="/#contact">
-            <Button className="bg-dark text-white hover:bg-gray-dark px-8 py-3 rounded-full text-lg">
-              Contactez-nous
-            </Button>
-          </Link>
+          <Button className="bg-white text-primary-green hover:bg-gray-100 px-8 py-3 rounded-full text-lg">
+            Contactez-nous
+          </Button>
         </div>
       </section>
     </>

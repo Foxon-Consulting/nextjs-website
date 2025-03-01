@@ -29,12 +29,12 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/#contact">
-                <Button className="bg-primary-green text-dark hover:bg-primary-yellow px-8 py-3 rounded-full text-lg">
+                <Button className="btn-primary px-8 py-3 rounded-full text-lg">
                   Contactez-nous
                 </Button>
               </Link>
               <Link href="/#services">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-dark px-8 py-3 rounded-full text-lg">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-full text-lg">
                   Nos services
                 </Button>
               </Link>
@@ -215,31 +215,31 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+              <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-bold mb-2">Analyse</h3>
               <p className="text-gray-600">Compréhension approfondie de vos besoins et objectifs</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+              <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-bold mb-2">Conception</h3>
               <p className="text-gray-600">Élaboration d'une solution sur mesure</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+              <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-bold mb-2">Développement</h3>
               <p className="text-gray-600">Mise en œuvre agile et itérative</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+              <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-xl font-bold mb-2">Déploiement</h3>
               <p className="text-gray-600">Intégration fluide dans votre environnement</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-primary-green text-dark rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
+              <div className="w-12 h-12 bg-primary-green text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
               <h3 className="text-xl font-bold mb-2">Suivi</h3>
               <p className="text-gray-600">Accompagnement continu et optimisation</p>
             </div>
@@ -415,7 +415,7 @@ export default function Home() {
               </div>
               
               <div>
-                <Button className="w-full md:w-auto bg-primary-green hover:bg-primary-yellow hover:text-dark text-dark font-medium px-6 py-3 rounded-full">
+                <Button className="w-full md:w-auto bg-primary-green hover:bg-primary-yellow hover:text-gray-900 text-gray-900 font-medium px-6 py-3 rounded-full">
                   Envoyer
                 </Button>
               </div>
