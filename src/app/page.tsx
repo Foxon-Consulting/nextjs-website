@@ -30,7 +30,7 @@ export default function Home() {
               d&apos;exploitation de données par l&apos;IA et des formations pour les décideurs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
                   Contactez-nous
                 </Button>
@@ -329,33 +329,36 @@ export default function Home() {
       <section id="faq" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Questions Fréquentes</h2>
-            <p className="text-xl text-gray-600">Réponses à vos interrogations</p>
+            <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
+            <p className="text-xl text-gray-600">Tout ce que vous devez savoir sur nos services</p>
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="bg-white rounded-lg shadow-md p-6">
+            <Accordion type="single" collapsible className="bg-white rounded-lg shadow-md">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Comment démarrer une collaboration avec vous ?</AccordionTrigger>
                 <AccordionContent>
                   Pour démarrer une collaboration, contactez-nous via notre formulaire de contact ou par téléphone. 
-                  Nous organiserons un premier rendez-vous pour comprendre vos besoins et vous proposer une approche adaptée.
+                  Nous organiserons un premier rendez-vous pour discuter de vos besoins et objectifs. Suite à cette 
+                  discussion, nous vous proposerons une solution adaptée à votre situation.
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="item-2">
-                <AccordionTrigger>Quelles technologies utilisez-vous pour vos projets ?</AccordionTrigger>
+                <AccordionTrigger>Quels types d&apos;entreprises accompagnez-vous ?</AccordionTrigger>
                 <AccordionContent>
-                  Nous utilisons les technologies les plus récentes et adaptées à chaque projet : cloud computing (AWS, Azure), 
-                  conteneurisation (Kubernetes, Docker), langages modernes (Python, JavaScript, Go), et frameworks d&apos;IA (TensorFlow, PyTorch).
+                  Nous accompagnons des entreprises de toutes tailles, des startups aux grands groupes, dans divers 
+                  secteurs d&apos;activité. Notre approche est adaptée aux besoins spécifiques de chaque client, 
+                  quelle que soit sa taille ou son secteur.
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="item-3">
-                <AccordionTrigger>Combien coûtent vos services ?</AccordionTrigger>
+                <AccordionTrigger>Proposez-vous des services sur mesure ?</AccordionTrigger>
                 <AccordionContent>
-                  Le coût de nos services varie en fonction de la nature et de l&apos;ampleur de votre projet. 
-                  Nous établissons un devis personnalisé après avoir analysé vos besoins spécifiques.
+                  Oui, tous nos services sont personnalisés selon vos besoins spécifiques. Nous ne croyons pas aux 
+                  solutions génériques. Après une analyse approfondie de votre situation, nous élaborons une stratégie 
+                  sur mesure pour répondre précisément à vos objectifs.
                 </AccordionContent>
               </AccordionItem>
               
@@ -376,68 +379,6 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Contactez-nous</h2>
-            <p className="text-xl text-gray-600">Parlons de votre projet</p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nom</label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00f65e]"
-                    placeholder="Votre nom"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00f65e]"
-                    placeholder="Votre email"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00f65e]"
-                  placeholder="Sujet de votre message"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00f65e]"
-                  placeholder="Votre message"
-                ></textarea>
-              </div>
-              
-              <div>
-                <Button className="w-full md:w-auto bg-[#00f65e] hover:bg-[#f1f55c] text-gray-900 hover:text-gray-900 font-medium px-6 py-3 rounded-full">
-                  Envoyer
-                </Button>
-              </div>
-            </form>
           </div>
         </div>
       </section>

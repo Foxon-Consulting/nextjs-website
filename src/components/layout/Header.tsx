@@ -17,7 +17,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Header() {
   const pathname = usePathname();
-  const [activeSection, setActiveSection] = useState<string>("");
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // Fonction pour vérifier si un chemin est actif
@@ -28,47 +27,13 @@ export function Header() {
     return pathname.startsWith(path);
   };
 
-  // Fonction pour vérifier si une section est active
-  const isSectionActive = (sectionId: string) => {
-    return pathname === '/' && activeSection === sectionId;
-  };
-
-  // Effet pour détecter le défilement et la section active
+  // Effet pour détecter le défilement
   useEffect(() => {
     if (pathname !== '/') return;
 
     const handleScroll = () => {
       // Détecter si la page a défilé
       setIsScrolled(window.scrollY > 50);
-
-      // Détecter la section active
-      const sections = [
-        { id: 'approach', element: document.getElementById('approach') },
-        { id: 'testimonials', element: document.getElementById('testimonials') },
-        { id: 'faq', element: document.getElementById('faq') },
-        { id: 'contact', element: document.getElementById('contact') },
-        { id: 'services', element: document.getElementById('services') },
-        { id: 'key-figures', element: document.getElementById('key-figures') }
-      ];
-
-      // Trouver la section la plus proche du haut de la fenêtre
-      let currentSection = "";
-      let minDistance = Number.MAX_VALUE;
-
-      sections.forEach(section => {
-        if (section.element) {
-          const rect = section.element.getBoundingClientRect();
-          // Distance entre le haut de la section et le milieu de la fenêtre
-          const distance = Math.abs(rect.top - window.innerHeight / 3);
-          
-          if (distance < minDistance && rect.top <= window.innerHeight / 2) {
-            minDistance = distance;
-            currentSection = section.id;
-          }
-        }
-      });
-
-      setActiveSection(currentSection);
     };
 
     // Ajouter l'écouteur d'événement
@@ -143,29 +108,8 @@ export function Header() {
           </DropdownMenu>
           
           <Link 
-            href="/#approach" 
-            className={`text-sm font-medium ${isSectionActive('approach') ? activeClass : inactiveClass}`}
-          >
-            Notre Approche
-          </Link>
-          
-          <Link 
-            href="/#testimonials" 
-            className={`text-sm font-medium ${isSectionActive('testimonials') ? activeClass : inactiveClass}`}
-          >
-            Témoignages
-          </Link>
-          
-          <Link 
-            href="/#faq" 
-            className={`text-sm font-medium ${isSectionActive('faq') ? activeClass : inactiveClass}`}
-          >
-            FAQ
-          </Link>
-          
-          <Link 
-            href="/#contact" 
-            className={`text-sm font-medium ${isSectionActive('contact') ? activeClass : inactiveClass}`}
+            href="/contact" 
+            className={`text-sm font-medium ${isActive('/contact') ? activeClass : inactiveClass}`}
           >
             Contact
           </Link>
@@ -220,29 +164,8 @@ export function Header() {
               </div>
               
               <Link 
-                href="/#approach" 
-                className={`text-sm font-medium ${isSectionActive('approach') ? activeClass : inactiveClass}`}
-              >
-                Notre Approche
-              </Link>
-              
-              <Link 
-                href="/#testimonials" 
-                className={`text-sm font-medium ${isSectionActive('testimonials') ? activeClass : inactiveClass}`}
-              >
-                Témoignages
-              </Link>
-              
-              <Link 
-                href="/#faq" 
-                className={`text-sm font-medium ${isSectionActive('faq') ? activeClass : inactiveClass}`}
-              >
-                FAQ
-              </Link>
-              
-              <Link 
-                href="/#contact" 
-                className={`text-sm font-medium ${isSectionActive('contact') ? activeClass : inactiveClass}`}
+                href="/contact" 
+                className={`text-sm font-medium ${isActive('/contact') ? activeClass : inactiveClass}`}
               >
                 Contact
               </Link>
