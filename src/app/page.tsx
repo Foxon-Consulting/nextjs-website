@@ -7,8 +7,7 @@ import {
   faAward,
   faServer,
   faDatabase,
-  faGraduationCap,
-  faChevronRight
+  faGraduationCap
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,55 +45,47 @@ export default function Home() {
       </section>
 
       {/* Key Figures Section */}
-      <section id="key-figures" className="py-16 bg-gray-100">
+      <section id="key-figures" className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                <FontAwesomeIcon icon={faProjectDiagram} className="w-[1em] h-[1em]" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faProjectDiagram} />
               </div>
-              <div className="text-xl mb-4">
-                <h3 className="font-bold text-xl mb-2">
-                  <CountUp end={500} prefix="+" />
-                </h3>
-                <p>Projets réalisés avec succès</p>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={150} duration={2.5} />+
               </div>
+              <p className="text-gray-600 dark:text-gray-400">Projets réalisés</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                <FontAwesomeIcon icon={faUsers} className="w-[1em] h-[1em]" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faUsers} />
               </div>
-              <div className="text-xl mb-4">
-                <h3 className="font-bold text-xl mb-2">
-                  <CountUp end={98} suffix="%" />
-                </h3>
-                <p>Taux de satisfaction client</p>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={50} duration={2.5} />+
               </div>
+              <p className="text-gray-600 dark:text-gray-400">Clients satisfaits</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                <FontAwesomeIcon icon={faCodeBranch} className="w-[1em] h-[1em]" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faCodeBranch} />
               </div>
-              <div className="text-xl mb-4">
-                <h3 className="font-bold text-xl mb-2">
-                  <CountUp end={50} prefix="+" />
-                </h3>
-                <p>Experts IT et IA</p>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={15} duration={2.5} />+
               </div>
+              <p className="text-gray-600 dark:text-gray-400">Technologies maîtrisées</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                <FontAwesomeIcon icon={faAward} className="w-[1em] h-[1em]" />
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faAward} />
               </div>
-              <div className="text-xl mb-4">
-                <h3 className="font-bold text-xl mb-2">
-                  <CountUp end={10} prefix="+" />
-                </h3>
-                <p>Années d&apos;expérience</p>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={8} duration={2.5} />+
               </div>
+              <p className="text-gray-600 dark:text-gray-400">Années d&apos;expérience</p>
             </div>
           </div>
         </div>
@@ -104,118 +95,102 @@ export default function Home() {
       <section id="services" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Nos Services</h2>
-            <p className="text-xl text-gray-600">Des solutions adaptées à vos besoins</p>
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">Nos Services</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Des solutions sur mesure pour répondre à vos besoins en matière de technologie et d&apos;innovation
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faServer} className="w-[1em] h-[1em]" />
+                <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                  <FontAwesomeIcon icon={faServer} />
                 </div>
-                <CardTitle>Consulting IT</CardTitle>
-                <CardDescription>
-                  Expertise technique et accompagnement pour vos projets IT
+                <CardTitle className="text-center dark:text-white">Consulting IT</CardTitle>
+                <CardDescription className="text-center dark:text-gray-400">
+                  Expertise technique et accompagnement stratégique
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-gray-600 dark:text-gray-400">
+                <p className="mb-4">
+                  Notre équipe d&apos;experts vous accompagne dans tous vos projets IT, du développement 
+                  à la mise en production, en passant par l&apos;audit et l&apos;optimisation de vos infrastructures.
+                </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Développement de logiciel à la demande</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Pilotage de la chaîne logicielle</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Audit technique et amélioration</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Déploiement d&apos;infrastructure</span>
-                  </li>
+                  <li>• Développement de logiciel à la demande</li>
+                  <li>• Pilotage de la chaîne logicielle</li>
+                  <li>• Audit technique et amélioration</li>
+                  <li>• Déploiement d&apos;infrastructure</li>
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Link href="/consulting-it" className="w-full">
-                  <Button className="w-full">En savoir plus</Button>
+              <CardFooter className="flex justify-center">
+                <Link href="/consulting-it">
+                  <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c]">
+                    En savoir plus
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faDatabase} className="w-[1em] h-[1em]" />
+                <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                  <FontAwesomeIcon icon={faDatabase} />
                 </div>
-                <CardTitle>Exploitation de données avec l&apos;IA</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-center dark:text-white">Exploitation de données avec l&apos;IA</CardTitle>
+                <CardDescription className="text-center dark:text-gray-400">
                   Valorisez vos données grâce à l&apos;intelligence artificielle
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-gray-600 dark:text-gray-400">
+                <p className="mb-4">
+                  Nous vous aidons à tirer le meilleur parti de vos données pour améliorer 
+                  vos processus et prendre des décisions éclairées grâce à l&apos;intelligence artificielle.
+                </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Collecte et intégration de données</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Structure et stockage optimisés</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Analyse prédictive par IA</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Tableaux de bord interactifs</span>
-                  </li>
+                  <li>• Collecte et intégration de données</li>
+                  <li>• Stockage optimisé</li>
+                  <li>• Analyse prédictive</li>
+                  <li>• Tableaux de bord interactifs</li>
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Link href="/data-ia" className="w-full">
-                  <Button className="w-full">En savoir plus</Button>
+              <CardFooter className="flex justify-center">
+                <Link href="/data-ia">
+                  <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c]">
+                    En savoir plus
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faGraduationCap} className="w-[1em] h-[1em]" />
+                <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                  <FontAwesomeIcon icon={faGraduationCap} />
                 </div>
-                <CardTitle>Formations</CardTitle>
-                <CardDescription>
-                  Formations techniques pour les décideurs
+                <CardTitle className="text-center dark:text-white">Formations</CardTitle>
+                <CardDescription className="text-center dark:text-gray-400">
+                  Des formations techniques adaptées aux décideurs
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-gray-600 dark:text-gray-400">
+                <p className="mb-4">
+                  Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre 
+                  les enjeux et les opportunités des technologies modernes.
+                </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>L&apos;IA au service des décideurs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Automatisation des process</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Vulgarisation et synthèse</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FontAwesomeIcon icon={faChevronRight} className="text-[#00f65e] mt-1 mr-2" />
-                    <span>Impact stratégique des technologies</span>
-                  </li>
+                  <li>• L&apos;IA au service des décideurs</li>
+                  <li>• Automatisation des processus</li>
+                  <li>• Transformation numérique</li>
+                  <li>• Data-driven decision making</li>
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Link href="/formation" className="w-full">
-                  <Button className="w-full">En savoir plus</Button>
+              <CardFooter className="flex justify-center">
+                <Link href="/formation">
+                  <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c]">
+                    En savoir plus
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -223,102 +198,137 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Approach Section */}
-      <section id="approach" className="py-16 bg-gray-100">
+      {/* About Section */}
+      <section id="about" className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Notre Approche</h2>
-            <p className="text-xl text-gray-600">Une méthodologie en 5 étapes pour garantir le succès de vos projets</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-bold mb-2">Analyse</h3>
-              <p className="text-gray-600">Compréhension approfondie de vos besoins et objectifs</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">À propos de nous</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Notre entreprise est spécialisée dans les services IT et IA, avec une expertise 
+                particulière dans le développement de solutions sur mesure, l&apos;exploitation de 
+                données et la formation des décideurs.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Nous nous distinguons par notre approche pragmatique et notre capacité à 
+                traduire des concepts techniques complexes en solutions concrètes et accessibles.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Notre mission est de vous accompagner dans votre transformation numérique 
+                en vous fournissant les outils, les connaissances et l&apos;expertise nécessaires 
+                pour réussir dans un monde en constante évolution.
+              </p>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-bold mb-2">Conception</h3>
-              <p className="text-gray-600">Élaboration d&apos;une solution sur mesure</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-bold mb-2">Développement</h3>
-              <p className="text-gray-600">Mise en œuvre agile et itérative</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-xl font-bold mb-2">Déploiement</h3>
-              <p className="text-gray-600">Intégration fluide dans votre environnement</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
-              <h3 className="text-xl font-bold mb-2">Suivi</h3>
-              <p className="text-gray-600">Accompagnement continu et optimisation</p>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-6 dark:text-white">Nos valeurs</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faAward} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2 dark:text-white">Excellence</h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Nous visons l&apos;excellence dans chaque projet, en appliquant les meilleures 
+                      pratiques et en restant à la pointe de l&apos;innovation.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faUsers} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2 dark:text-white">Collaboration</h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Nous croyons en la puissance de la collaboration et travaillons en 
+                      étroite relation avec nos clients pour atteindre leurs objectifs.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCodeBranch} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2 dark:text-white">Innovation</h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Nous explorons constamment de nouvelles technologies et approches 
+                      pour offrir des solutions innovantes à nos clients.
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Témoignages</h2>
-            <p className="text-xl text-gray-600">Ce que nos clients disent de nous</p>
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">Témoignages</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Ce que nos clients disent de nous
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#00f65e] rounded-full mr-4"></div>
-                  <div>
-                    <h3 className="font-bold">Jean Dupont</h3>
-                    <p className="text-sm text-gray-600">Directeur IT, Entreprise A</p>
+                  <div className="text-[#00f65e]">
+                    <span className="text-2xl">★★★★★</span>
                   </div>
                 </div>
-                <p className="text-gray-600">
-                  &quot;L&apos;équipe a su comprendre nos besoins et nous proposer une solution parfaitement adaptée. 
-                  Le projet a été livré dans les délais et le résultat dépasse nos attentes.&quot;
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  &quot;L&apos;équipe a su comprendre nos besoins et nous proposer une solution 
+                  parfaitement adaptée à notre problématique. Leur expertise en IA 
+                  nous a permis d&apos;optimiser considérablement nos processus.&quot;
                 </p>
+                <div>
+                  <p className="font-bold dark:text-white">Sophie Martin</p>
+                  <p className="text-gray-600 dark:text-gray-400">Directrice Innovation, Entreprise A</p>
+                </div>
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#00f65e] rounded-full mr-4"></div>
-                  <div>
-                    <h3 className="font-bold">Marie Martin</h3>
-                    <p className="text-sm text-gray-600">CEO, Startup B</p>
+                  <div className="text-[#00f65e]">
+                    <span className="text-2xl">★★★★★</span>
                   </div>
                 </div>
-                <p className="text-gray-600">
-                  &quot;Grâce à leur expertise en IA, nous avons pu valoriser nos données et obtenir des insights 
-                  précieux pour notre activité. Un partenaire de confiance pour notre transformation numérique.&quot;
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  &quot;La formation sur l&apos;IA pour les décideurs a été une révélation pour 
+                  notre équipe dirigeante. Nous avons enfin compris comment exploiter 
+                  concrètement ces technologies dans notre stratégie.&quot;
                 </p>
+                <div>
+                  <p className="font-bold dark:text-white">Thomas Dubois</p>
+                  <p className="text-gray-600 dark:text-gray-400">CEO, Entreprise B</p>
+                </div>
               </CardContent>
             </Card>
             
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#00f65e] rounded-full mr-4"></div>
-                  <div>
-                    <h3 className="font-bold">Pierre Leroy</h3>
-                    <p className="text-sm text-gray-600">Directeur Général, Entreprise C</p>
+                  <div className="text-[#00f65e]">
+                    <span className="text-2xl">★★★★★</span>
                   </div>
                 </div>
-                <p className="text-gray-600">
-                  &quot;Les formations pour décideurs nous ont permis de mieux comprendre les enjeux de l&apos;IA 
-                  et de prendre des décisions stratégiques éclairées. Une approche pédagogique remarquable.&quot;
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  &quot;Le système d&apos;analyse prédictive développé par l&apos;équipe nous a permis 
+                  de réduire nos coûts de maintenance de 30% et d&apos;améliorer la 
+                  disponibilité de nos équipements.&quot;
                 </p>
+                <div>
+                  <p className="font-bold dark:text-white">Julie Leroy</p>
+                  <p className="text-gray-600 dark:text-gray-400">Directrice Technique, Entreprise C</p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -326,60 +336,89 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
-            <p className="text-xl text-gray-600">Tout ce que vous devez savoir sur nos services</p>
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">Questions fréquentes</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Tout ce que vous devez savoir sur nos services
+            </p>
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="bg-white rounded-lg shadow-md">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Comment démarrer une collaboration avec vous ?</AccordionTrigger>
-                <AccordionContent>
-                  Pour démarrer une collaboration, contactez-nous via notre formulaire de contact ou par téléphone. 
-                  Nous organiserons un premier rendez-vous pour discuter de vos besoins et objectifs. Suite à cette 
-                  discussion, nous vous proposerons une solution adaptée à votre situation.
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Comment démarrer une collaboration avec vous ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  La première étape consiste à nous contacter pour un entretien initial où nous 
+                  discuterons de vos besoins et objectifs. Nous vous proposerons ensuite une 
+                  approche personnalisée et un devis détaillé.
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Quels types d&apos;entreprises accompagnez-vous ?</AccordionTrigger>
-                <AccordionContent>
-                  Nous accompagnons des entreprises de toutes tailles, des startups aux grands groupes, dans divers 
-                  secteurs d&apos;activité. Notre approche est adaptée aux besoins spécifiques de chaque client, 
-                  quelle que soit sa taille ou son secteur.
+              <AccordionItem value="item-2" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Quels types d&apos;entreprises accompagnez-vous ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Nous travaillons avec des entreprises de toutes tailles, des startups aux grands 
+                  groupes, dans divers secteurs d&apos;activité. Notre approche est adaptée aux 
+                  spécificités de chaque client.
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Proposez-vous des services sur mesure ?</AccordionTrigger>
-                <AccordionContent>
-                  Oui, tous nos services sont personnalisés selon vos besoins spécifiques. Nous ne croyons pas aux 
-                  solutions génériques. Après une analyse approfondie de votre situation, nous élaborons une stratégie 
-                  sur mesure pour répondre précisément à vos objectifs.
+              <AccordionItem value="item-3" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Combien coûtent vos services ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Nos tarifs varient en fonction de la nature et de l&apos;ampleur du projet. Nous 
+                  proposons des formules adaptées à différents budgets et travaillons en toute 
+                  transparence sur les coûts.
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Quelle est la durée moyenne d&apos;un projet ?</AccordionTrigger>
-                <AccordionContent>
-                  La durée d&apos;un projet dépend de sa complexité. Un projet simple peut prendre quelques semaines, 
-                  tandis qu&apos;un projet plus complexe peut s&apos;étendre sur plusieurs mois. Nous définissons ensemble 
-                  un calendrier réaliste lors de la phase de conception.
+              <AccordionItem value="item-4" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Quelle est votre approche en matière de confidentialité ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Nous accordons une importance capitale à la confidentialité. Tous nos contrats 
+                  incluent des clauses de confidentialité strictes, et nous mettons en œuvre des 
+                  mesures de sécurité robustes pour protéger vos données.
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Proposez-vous un support après la livraison du projet ?</AccordionTrigger>
-                <AccordionContent>
-                  Oui, nous offrons un support continu après la livraison du projet. Nous proposons différentes 
-                  formules de maintenance et d&apos;accompagnement pour assurer la pérennité et l&apos;évolution de votre solution.
+              <AccordionItem value="item-5" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Proposez-vous un suivi après la réalisation d&apos;un projet ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Absolument ! Nous proposons des services de maintenance et de support pour 
+                  assurer la pérennité et l&apos;évolution de vos solutions. Nous restons disponibles 
+                  pour vous accompagner sur le long terme.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à transformer votre entreprise ?</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
+            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins et découvrir 
+            comment nous pouvons vous aider à atteindre vos objectifs.
+          </p>
+          <Link href="/contact">
+            <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
+              Contactez-nous
+            </Button>
+          </Link>
         </div>
       </section>
     </>

@@ -38,8 +38,8 @@ export default function Formation() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Nos formations</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos formations</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
                 Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre 
                 les enjeux et les opportunités des technologies modernes sans nécessairement maîtriser 
                 les aspects techniques.
@@ -47,48 +47,48 @@ export default function Formation() {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="text-primary-green text-xl mr-4 mt-1">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-900">L'IA au service des décideurs</h3>
-                    <p className="text-gray-600">
-                      Comprendre les fondamentaux de l'IA, ses applications concrètes et son impact stratégique sur votre entreprise.
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">L&apos;IA au service des décideurs</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Comprendre les fondamentaux de l&apos;IA et son impact stratégique sur votre secteur d&apos;activité.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="text-primary-green text-xl mr-4 mt-1">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-900">Automatisation des processus</h3>
-                    <p className="text-gray-600">
-                      Découvrir les outils modernes d'automatisation (n8n, crewai, etc.) et leur potentiel pour optimiser vos processus métier.
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Automatisation des processus</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Découvrir les outils modernes d&apos;automatisation et leur potentiel pour votre entreprise.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="text-primary-green text-xl mr-4 mt-1">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-900">Transformation numérique</h3>
-                    <p className="text-gray-600">
-                      Comprendre les enjeux de la transformation numérique et élaborer une stratégie adaptée à votre entreprise.
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Transformation numérique</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Comprendre les enjeux de la transformation numérique et les stratégies pour la réussir.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="text-primary-green text-xl mr-4 mt-1">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-900">Data-driven decision making</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Data-driven decision making</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
                       Apprendre à exploiter les données pour prendre des décisions stratégiques éclairées.
                     </p>
                   </div>
@@ -96,243 +96,258 @@ export default function Formation() {
               </div>
             </div>
             
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                alt="Formations" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-6 dark:text-white">Pourquoi choisir nos formations ?</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <p className="dark:text-gray-300">Contenu adapté spécifiquement aux décideurs et dirigeants</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <p className="dark:text-gray-300">Formateurs experts avec expérience en entreprise</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <p className="dark:text-gray-300">Approche pratique avec des cas concrets adaptés à votre secteur</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <p className="dark:text-gray-300">Suivi personnalisé et accompagnement post-formation</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Catalog Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Notre catalogue de formations</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des formations conçues spécifiquement pour les décideurs et adaptées à vos besoins
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Catalogue de formations</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="text-primary-green text-3xl mb-4">
-                  <FontAwesomeIcon icon={faRobot} />
-                </div>
-                <CardTitle>L'IA pour les décideurs</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Une formation complète pour comprendre les fondamentaux de l'IA, ses applications 
-                  concrètes et son impact stratégique sur votre entreprise.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Durée :</span>
-                    <span className="text-sm text-gray-500">2 jours</span>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faLightbulb} />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-center dark:text-white">L&apos;IA pour les décideurs</h3>
+              <div className="mb-4 text-center">
+                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">2 jours</span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Une formation complète pour comprendre les fondamentaux de l&apos;IA, ses applications 
+                concrètes en entreprise et son impact stratégique sur votre secteur d&apos;activité.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Format :</span>
-                    <span className="text-sm text-gray-500">Présentiel ou distanciel</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Introduction aux concepts clés de l&apos;IA</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Public :</span>
-                    <span className="text-sm text-gray-500">Dirigeants, managers, décideurs</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Applications sectorielles et études de cas</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Stratégies d&apos;intégration de l&apos;IA</p>
+                </li>
+              </ul>
+            </div>
             
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="text-primary-green text-3xl mb-4">
-                  <FontAwesomeIcon icon={faLightbulb} />
-                </div>
-                <CardTitle>Automatisation des processus</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Découvrez les outils modernes d'automatisation et leur potentiel pour 
-                  optimiser vos processus métier et gagner en efficacité.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Durée :</span>
-                    <span className="text-sm text-gray-500">1 jour</span>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faRobot} />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-center dark:text-white">Automatisation des processus</h3>
+              <div className="mb-4 text-center">
+                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">1 jour</span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Découvrez les outils modernes d&apos;automatisation et leur potentiel pour optimiser 
+                les processus métier de votre entreprise.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Format :</span>
-                    <span className="text-sm text-gray-500">Présentiel ou distanciel</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Panorama des technologies d&apos;automatisation</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Public :</span>
-                    <span className="text-sm text-gray-500">Dirigeants, managers, décideurs</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Identification des processus automatisables</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Méthodologie de mise en œuvre</p>
+                </li>
+              </ul>
+            </div>
             
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="text-primary-green text-3xl mb-4">
-                  <FontAwesomeIcon icon={faChartLine} />
-                </div>
-                <CardTitle>Data-driven decision making</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Apprenez à exploiter vos données pour prendre des décisions stratégiques 
-                  éclairées et développer un avantage concurrentiel.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Durée :</span>
-                    <span className="text-sm text-gray-500">2 jours</span>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faChartLine} />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-center dark:text-white">Data-driven decision making</h3>
+              <div className="mb-4 text-center">
+                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">2 jours</span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Apprenez à exploiter les données pour prendre des décisions stratégiques 
+                éclairées et piloter votre entreprise avec précision.
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Format :</span>
-                    <span className="text-sm text-gray-500">Présentiel ou distanciel</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Collecte et analyse des données pertinentes</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium mr-2">Public :</span>
-                    <span className="text-sm text-gray-500">Dirigeants, managers, décideurs</span>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Interprétation et visualisation des données</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="text-[#00f65e] text-sm mr-2 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Mise en place d&apos;une culture data-driven</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Methodology */}
+      {/* Methodology Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Notre approche pédagogique</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une méthodologie éprouvée pour garantir l'acquisition de compétences concrètes
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Notre approche pédagogique</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
-              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Simplification</h3>
-              <p className="text-gray-600">
-                Nous rendons accessibles des concepts techniques complexes grâce à des explications 
-                claires et des analogies pertinentes.
-              </p>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">Simplification</h3>
+              <p className="text-gray-600 dark:text-gray-400">Nous rendons accessibles des concepts techniques complexes</p>
             </div>
             
-            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
-              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Cas pratiques</h3>
-              <p className="text-gray-600">
-                Nous utilisons des études de cas réels et des exemples concrets adaptés 
-                à votre secteur d'activité.
-              </p>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">Cas pratiques</h3>
+              <p className="text-gray-600 dark:text-gray-400">Nous utilisons des exemples concrets adaptés à votre secteur</p>
             </div>
             
-            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
-              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Ateliers interactifs</h3>
-              <p className="text-gray-600">
-                Nous favorisons l'apprentissage par la pratique avec des ateliers 
-                collaboratifs et des mises en situation.
-              </p>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">Interactivité</h3>
+              <p className="text-gray-600 dark:text-gray-400">Nos ateliers favorisent les échanges et la participation active</p>
             </div>
             
-            <div className="text-center p-6 hover:shadow-lg transition-shadow rounded-lg">
-              <div className="w-16 h-16 bg-primary-green text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                4
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Suivi personnalisé</h3>
-              <p className="text-gray-600">
-                Nous proposons un accompagnement post-formation pour vous aider 
-                à mettre en pratique les connaissances acquises.
-              </p>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">Suivi personnalisé</h3>
+              <p className="text-gray-600 dark:text-gray-400">Nous vous accompagnons après la formation pour la mise en pratique</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 bg-gray-100">
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Questions fréquentes</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tout ce que vous devez savoir sur nos formations
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Questions fréquentes</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Faut-il avoir des connaissances techniques préalables ?</h3>
-              <p className="text-gray-600">
-                Non, nos formations sont spécialement conçues pour les décideurs sans bagage technique. 
-                Nous adaptons notre langage et nos explications pour rendre les concepts accessibles à tous.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Les formations peuvent-elles être personnalisées ?</h3>
-              <p className="text-gray-600">
-                Absolument ! Nous pouvons adapter le contenu, la durée et les exemples utilisés 
-                pour répondre parfaitement aux spécificités de votre entreprise et de votre secteur.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Proposez-vous des formations en intra-entreprise ?</h3>
-              <p className="text-gray-600">
-                Oui, nous intervenons directement dans vos locaux ou à distance pour former 
-                vos équipes. C'est souvent la solution privilégiée pour aborder des problématiques 
-                spécifiques à votre organisation.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Quel est le nombre idéal de participants ?</h3>
-              <p className="text-gray-600">
-                Pour garantir une interaction optimale et un apprentissage efficace, 
-                nous recommandons des groupes de 6 à 12 participants. Cela permet à chacun 
-                de participer activement tout en bénéficiant de la richesse des échanges.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Quel suivi est proposé après la formation ?</h3>
-              <p className="text-gray-600">
-                Nous offrons une session de suivi à distance quelques semaines après la formation 
-                pour répondre à vos questions et vous aider à surmonter les éventuels obstacles 
-                rencontrés dans la mise en pratique.
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Faut-il avoir des connaissances techniques préalables ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Non, nos formations sont spécifiquement conçues pour les décideurs sans bagage technique. 
+                  Nous rendons accessibles des concepts complexes en utilisant un langage clair et des exemples concrets.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Les formations peuvent-elles être personnalisées ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Absolument ! Nous adaptons le contenu de nos formations à votre secteur d&apos;activité, 
+                  à vos enjeux spécifiques et à vos objectifs stratégiques. Contactez-nous pour discuter 
+                  de vos besoins particuliers.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Proposez-vous des formations en intra-entreprise ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Oui, nous proposons des formations en intra-entreprise, ce qui permet d&apos;adapter 
+                  le contenu à votre contexte spécifique et de former plusieurs collaborateurs 
+                  simultanément. C&apos;est souvent la solution la plus efficace pour les équipes dirigeantes.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Quel est le nombre idéal de participants ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Pour garantir une expérience d&apos;apprentissage optimale et favoriser les interactions, 
+                  nous recommandons des groupes de 5 à 10 participants. Cela permet à chacun de 
+                  bénéficier d&apos;une attention personnalisée tout en profitant de la richesse des échanges.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5" className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
+                  Y a-t-il un suivi après la formation ?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                  Oui, nous proposons un accompagnement post-formation qui comprend des sessions 
+                  de questions-réponses, des ressources complémentaires et un accès à nos experts 
+                  pour vous aider à mettre en pratique les connaissances acquises.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 gradient-primary">
+      {/* CTA Section */}
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Prêt à développer vos compétences ?</h2>
-          <p className="text-xl mb-8 text-gray-900 max-w-3xl mx-auto">
-            Contactez notre équipe pour discuter de vos besoins en formation et découvrir 
-            comment nous pouvons vous aider à atteindre vos objectifs.
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à développer vos compétences ?</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
+            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en formation 
+            et découvrir comment nous pouvons vous aider à maîtriser les technologies modernes.
           </p>
-          <Link href="/#contact">
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-3 rounded-full text-lg">
+          <Link href="/contact">
+            <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
               Contactez-nous
             </Button>
           </Link>
