@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import tailwindcssAnimate from "tailwindcss-animate";
+
+export default {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -18,8 +20,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        "primary-yellow": "#f1f55c",
-        "primary-green": "#00f65e",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        "primary-green": "rgb(0, 246, 94)", // #00f65e
+        "primary-yellow": "rgb(241, 245, 92)", // #f1f55c
         dark: "#121212",
         light: "#ffffff",
         gray: "#f5f5f5",
@@ -27,7 +38,7 @@ module.exports = {
         "gray-light": "#eeeeee",
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, var(--primary-green) 0%, var(--primary-yellow) 100%)",
+        "gradient-primary": "linear-gradient(135deg, rgb(0, 246, 94) 0%, rgb(241, 245, 92) 100%)",
         "gradient-dark": "linear-gradient(135deg, var(--dark) 0%, var(--gray-dark) 100%)",
       },
       boxShadow: {
@@ -60,5 +71,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } 

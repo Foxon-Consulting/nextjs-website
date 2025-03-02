@@ -326,14 +326,16 @@ export default function Formation() {
       {/* Call to Action */}
       <section className="py-16 gradient-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">Prêt à développer vos compétences ?</h2>
-          <p className="text-xl mb-8 text-white max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Prêt à développer vos compétences ?</h2>
+          <p className="text-xl mb-8 text-gray-900 max-w-3xl mx-auto">
             Contactez notre équipe pour discuter de vos besoins en formation et découvrir 
             comment nous pouvons vous aider à atteindre vos objectifs.
           </p>
-          <Button className="bg-white text-primary-green hover:bg-gray-100 px-8 py-3 rounded-full text-lg">
-            Contactez-nous
-          </Button>
+          <Link href="/#contact">
+            <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-3 rounded-full text-lg">
+              Contactez-nous
+            </Button>
+          </Link>
         </div>
       </section>
     </>
