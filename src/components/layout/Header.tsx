@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,38 +17,24 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // Fonction pour vérifier si un chemin est actif
   const isActive = (path: string) => {
     if (path === '/') {
-      return pathname === '/' && !isScrolled;
+      return pathname === '/';
     }
     return pathname.startsWith(path);
   };
 
-  // Effet pour détecter le défilement
-  useEffect(() => {
-    if (pathname !== '/') return;
-
-    const handleScroll = () => {
-      // Détecter si la page a défilé
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    // Ajouter l'écouteur d'événement
-    window.addEventListener('scroll', handleScroll);
-    // Appeler une fois au chargement
-    handleScroll();
-
-    // Nettoyer l'écouteur d'événement
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [pathname]);
+  // Fonction pour vérifier si on est sur une page de services
+  const isServicePage = () => {
+    return pathname.startsWith('/consulting-it') || 
+           pathname.startsWith('/data-ia') || 
+           pathname.startsWith('/formation');
+  };
 
   const activeClass = "text-[#00f65e] font-semibold";
-  const inactiveClass = "hover:text-[#00f65e] transition-colors";
+  const inactiveClass = "text-gray-800 dark:text-gray-200 hover:text-[#00f65e] transition-colors";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-950 dark:border-gray-800">
@@ -86,9 +71,7 @@ export function Header() {
                 <Button 
                   variant="link" 
                   className={`text-sm font-medium ${
-                    isActive('/consulting-it') || isActive('/data-ia') || isActive('/formation') 
-                      ? activeClass 
-                      : inactiveClass
+                    isServicePage() ? activeClass : inactiveClass
                   }`}
                 >
                   Services <FontAwesomeIcon icon={faChevronDown} className="ml-1 h-3 w-3" />
@@ -170,9 +153,7 @@ export function Header() {
                 
                 <div className="space-y-3">
                   <p className={`text-sm font-medium ${
-                    isActive('/consulting-it') || isActive('/data-ia') || isActive('/formation') 
-                      ? activeClass 
-                      : 'text-gray-800 dark:text-gray-200'
+                    isServicePage() ? activeClass : 'text-gray-800 dark:text-gray-200'
                   }`}>Services</p>
                   <div className="pl-4 space-y-2">
                     <Link 

@@ -4,6 +4,12 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+// Empêcher FontAwesome de charger ses propres styles CSS
+// qui peuvent causer un flash d'icônes non stylisées
+config.autoAddCss = false;
 
 const poppins = Poppins({
   subsets: ["latin"],

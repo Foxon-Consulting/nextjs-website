@@ -41,28 +41,28 @@ export function CountUp({
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           
-          const startTime = Date.now();
+          let startTimestamp: number | null = null;
           const startValue = 0;
           
-          const updateCount = () => {
-            const currentTime = Date.now();
-            const elapsedTime = currentTime - startTime;
+          const step = (timestamp: number) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const elapsedTime = timestamp - startTimestamp;
             
             if (elapsedTime < duration) {
               // Utiliser une fonction d'accélération pour un effet plus naturel
-              const progress = easeOutQuad(elapsedTime / duration);
+              const progress = easeOutQuart(elapsedTime / duration);
               const currentValue = startValue + (end - startValue) * progress;
-              setCount(currentValue);
-              requestAnimationFrame(updateCount);
+              setCount(Math.floor(currentValue)); // Utiliser Math.floor pour un effet de comptage entier
+              requestAnimationFrame(step);
             } else {
               setCount(end);
             }
           };
           
-          requestAnimationFrame(updateCount);
+          requestAnimationFrame(step);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
 
     if (countRef.current) {
@@ -76,9 +76,9 @@ export function CountUp({
     };
   }, [end, duration, hasAnimated]);
 
-  // Fonction d'accélération pour une animation plus naturelle
-  const easeOutQuad = (t: number): number => {
-    return t * (2 - t);
+  // Fonction d'accélération pour une animation plus dynamique
+  const easeOutQuart = (t: number): number => {
+    return 1 - Math.pow(1 - t, 4);
   };
 
   return (
