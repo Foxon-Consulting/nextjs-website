@@ -1,33 +1,51 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faGraduationCap, 
   faLightbulb, 
   faRobot, 
-  faUsers,
   faCheckCircle,
   faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata = {
   title: "Formations | Services IT & IA",
-  description: "Formations techniques pour les décideurs sur l'IA et l'automatisation des processus.",
+  description: "Formations techniques pour les décideurs sur l&apos;IA et l&apos;automatisation des processus.",
 };
 
 export default function Formation() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-20 formation-header service-header text-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative py-20 formation-header service-header overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/charte_graphique/videos/formation.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay avec gradient linéaire */}
+          <div 
+            className="absolute inset-0 z-0" 
+            style={{ 
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+            }}
+          ></div>
+        </div>
+        
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Formations pour les décideurs</h1>
-            <p className="text-xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Formations pour les décideurs</h1>
+            <p className="text-xl mb-8 text-[#00f65e]">
               Des formations techniques adaptées aux décideurs pour comprendre et exploiter 
-              le potentiel de l'IA et de l'automatisation dans votre entreprise.
+              le potentiel de l&apos;IA et de l&apos;automatisation dans votre entreprise.
             </p>
           </div>
         </div>
@@ -96,7 +114,27 @@ export default function Formation() {
               </div>
             </div>
             
-            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg">
+            <div className="relative rounded-lg overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00f65e]/80 to-blue-500/80 mix-blend-multiply z-10"></div>
+              <Image
+                src="/images/backgrounds/formation-bg.jpg"
+                alt="Formation pour décideurs"
+                width={800}
+                height={600}
+                className="object-cover h-full w-full"
+              />
+              <div className="absolute inset-0 flex items-center z-20 p-8">
+                <div className="text-white">
+                  <h3 className="text-2xl font-bold mb-4">Expertise pédagogique</h3>
+                  <p className="text-lg">
+                    Notre équipe de formateurs combine expertise technique et compétences pédagogiques pour 
+                    vous offrir des formations accessibles et directement applicables dans votre contexte professionnel.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg md:col-span-2">
               <h3 className="text-2xl font-bold mb-6 dark:text-white">Pourquoi choisir nos formations ?</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">

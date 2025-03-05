@@ -53,7 +53,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faProjectDiagram} />
               </div>
               <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={150} duration={1500} />+
+                <CountUp end={150} duration={2.5} />+
               </div>
               <p className="text-gray-600 dark:text-gray-400">Projets réalisés</p>
             </div>
@@ -63,7 +63,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faUsers} />
               </div>
               <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={50} duration={1500} />+
+                <CountUp end={50} duration={2.5} />+
               </div>
               <p className="text-gray-600 dark:text-gray-400">Clients satisfaits</p>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faCodeBranch} />
               </div>
               <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={15} duration={1500} />+
+                <CountUp end={15} duration={2.5} />+
               </div>
               <p className="text-gray-600 dark:text-gray-400">Technologies maîtrisées</p>
             </div>
@@ -257,7 +257,7 @@ export default function Home() {
                       pour offrir des solutions innovantes à nos clients.
                     </p>
                   </div>
-                </li>
+          </li>
               </ul>
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function Home() {
               Contactez-nous
             </Button>
           </Link>
-        </div>
+    </div>
       </section>
     </>
   );

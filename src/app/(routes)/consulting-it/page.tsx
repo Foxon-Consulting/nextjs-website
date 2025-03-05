@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faServer, 
   faCode, 
   faChartLine, 
   faCloud,
@@ -18,12 +17,32 @@ export const metadata = {
 export default function ConsultingIT() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-20 consulting-header service-header text-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative py-20 consulting-header service-header overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/charte_graphique/videos/consulting_it.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay avec gradient linéaire */}
+          <div 
+            className="absolute inset-0 z-0" 
+            style={{ 
+              background: 'linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+            }}
+          ></div>
+        </div>
+        
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Consulting IT</h1>
-            <p className="text-xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Consulting IT</h1>
+            <p className="text-xl mb-8 text-[#00f65e]">
               Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, 
               piloter et optimiser vos solutions logicielles.
             </p>
@@ -86,41 +105,27 @@ export default function ConsultingIT() {
                   <div>
                     <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d'infrastructure</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Conception et mise en place d'infrastructures cloud et on-premise adaptées à vos besoins.
+                      Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-6 dark:text-white">Pourquoi choisir notre service de Consulting IT ?</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Expertise technique de haut niveau dans les technologies modernes</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Approche agile et adaptative pour répondre à vos besoins spécifiques</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Solutions évolutives qui grandissent avec votre entreprise</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Accompagnement continu et support réactif</p>
-                </li>
-              </ul>
+            <div className="relative rounded-lg overflow-hidden shadow-xl h-[500px]">
+              <img 
+                src="/images/backgrounds/consulting-bg.jpg" 
+                alt="Consulting IT" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Expertise technique</h3>
+                  <p className="text-gray-200">
+                    Notre équipe d'experts vous accompagne dans tous vos projets IT avec une approche personnalisée.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -3,31 +3,48 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faDatabase, 
   faChartPie, 
-  faRobot, 
   faBrain,
-  faCheckCircle,
-  faServer,
-  faCloud
+  faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Exploitation de données avec l'IA | Services IT & IA",
-  description: "Services d'exploitation de données avec l'IA pour valoriser vos données et obtenir des insights précieux pour votre activité.",
+  description: "Services d'exploitation de données avec l'intelligence artificielle pour optimiser vos performances et prendre des décisions éclairées.",
 };
 
 export default function DataIA() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-20 data-ia-header service-header text-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative py-20 data-ia-header service-header overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/charte_graphique/videos/data_exploitation.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay avec gradient linéaire */}
+          <div 
+            className="absolute inset-0 z-0" 
+            style={{ 
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+            }}
+          ></div>
+        </div>
+        
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Exploitation de données avec l'IA</h1>
-            <p className="text-xl mb-8">
-              Valorisez vos données grâce à l'intelligence artificielle et obtenez des insights 
-              précieux pour optimiser votre activité.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Exploitation de données avec l&apos;IA</h1>
+            <p className="text-xl mb-8 text-[#00f65e]">
+              Transformez vos données en insights stratégiques grâce à nos solutions 
+              d&apos;intelligence artificielle sur mesure.
             </p>
           </div>
         </div>
@@ -62,9 +79,9 @@ export default function DataIA() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Stockage optimisé</h3>
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Stockage optimisé et sécurisé</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Conception d&apos;architectures de stockage adaptées à vos besoins en termes de volume, de vitesse et de variété.
+                      Conception d&apos;architectures de stockage performantes et sécurisées pour vos données.
                     </p>
                   </div>
                 </div>
@@ -74,9 +91,9 @@ export default function DataIA() {
                     <FontAwesomeIcon icon={faCheckCircle} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse prédictive</h3>
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse prédictive et prescriptive</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Développement de modèles d&apos;IA pour prédire les tendances et anticiper les évolutions de votre marché.
+                      Développement de modèles d&apos;IA pour prédire les tendances et recommander des actions.
                     </p>
                   </div>
                 </div>
@@ -88,41 +105,27 @@ export default function DataIA() {
                   <div>
                     <h3 className="text-xl font-bold mb-2 dark:text-white">Tableaux de bord interactifs</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Création d&apos;interfaces de visualisation permettant d&apos;explorer vos données de manière intuitive.
+                      Création de visualisations interactives pour explorer et comprendre vos données.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-6 dark:text-white">Pourquoi exploiter vos données avec l&apos;IA ?</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Identifiez des opportunités commerciales cachées dans vos données</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Optimisez vos processus grâce à des insights basés sur les données</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Anticipez les tendances du marché avec l&apos;analyse prédictive</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <p className="dark:text-gray-300">Prenez des décisions éclairées basées sur des données fiables</p>
-                </li>
-              </ul>
+            <div className="relative rounded-lg overflow-hidden shadow-xl h-[500px]">
+              <img 
+                src="/images/backgrounds/data-ia-bg.jpg" 
+                alt="Exploitation de données avec l'IA" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Intelligence artificielle</h3>
+                  <p className="text-gray-200">
+                    Transformez vos données en insights actionnables grâce à nos solutions d&apos;IA avancées.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
