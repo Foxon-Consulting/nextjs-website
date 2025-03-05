@@ -53,76 +53,58 @@ export default function DataIA() {
       {/* Services Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services d&apos;exploitation de données</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Notre équipe d&apos;experts en data science et en IA vous aide à tirer le meilleur parti 
-                de vos données pour améliorer vos processus et prendre des décisions éclairées.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Collecte et intégration de données</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Mise en place de systèmes de collecte et d&apos;intégration de données provenant de sources diverses.
-                    </p>
-                  </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services d&apos;exploitation de données</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+              Notre équipe d&apos;experts en data science et en IA vous aide à tirer le meilleur parti 
+              de vos données pour améliorer vos processus et prendre des décisions éclairées.
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Stockage optimisé et sécurisé</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Conception d&apos;architectures de stockage performantes et sécurisées pour vos données.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse prédictive et prescriptive</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Développement de modèles d&apos;IA pour prédire les tendances et recommander des actions.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Tableaux de bord interactifs</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Création de visualisations interactives pour explorer et comprendre vos données.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Collecte et intégration de données</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Mise en place de systèmes de collecte et d&apos;intégration de données provenant de sources diverses.
+                  </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="relative rounded-lg overflow-hidden shadow-xl h-[500px]">
-              <img 
-                src="/images/backgrounds/data-ia-bg.jpg" 
-                alt="Exploitation de données avec l'IA" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Intelligence artificielle</h3>
-                  <p className="text-gray-200">
-                    Transformez vos données en insights actionnables grâce à nos solutions d&apos;IA avancées.
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Stockage optimisé et sécurisé</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Conception d&apos;architectures de stockage performantes et sécurisées pour vos données.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse prédictive et prescriptive</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Développement de modèles d&apos;IA pour prédire les tendances et recommander des actions.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Tableaux de bord interactifs</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Création de visualisations interactives pour explorer et comprendre vos données.
                   </p>
                 </div>
               </div>

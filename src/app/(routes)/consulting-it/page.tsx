@@ -53,76 +53,58 @@ export default function ConsultingIT() {
       {/* Services Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services de Consulting IT</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement 
-                à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Développement de logiciel à la demande</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques.
-                    </p>
-                  </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services de Consulting IT</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+              Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement 
+              à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Pilotage de la chaîne logicielle</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Mise en place et optimisation de votre chaîne de développement, de l'idée à la production.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Audit technique et amélioration</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d'infrastructure</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Développement de logiciel à la demande</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques.
+                  </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="relative rounded-lg overflow-hidden shadow-xl h-[500px]">
-              <img 
-                src="/images/backgrounds/consulting-bg.jpg" 
-                alt="Consulting IT" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Expertise technique</h3>
-                  <p className="text-gray-200">
-                    Notre équipe d'experts vous accompagne dans tous vos projets IT avec une approche personnalisée.
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Pilotage de la chaîne logicielle</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Mise en place et optimisation de votre chaîne de développement, de l'idée à la production.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Audit technique et amélioration</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d'infrastructure</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes.
                   </p>
                 </div>
               </div>

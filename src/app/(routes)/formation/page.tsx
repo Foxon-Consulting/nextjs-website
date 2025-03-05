@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faLightbulb, 
@@ -54,87 +53,65 @@ export default function Formation() {
       {/* Services Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos formations</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre 
-                les enjeux et les opportunités des technologies modernes sans nécessairement maîtriser 
-                les aspects techniques.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">L&apos;IA au service des décideurs</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Comprendre les fondamentaux de l&apos;IA et son impact stratégique sur votre secteur d&apos;activité.
-                    </p>
-                  </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos formations</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+              Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre 
+              les enjeux et les opportunités des technologies modernes sans nécessairement maîtriser 
+              les aspects techniques.
+            </p>
+            
+            <div className="space-y-6 mb-12">
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Automatisation des processus</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Découvrir les outils modernes d&apos;automatisation et leur potentiel pour votre entreprise.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Transformation numérique</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Comprendre les enjeux de la transformation numérique et les stratégies pour la réussir.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Data-driven decision making</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Apprendre à exploiter les données pour prendre des décisions stratégiques éclairées.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">L&apos;IA au service des décideurs</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Comprendre les fondamentaux de l&apos;IA et son impact stratégique sur votre secteur d&apos;activité.
+                  </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="relative rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00f65e]/80 to-blue-500/80 mix-blend-multiply z-10"></div>
-              <Image
-                src="/images/backgrounds/formation-bg.jpg"
-                alt="Formation pour décideurs"
-                width={800}
-                height={600}
-                className="object-cover h-full w-full"
-              />
-              <div className="absolute inset-0 flex items-center z-20 p-8">
-                <div className="text-white">
-                  <h3 className="text-2xl font-bold mb-4">Expertise pédagogique</h3>
-                  <p className="text-lg">
-                    Notre équipe de formateurs combine expertise technique et compétences pédagogiques pour 
-                    vous offrir des formations accessibles et directement applicables dans votre contexte professionnel.
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Automatisation des processus</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Découvrir les outils modernes d&apos;automatisation et leur potentiel pour votre entreprise.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Transformation numérique</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Comprendre les enjeux de la transformation numérique et les stratégies pour la réussir.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Data-driven decision making</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Apprendre à exploiter les données pour prendre des décisions stratégiques éclairées.
                   </p>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg md:col-span-2">
+
+            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-bold mb-6 dark:text-white">Pourquoi choisir nos formations ?</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">

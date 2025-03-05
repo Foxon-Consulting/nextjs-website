@@ -12,7 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
@@ -127,6 +127,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-white border-gray-200 dark:bg-gray-950 dark:border-gray-800">
+              <SheetTitle className="sr-only">Menu de navigation</SheetTitle>
               <div className="flex justify-center mb-6">
                 <Image 
                   src="/images/logo/new/GREEN-BLACK-C.png" 
