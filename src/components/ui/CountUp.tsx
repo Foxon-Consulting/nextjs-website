@@ -65,13 +65,17 @@ export function CountUp({
       { threshold: 0.1 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    // Stocker une référence à l'élément courant
+    const currentElement = countRef.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      // Utiliser la référence stockée au lieu de countRef.current
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [end, duration, hasAnimated]);

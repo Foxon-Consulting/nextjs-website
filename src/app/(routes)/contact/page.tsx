@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact | Services IT & IA",
-  description: "Contactez notre équipe d'experts pour discuter de vos projets IT, d'exploitation de données avec l'IA ou de formations pour décideurs.",
+  description: "Contactez notre équipe d&apos;experts pour discuter de vos projets IT, d&apos;exploitation de données avec l&apos;IA ou de formations pour décideurs.",
 };
 
 export default function ContactPage() {

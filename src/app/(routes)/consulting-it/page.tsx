@@ -11,7 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Consulting IT | Services IT & IA",
-  description: "Services de consulting IT pour le développement de logiciels, le pilotage de la chaîne logicielle, l'audit technique et le déploiement d'infrastructure.",
+  description: "Services de consulting IT pour le développement de logiciels, le pilotage de la chaîne logicielle, l&apos;audit technique et le déploiement d&apos;infrastructure.",
 };
 
 export default function ConsultingIT() {
@@ -34,7 +34,7 @@ export default function ConsultingIT() {
           <div 
             className="absolute inset-0 z-0" 
             style={{ 
-              background: 'linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+              background: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
             }}
           ></div>
         </div>
@@ -55,8 +55,8 @@ export default function ConsultingIT() {
         <div className="container mx-auto px-4">
           <div>
             <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services de Consulting IT</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Notre équipe d&apos;experts vous accompagne dans tous vos projets IT, du développement 
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+              Notre équipe d&apos;experts vous accompagne dans tous vos projets IT, du développement
               à la mise en production, en passant par l&apos;audit et l&apos;optimisation de vos infrastructures.
             </p>
             
@@ -213,8 +213,8 @@ export default function ConsultingIT() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 dark:text-white">Refonte du système d&apos;information d&apos;une entreprise de logistique</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Modernisation complète du SI avec une architecture microservices, permettant une réduction de 40% des coûts 
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
+                Modernisation complète du SI permettant une réduction de 40% des coûts
                 d&apos;exploitation et une amélioration de 60% des temps de réponse.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -227,8 +227,8 @@ export default function ConsultingIT() {
             
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 dark:text-white">Développement d&apos;une plateforme e-commerce B2B</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Création d&apos;une solution sur mesure intégrant gestion des stocks, facturation et CRM, 
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
+                Création d&apos;une solution sur mesure intégrant gestion des stocks, facturation et CRM,
                 permettant à notre client d&apos;augmenter son chiffre d&apos;affaires de 35% en un an.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -246,9 +246,8 @@ export default function ConsultingIT() {
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à transformer votre infrastructure IT ?</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en consulting IT 
-            et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
+          <p className="text-xl font-semibold text-center mb-6">
+            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en consulting IT
           </p>
           <Link href="/contact">
             <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">

@@ -20,6 +20,8 @@ export function Header() {
 
   // Fonction pour vérifier si un chemin est actif
   const isActive = (path: string) => {
+    if (!pathname) return false;
+    
     if (path === '/') {
       return pathname === '/';
     }
@@ -28,6 +30,8 @@ export function Header() {
 
   // Fonction pour vérifier si on est sur une page de services
   const isServicePage = () => {
+    if (!pathname) return false;
+    
     return pathname.startsWith('/consulting-it') || 
            pathname.startsWith('/data-ia') || 
            pathname.startsWith('/formation');

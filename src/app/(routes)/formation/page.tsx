@@ -34,7 +34,7 @@ export default function Formation() {
           <div 
             className="absolute inset-0 z-0" 
             style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
             }}
           ></div>
         </div>

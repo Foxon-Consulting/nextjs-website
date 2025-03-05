@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Exploitation de données avec l'IA | Services IT & IA",
-  description: "Services d'exploitation de données avec l'intelligence artificielle pour optimiser vos performances et prendre des décisions éclairées.",
+  title: "Exploitation de données avec l&apos;IA | Services IT & IA",
+  description: "Services d&apos;exploitation de données avec l&apos;intelligence artificielle pour optimiser vos performances et prendre des décisions éclairées.",
 };
 
 export default function DataIA() {
@@ -34,7 +34,7 @@ export default function DataIA() {
           <div 
             className="absolute inset-0 z-0" 
             style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)' 
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
             }}
           ></div>
         </div>
