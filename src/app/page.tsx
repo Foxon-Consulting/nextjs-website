@@ -21,10 +21,10 @@ export default function Home() {
       <section className="relative py-20 hero-pattern text-white">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-[#00f65e] text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Excellence IT & IA au service des entreprises
             </h1>
-            <p className="text-xl mb-8 text-[#00f65e]">
+            <p className="text-xl mb-8 text-white">
               Nous vous accompagnons dans votre transformation numérique avec des services de consulting IT, 
               d&apos;exploitation de données par l&apos;IA et des formations pour les décideurs.
             </p>

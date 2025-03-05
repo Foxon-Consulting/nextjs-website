@@ -41,8 +41,8 @@ export default function ConsultingIT() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Consulting IT</h1>
-            <p className="text-xl mb-8 text-[#00f65e]">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Consulting IT</h1>
+            <p className="text-xl mb-8 text-white">
               Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, 
               piloter et optimiser vos solutions logicielles.
             </p>

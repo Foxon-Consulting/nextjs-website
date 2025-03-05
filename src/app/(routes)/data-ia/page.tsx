@@ -41,8 +41,8 @@ export default function DataIA() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Exploitation de données avec l&apos;IA</h1>
-            <p className="text-xl mb-8 text-[#00f65e]">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Exploitation de données avec l&apos;IA</h1>
+            <p className="text-xl mb-8 text-white">
               Transformez vos données en insights stratégiques grâce à nos solutions 
               d&apos;intelligence artificielle sur mesure.
             </p>

@@ -41,8 +41,8 @@ export default function Formation() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#00f65e]">Formations pour les décideurs</h1>
-            <p className="text-xl mb-8 text-[#00f65e]">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Formations pour les décideurs</h1>
+            <p className="text-xl mb-8 text-white">
               Des formations techniques adaptées aux décideurs pour comprendre et exploiter 
               le potentiel de l&apos;IA et de l&apos;automatisation dans votre entreprise.
             </p>
