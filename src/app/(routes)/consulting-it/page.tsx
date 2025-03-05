@@ -28,7 +28,7 @@ export default function ConsultingIT() {
             loop 
             playsInline
           >
-            <source src="/charte_graphique/videos/consulting_it.mp4" type="video/mp4" />
+            <source src="/videos/consulting_it.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
           <div 
@@ -56,8 +56,8 @@ export default function ConsultingIT() {
           <div>
             <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services de Consulting IT</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement 
-              à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.
+              Notre équipe d&apos;experts vous accompagne dans tous vos projets IT, du développement 
+              à la mise en production, en passant par l&apos;audit et l&apos;optimisation de vos infrastructures.
             </p>
             
             <div className="space-y-6">
@@ -80,11 +80,10 @@ export default function ConsultingIT() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 dark:text-white">Pilotage de la chaîne logicielle</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Mise en place et optimisation de votre chaîne de développement, de l'idée à la production.
+                    Mise en place et optimisation de votre chaîne de développement, de l&apos;idée à la production.
                   </p>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <div className="text-[#00f65e] text-xl mr-4 mt-1">
                   <FontAwesomeIcon icon={faCheckCircle} />
@@ -102,9 +101,9 @@ export default function ConsultingIT() {
                   <FontAwesomeIcon icon={faCheckCircle} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d'infrastructure</h3>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d&apos;infrastructure</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes.
+                    Conception et mise en place d&apos;infrastructures cloud sécurisées, évolutives et performantes.
                   </p>
                 </div>
               </div>
@@ -188,7 +187,7 @@ export default function ConsultingIT() {
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
               <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-bold mb-2 dark:text-white">Conception de la solution</h3>
-              <p className="text-gray-600 dark:text-gray-400">Élaboration d'une architecture adaptée à vos besoins</p>
+              <p className="text-gray-600 dark:text-gray-400">Élaboration d&apos;une architecture adaptée à vos besoins</p>
             </div>
             
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
@@ -213,10 +212,10 @@ export default function ConsultingIT() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Refonte du système d'information d'une entreprise de logistique</h3>
+              <h3 className="text-xl font-bold mb-4 dark:text-white">Refonte du système d&apos;information d&apos;une entreprise de logistique</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Modernisation complète du SI avec une architecture microservices, permettant une réduction de 40% des coûts 
-                d'exploitation et une amélioration de 60% des temps de réponse.
+                d&apos;exploitation et une amélioration de 60% des temps de réponse.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Java</span>
@@ -227,10 +226,10 @@ export default function ConsultingIT() {
             </div>
             
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Développement d'une plateforme e-commerce B2B</h3>
+              <h3 className="text-xl font-bold mb-4 dark:text-white">Développement d&apos;une plateforme e-commerce B2B</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Création d'une solution sur mesure intégrant gestion des stocks, facturation et CRM, 
-                permettant à notre client d'augmenter son chiffre d'affaires de 35% en un an.
+                Création d&apos;une solution sur mesure intégrant gestion des stocks, facturation et CRM, 
+                permettant à notre client d&apos;augmenter son chiffre d&apos;affaires de 35% en un an.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">React</span>
@@ -248,7 +247,7 @@ export default function ConsultingIT() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à transformer votre infrastructure IT ?</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de vos besoins en consulting IT 
+            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en consulting IT 
             et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
           </p>
           <Link href="/contact">

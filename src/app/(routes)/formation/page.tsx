@@ -28,7 +28,7 @@ export default function Formation() {
             loop 
             playsInline
           >
-            <source src="/charte_graphique/videos/formation.mp4" type="video/mp4" />
+            <source src="/videos/formation.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
           <div 

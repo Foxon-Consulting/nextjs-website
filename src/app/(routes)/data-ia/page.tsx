@@ -28,7 +28,7 @@ export default function DataIA() {
             loop 
             playsInline
           >
-            <source src="/charte_graphique/videos/data_exploitation.mp4" type="video/mp4" />
+            <source src="/videos/data_exploitation.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
           <div 
