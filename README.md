@@ -92,6 +92,43 @@ La configuration Terraform crée :
 - La configuration des domaines dans Route53
 - Les règles de redirection nécessaires
 
+### Variables de déploiement requises
+
+Pour déployer l'infrastructure, vous devez configurer les variables suivantes dans le fichier `terraform/amplify.tfvars` :
+
+```
+# Informations générales
+client          = "nom-du-client"
+environment     = "production"
+app_name        = "nom-application"
+domain_name     = "exemple.com"
+
+# Configuration du dépôt
+repository_url  = "https://github.com/organisation/repo"
+access_token    = "github-personal-access-token"
+prd_branch_name = "main"
+
+# Sécurité (pour environnement UAT)
+basic_auth_username = "utilisateur"
+basic_auth_password = "mot-de-passe"
+
+# Optionnel - Liste des préfixes pour les sous-domaines à rediriger vers le domaine principal
+prefixlist = ["www", "app"]
+```
+
+| Variable | Description |
+|----------|-------------|
+| `client` | Nom du client ou de l'organisation |
+| `environment` | Environnement de déploiement (production, staging, etc.) |
+| `app_name` | Nom de l'application Amplify |
+| `domain_name` | Nom de domaine principal |
+| `repository_url` | URL du dépôt GitHub (sans .git) |
+| `access_token` | Token d'accès GitHub pour Amplify |
+| `prd_branch_name` | Nom de la branche de production |
+| `basic_auth_username` | Nom d'utilisateur pour l'authentification basique (environnements non-production) |
+| `basic_auth_password` | Mot de passe pour l'authentification basique (environnements non-production) |
+| `prefixlist` | Liste des préfixes de sous-domaines à rediriger vers le domaine principal |
+
 ### Activation du déploiement continu
 
 Après avoir appliqué la configuration Terraform, vous devez lancer les jobs des branches correspondantes dans l'interface AWS Amplify pour que l'application soit complètement déployée.
@@ -118,6 +155,6 @@ Les couleurs principales du site sont définies dans le fichier `tailwind.config
 
 Le site utilise la police Poppins, importée depuis Google Fonts dans le fichier `layout.tsx`.
 
-## Licence
+## Licence et Copyright
 
-Ce projet est sous licence [MIT](LICENSE).
+Ce projet est la propriété exclusive de FOXON CONSULTING FR. Tous droits réservés.
