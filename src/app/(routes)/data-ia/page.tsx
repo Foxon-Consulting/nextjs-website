@@ -1,13 +1,9 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faDatabase, 
-  faChartPie, 
-  faBrain,
   faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Exploitation de données avec l&apos;IA | Services IT & IA",
@@ -147,61 +143,98 @@ export default function DataIA() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Technologies utilisées</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faDatabase} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">Data</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>Apache Kafka</p>
-                <p>Hadoop / Spark</p>
-                <p>MongoDB / Cassandra</p>
-                <p>PostgreSQL / MySQL</p>
-                <p>Elasticsearch</p>
-                <p>AWS S3 / Redshift</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faBrain} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">IA</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>TensorFlow / PyTorch</p>
-                <p>Scikit-learn</p>
-                <p>Pandas / NumPy</p>
-                <p>Hugging Face</p>
-                <p>OpenAI API</p>
-                <p>MLflow</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faChartPie} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">Visualisation</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>Tableau</p>
-                <p>Power BI</p>
-                <p>D3.js</p>
-                <p>Plotly / Dash</p>
-                <p>Grafana</p>
-                <p>Kibana</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* LLM */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">LLM</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Large Language Models</h3>
+            </div>
+
+            {/* Embeddings */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">EMB</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Embeddings</h3>
+            </div>
+
+            {/* Vector Databases */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">VDB</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Vector Databases</h3>
+            </div>
+
+            {/* Prompt Engineering */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">PE</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Prompt Engineering</h3>
+            </div>
+
+            {/* RAG */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">RAG</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Retrieval Augmented Generation</h3>
+            </div>
+
+            {/* LangChain */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">LC</span>
+              </div>
+              <h3 className="font-bold dark:text-white">LangChain</h3>
+            </div>
+
+            {/* Hugging Face */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 text-3xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">🤗</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Hugging Face</h3>
+            </div>
+
+            {/* Fine-tuning */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">FT</span>
+              </div>
+              <h3 className="font-bold dark:text-white">Fine-tuning</h3>
+            </div>
+
+            {/* AWS Bedrock */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">AWS</span>
+              </div>
+              <h3 className="font-bold dark:text-white">AWS Bedrock</h3>
+            </div>
+
+            {/* AWS SageMaker */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">SM</span>
+              </div>
+              <h3 className="font-bold dark:text-white">AWS SageMaker</h3>
+            </div>
+
+            {/* AWS Datazone */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="mb-4 flex items-center justify-center">
+                <span className="bg-sky-100 dark:bg-sky-900 text-sky-600 dark:text-sky-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">DZ</span>
+              </div>
+              <h3 className="font-bold dark:text-white">AWS Datazone</h3>
+            </div>
           </div>
         </div>
       </section>

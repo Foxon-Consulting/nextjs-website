@@ -1,0 +1,60 @@
+formations:
+  - title: "L'IA pour les décideurs"
+    icon: faLightbulb
+    duration: "2 jours"
+    description: "Une formation complète pour comprendre les fondamentaux de l'IA, ses applications concrètes en entreprise et son impact stratégique sur votre secteur d'activité."
+    modules:
+      - "Introduction aux concepts clés de l'IA"
+      - "Applications sectorielles et études de cas"
+      - "Stratégies d'intégration de l'IA"
+
+  - title: "Automatisation des processus"
+    icon: faRobot
+    duration: "1 jour"
+    description: "Découvrez les outils modernes d'automatisation et leur potentiel pour optimiser les processus métier de votre entreprise."
+    modules:
+      - "Panorama des technologies d'automatisation"
+      - "Identification des processus automatisables"
+      - "Méthodologie de mise en œuvre"
+
+  - title: "Data-driven decision making"
+    icon: faChartLine
+    duration: "2 jours"
+    description: "Apprenez à exploiter les données pour prendre des décisions stratégiques éclairées et piloter votre entreprise avec précision."
+    modules:
+      - "Collecte et analyse des données pertinentes"
+      - "Interprétation et visualisation des données"
+      - "Mise en place d'une culture data-driven"
+
+pedagogie:
+  - title: "Simplification"
+    description: "Nous rendons accessibles des concepts techniques complexes"
+    step: 1
+  
+  - title: "Cas pratiques"
+    description: "Nous utilisons des exemples concrets adaptés à votre secteur"
+    step: 2
+  
+  - title: "Interactivité"
+    description: "Nos ateliers favorisent les échanges et la participation active"
+    step: 3
+  
+  - title: "Suivi personnalisé"
+    description: "Nous vous accompagnons après la formation pour la mise en pratique"
+    step: 4
+
+faq:
+  - question: "Faut-il avoir des connaissances techniques préalables ?"
+    reponse: "Non, nos formations sont spécifiquement conçues pour les décideurs sans bagage technique. Nous rendons accessibles des concepts complexes en utilisant un langage clair et des exemples concrets."
+  
+  - question: "Les formations peuvent-elles être personnalisées ?"
+    reponse: "Absolument ! Nous adaptons le contenu de nos formations à votre secteur d'activité, à vos enjeux spécifiques et à vos objectifs stratégiques. Contactez-nous pour discuter de vos besoins particuliers."
+  
+  - question: "Proposez-vous des formations en intra-entreprise ?"
+    reponse: "Oui, nous proposons des formations en intra-entreprise, ce qui permet d'adapter le contenu à votre contexte spécifique et de former plusieurs collaborateurs simultanément. C'est souvent la solution la plus efficace pour les équipes dirigeantes."
+  
+  - question: "Quel est le nombre idéal de participants ?"
+    reponse: "Pour garantir une expérience d'apprentissage optimale et favoriser les interactions, nous recommandons des groupes de 5 à 10 participants. Cela permet à chacun de bénéficier d'une attention personnalisée tout en profitant de la richesse des échanges."
+  
+  - question: "Y a-t-il un suivi après la formation ?"
+    reponse: "Oui, nous proposons un accompagnement post-formation qui comprend des sessions de questions-réponses, des ressources complémentaires et un accès à nos experts pour vous aider à mettre en pratique les connaissances acquises." 

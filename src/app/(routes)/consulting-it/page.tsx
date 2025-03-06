@@ -1,20 +1,61 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faCode, 
   faChartLine, 
   faCloud,
-  faCheckCircle
+  faCheckCircle,
+  faDatabase
 } from "@fortawesome/free-solid-svg-icons";
+import { 
+  faJs,
+  faNodeJs,
+  faPython,
+  faJava,
+  faReact,
+  faAngular,
+  faVuejs,
+  faAws,
+  faDocker,
+  faGitAlt,
+  faHtml5,
+  faCss3Alt
+} from "@fortawesome/free-brands-svg-icons";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+// Type pour les études de cas
+interface CaseStudy {
+  title: string;
+  description: string;
+  technologies: string[];
+}
 
 export const metadata = {
   title: "Consulting IT | Services IT & IA",
   description: "Services de consulting IT pour le développement de logiciels, le pilotage de la chaîne logicielle, l&apos;audit technique et le déploiement d&apos;infrastructure.",
 };
 
+// Fonction pour charger les données YAML
+function loadYamlData(): CaseStudy[] {
+  const caseStudies: CaseStudy[] = [
+    {
+      title: "Audit des pipeline CI/CD dans le cadre d'une migration de l'infrastructure cloud",
+      description: "Analyse des pipelines CI/CD existants et recommandations pour améliorer la qualité et la sécurité des pipelines. Aide à la migration vers Azure.",
+      technologies: ["Jenkins", "GitHub Actions", "Azure", "Kubernetes"]
+    },
+    {
+      title: "Déploiement d'une solution ERP sur AWS",
+      description: "Déploiement d'une solution ERP sur AWS avec une architecture hautement disponible et scalable.",
+      technologies: ["AWS", "Terraform", "MariaDB", "Github Actions"]
+    }
+  ];
+  
+  return caseStudies;
+}
+
 export default function ConsultingIT() {
+  // Charger les études de cas depuis le fichier YAML (maintenant hard-codées)
+  const caseStudies = loadYamlData();
+  
   return (
     <>
       {/* Hero Section with Video Background */}
@@ -117,57 +158,134 @@ export default function ConsultingIT() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Technologies utilisées</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faCode} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">Langages & Frameworks</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>JavaScript / TypeScript</p>
-                <p>Python / Django / Flask</p>
-                <p>Java / Spring Boot</p>
-                <p>Go</p>
-                <p>React / Vue.js / Angular</p>
-                <p>Node.js / Express</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faCloud} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">Cloud & Infrastructure</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>AWS / Azure / Google Cloud</p>
-                <p>Docker / Kubernetes</p>
-                <p>Terraform / Ansible</p>
-                <p>CI/CD (Jenkins, GitHub Actions)</p>
-                <p>Monitoring (Prometheus, Grafana)</p>
-                <p>Sécurité & Conformité</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <div className="text-[#00f65e] text-3xl mb-4 h-[1.5em] flex items-center justify-center">
-                  <FontAwesomeIcon icon={faChartLine} className="w-[1em] h-[1em]" />
-                </div>
-                <CardTitle className="text-center dark:text-white">Méthodologies</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 dark:text-gray-300">
-                <p>Agile / Scrum / Kanban</p>
-                <p>DevOps / DevSecOps</p>
-                <p>Test-Driven Development</p>
-                <p>Continuous Integration</p>
-                <p>Continuous Deployment</p>
-                <p>Microservices Architecture</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* JavaScript */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#F7DF1E] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faJs} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">JavaScript</h3>
+            </div>
+
+            {/* TypeScript */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#007ACC] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faJs} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">TypeScript</h3>
+            </div>
+
+            {/* Python */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#3776AB] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faPython} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Python</h3>
+            </div>
+
+            {/* Java */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#007396] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faJava} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Java</h3>
+            </div>
+
+            {/* React */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#61DAFB] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faReact} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">React</h3>
+            </div>
+
+            {/* Angular */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#DD0031] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faAngular} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Angular</h3>
+            </div>
+
+            {/* Vue */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#4FC08D] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faVuejs} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Vue.js</h3>
+            </div>
+
+            {/* Node.js */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#339933] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faNodeJs} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Node.js</h3>
+            </div>
+
+            {/* AWS */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#FF9900] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faAws} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">AWS</h3>
+            </div>
+
+            {/* Docker */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#2496ED] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faDocker} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Docker</h3>
+            </div>
+
+            {/* Kubernetes */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-blue-500 text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faCloud} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Kubernetes</h3>
+            </div>
+
+            {/* Git */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#F05032] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faGitAlt} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Git</h3>
+            </div>
+
+            {/* Database */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#4479A1] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faDatabase} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Bases de données</h3>
+            </div>
+
+            {/* HTML5 */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#E34F26] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faHtml5} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">HTML5</h3>
+            </div>
+
+            {/* CSS3 */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#1572B6] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faCss3Alt} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">CSS3</h3>
+            </div>
+
+            {/* Monitoring */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+              <div className="text-[#00f65e] text-4xl mb-4 h-[1.5em] flex items-center justify-center">
+                <FontAwesomeIcon icon={faChartLine} className="w-[1em] h-[1em]" />
+              </div>
+              <h3 className="font-bold dark:text-white">Monitoring</h3>
+            </div>
           </div>
         </div>
       </section>
@@ -211,33 +329,19 @@ export default function ConsultingIT() {
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Études de cas</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Refonte du système d&apos;information d&apos;une entreprise de logistique</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Modernisation complète du SI permettant une réduction de 40% des coûts
-                d&apos;exploitation et une amélioration de 60% des temps de réponse.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Java</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Spring Boot</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Kubernetes</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">AWS</span>
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 dark:text-white">{study.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {study.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {study.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">{tech}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Développement d&apos;une plateforme e-commerce B2B</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Création d&apos;une solution sur mesure intégrant gestion des stocks, facturation et CRM,
-                permettant à notre client d&apos;augmenter son chiffre d&apos;affaires de 35% en un an.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">React</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Node.js</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Docker</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

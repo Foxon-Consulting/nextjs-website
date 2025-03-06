@@ -1,0 +1,17 @@
+Etude de cas:
+- Audit des pipeline CI/CD dans le cadre d'une migration de l'infrastructure cloud:
+  - description: Analyse des pipelines CI/CD existants et recommandations pour améliorer la qualité et la sécurité des pipelines. Aide à la migration vers Azure.
+  - technologies:
+    - Jenkins
+    - GitHub Actions
+    - Azure
+    - Kubernetes
+
+- Déploiement d'une solution ERP sur AWS:
+  - description: Déploiement d'une solution ERP sur AWS avec une architecture hautement disponible et scalable.
+  - technologies:
+    - AWS
+    - Terraform
+    - MariaDB
+    - Github Actions
+      
