@@ -27,11 +27,14 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_access_token"></a> [access\_token](#input\_access\_token) | Access token | `string` | n/a | yes |
 | <a name="input_app_name"></a> [app\_name](#input\_app\_name) | Application name | `string` | n/a | yes |
+| <a name="input_basic_auth_password"></a> [basic\_auth\_password](#input\_basic\_auth\_password) | Basic auth password for uat | `string` | n/a | yes |
+| <a name="input_basic_auth_username"></a> [basic\_auth\_username](#input\_basic\_auth\_username) | Basic auth username for uat | `string` | n/a | yes |
 | <a name="input_client"></a> [client](#input\_client) | Client name | `string` | n/a | yes |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Domain name | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment name | `string` | n/a | yes |
 | <a name="input_framework_type"></a> [framework\_type](#input\_framework\_type) | Framework type for Amplify app (e.g. 'Next.js - SSR') | `string` | `"Next.js - SSR"` | no |
-| <a name="input_main_branch_name"></a> [main\_branch\_name](#input\_main\_branch\_name) | Main branch name | `string` | n/a | yes |
+| <a name="input_prd_branch_name"></a> [prd\_branch\_name](#input\_prd\_branch\_name) | Prd branch name | `string` | `"main"` | no |
+| <a name="input_prefixlist"></a> [prefixlist](#input\_prefixlist) | Liste des préfixes pour les sous-domaines | `list(string)` | `[]` | no |
 | <a name="input_repository_url"></a> [repository\_url](#input\_repository\_url) | Repository url (without .git) | `string` | n/a | yes |
 
 ## Outputs

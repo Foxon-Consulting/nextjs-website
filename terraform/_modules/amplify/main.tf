@@ -16,6 +16,15 @@ resource "aws_amplify_app" "this" {
     enable_pull_request_preview = true
   }
 
+  dynamic "custom_rule" {
+    for_each = var.custom_rules
+    content {
+      source = custom_rule.value.source
+      target = custom_rule.value.target
+      status = custom_rule.value.status
+    }
+  }
+
   tags = {
     client      = var.client
     environment = var.environment
@@ -25,7 +34,7 @@ resource "aws_amplify_app" "this" {
 # Création et déploiement automatique de la branche principale
 resource "aws_amplify_branch" "main" {
   app_id      = aws_amplify_app.this.id
-  branch_name = var.main_branch_name
+  branch_name = var.prd_branch_name
   
   # Configuration du framework et de l'environnement
   framework = var.framework_type
@@ -42,7 +51,7 @@ resource "aws_amplify_branch" "main" {
 # Création et déploiement automatique de la branche uat
 resource "aws_amplify_branch" "uat" {
   app_id      = aws_amplify_app.this.id
-  branch_name = var.uat_branch_name
+  branch_name = "uat"
   
   # Configuration du framework et de l'environnement
   framework = var.framework_type
@@ -54,4 +63,7 @@ resource "aws_amplify_branch" "uat" {
   # Déclenchement immédiat d'un déploiement après la création
   enable_performance_mode = false
   enable_notification     = false
+
+  enable_basic_auth      = true
+  basic_auth_credentials = base64encode("${var.basic_auth_username}:${var.basic_auth_password}")
 }

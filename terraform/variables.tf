@@ -29,14 +29,37 @@ variable "domain_name" {
   type        = string
 }
 
-variable "main_branch_name" {
-  description = "Main branch name"
-  type        = string
-}
-
 variable "framework_type" {
   description = "Framework type for Amplify app (e.g. 'Next.js - SSR')"
   type        = string
   default     = "Next.js - SSR"
+}
+
+variable "basic_auth_username" {
+  description = "Basic auth username for uat"
+  type        = string
+}
+
+variable "basic_auth_password" {
+  description = "Basic auth password for uat"
+  type        = string
+  sensitive   = true
+
+  validation {
+    condition     = length(var.basic_auth_password) > 7
+    error_message = "Basic auth password must be at least 8 characters long"
+  }
+}
+
+variable "prefixlist" {
+  description = "Liste des préfixes pour les sous-domaines"
+  type        = list(string)
+  default     = []
+}
+
+variable "prd_branch_name" {
+  description = "Prd branch name"
+  type        = string
+  default     = "main"
 }
 

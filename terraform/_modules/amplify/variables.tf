@@ -24,20 +24,36 @@ variable "access_token" {
   sensitive   = true
 }
 
-variable "main_branch_name" {
-  description = "Main branch name"
+
+variable "prd_branch_name" {
+  description = "Prd branch name"
   type        = string
   default     = "main"
-}
-
-variable "uat_branch_name" {
-  description = "UAT branch name"
-  type        = string
-  default     = "uat"
 }
 
 variable "framework_type" {
   description = "Type de framework utilisé pour l'application (ex: Next.js - SSR)"
   type        = string
   default     = "Next.js - SSR"
+}
+
+variable "custom_rules" {
+  description = "Custom rules"
+  type        = list(object({
+    source = string
+    target = string
+    status = string
+  }))
+  default = []  
+}
+
+variable "basic_auth_username" {
+  description = "Basic auth username"
+  type        = string
+}
+
+variable "basic_auth_password" {
+  description = "Basic auth password"
+  type        = string
+  sensitive   = true
 }

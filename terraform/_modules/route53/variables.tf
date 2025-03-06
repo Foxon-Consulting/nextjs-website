@@ -15,30 +15,17 @@ variable "main_branch_name" {
   default     = "main"
 }
 
-variable "uat_branch_name" {
-  description = "Nom de la branche UAT pour le déploiement"
-  type        = string
-  default     = "uat"
+variable "prefixlist" {
+  description = "Liste des préfixes pour les sous-domaines"
+  type        = list(string)
+  default     = []
 }
 
-
-variable "amplify_cloudfront_domain" {
-  description = "Domaine CloudFront généré par Amplify (ex: d3toivuk9miws8.cloudfront.net)"
+variable "prd_branch_name" {
+  description = "Prd branch name"
   type        = string
+  default     = "main"
 }
-
-variable "cloudfront_zone_id" {
-  description = "Zone ID fixe pour CloudFront"
-  type        = string
-  default     = "Z2FDTNDATAQYW2" # Zone ID fixe pour tous les domaines CloudFront
-}
-
-variable "framework_type" {
-  description = "Type de framework utilisé pour l'application (ex: Next.js - SSR)"
-  type        = string
-  default     = "Next.js - SSR"
-}
-
 
 
 

@@ -13,39 +13,31 @@ resource "aws_amplify_domain_association" "main" {
   
   # Configuration pour le sous-domaine www
   sub_domain {
-    branch_name = var.main_branch_name
+    branch_name = var.prd_branch_name
     prefix      = "www"
   }
   
   # Configuration pour le domaine apex (sans www)
   sub_domain {
-    branch_name = var.main_branch_name
+    branch_name = var.prd_branch_name
     prefix      = ""
   }
+
+  # Configuration pour le sous-domaine qrcode (si activé)
+  dynamic "sub_domain" {
+    for_each = var.prefixlist
+    content {
+      branch_name = var.prd_branch_name
+      prefix      = sub_domain.value
+    }
+  }
+
   
-  # Attendre que la vérification de propriété du domaine soit terminée
-  wait_for_verification = true
-}
-
-# Association du domaine à l'application Amplify (branche UAT)
-resource "aws_amplify_domain_association" "uat" {
-  app_id      = var.aws_amplify_app_id
-  domain_name = "uat.${var.domain_name}"
-
   sub_domain {
-    branch_name = var.uat_branch_name
-    prefix      = ""
+    branch_name = "uat"
+    prefix      = "uat"
   }
 
-  sub_domain {
-    branch_name = var.uat_branch_name
-    prefix      = "www"
-  }
-
-  wait_for_verification = true
+  # Désactivation de l'attente de vérification pour permettre à Terraform de continuer
+  wait_for_verification = false
 }
-
-
-
-
-

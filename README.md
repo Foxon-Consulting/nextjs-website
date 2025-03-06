@@ -63,14 +63,45 @@ npm run dev
 
 ## Déploiement
 
-Ce site peut être déployé sur n'importe quelle plateforme supportant Next.js, comme Vercel, Netlify ou AWS Amplify.
+Le déploiement de ce site est géré par Terraform qui configure AWS Amplify et Route53 pour l'hébergement et le domaine.
 
-### Déploiement sur Vercel
+### Déploiement avec Terraform
 
-1. Créer un compte sur [Vercel](https://vercel.com/)
-2. Importer le projet depuis GitHub
-3. Configurer les variables d'environnement si nécessaire
-4. Déployer
+1. Accéder au répertoire terraform :
+```bash
+cd terraform
+```
+
+2. Initialiser Terraform :
+```bash
+make init
+```
+
+3. Planifier les modifications :
+```bash
+make plan
+```
+
+4. Appliquer les modifications :
+```bash
+make apply
+```
+
+La configuration Terraform crée :
+- Une application AWS Amplify connectée au dépôt GitHub
+- La configuration des domaines dans Route53
+- Les règles de redirection nécessaires
+
+### Activation du déploiement continu
+
+Après avoir appliqué la configuration Terraform, vous devez lancer les jobs des branches correspondantes dans l'interface AWS Amplify pour que l'application soit complètement déployée.
+
+1. Accéder à la console AWS Amplify
+2. Sélectionner l'application créée
+3. Dans l'onglet "Branches", déclencher le build pour la branche principale (main)
+4. Attendre que le déploiement soit terminé
+
+Une fois le déploiement terminé, le site sera accessible à l'adresse configurée dans les variables Terraform.
 
 ## Personnalisation
 
