@@ -67,41 +67,23 @@ Technologies:
 
 # Section Études de cas
 Etude de cas:
-  - "Maintenance prédictive pour l'industrie":
-    - description: "Développement d'un système de maintenance prédictive utilisant des capteurs IoT et des algorithmes d'IA pour prédire les pannes d'équipement industriel avant qu'elles ne se produisent."
+  - Développement d'agents d'analyse de documents administratifs:
+    - description: 
+        Développement d'agents d'analyse de documents internes à une entreprise technologique.
     - technologies:
-      - "Python"
-      - "TensorFlow"
-      - "IoT"
-      - "Azure"
-      - "Power BI"
-  
-  - "Optimisation de la chaîne d'approvisionnement":
-    - description: "Création d'un système d'optimisation de la chaîne d'approvisionnement utilisant l'apprentissage automatique pour prévoir la demande et optimiser les niveaux de stock."
+      - Python
+      - Hugging Face
+      - RAG
+      - Ollama
+      - LangChain
+  - Développement d'agents d'analyse de documents juridique:
+    - description: 
+        Fine-tuning et Optimisationde modèles de LLMs sur des documents légaux pour cabinets d'avocats.
     - technologies:
-      - "Python"
-      - "Scikit-learn"
-      - "Tableau"
-      - "AWS"
-      - "PostgreSQL"
-  
-  - "Système de recommandation personnalisé":
-    - description: "Mise en place d'un système de recommandation pour une plateforme e-commerce, augmentant le taux de conversion de 35% grâce à des suggestions personnalisées."
-    - technologies:
-      - "Python"
-      - "PyTorch"
-      - "MongoDB"
-      - "AWS Lambda"
-      - "React"
-  
-  - "Analyse des sentiments sur les réseaux sociaux":
-    - description: "Développement d'une solution d'analyse des sentiments en temps réel pour surveiller la réputation d'une marque sur les réseaux sociaux et ajuster sa stratégie de communication."
-    - technologies:
-      - "Python"
-      - "BERT"
-      - "Elasticsearch"
-      - "Kibana"
-      - "Twitter API"
+      - AWS SageMaker
+      - AWS Bedrock
+      - Transformers
+      - CrewAI
 
 # Section CTA
 cta:

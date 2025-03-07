@@ -70,20 +70,20 @@ faq:
 
 # Section Témoignages
 testimonials:
-  - content: "La formation sur l'IA pour les décideurs a été une révélation pour notre équipe dirigeante. Nous avons enfin compris comment exploiter concrètement ces technologies dans notre stratégie."
-    author: "Thomas Dubois"
+  - content: ""
+    author: "Fabien Jallot"
+    position: "Directeur Technique"
+    company: "Deloitte"
+  
+  - content: ""
+    author: "Jean-François Metzger"
+    position: "Cloud Transformation Program Manager"
+    company: "Société Générale"
+
+  - content: ""
+    author: "Julien Cugniez"
     position: "CEO"
-    company: "Entreprise B"
-  
-  - content: "Une approche pédagogique remarquable qui a permis à notre équipe de direction, peu familière avec les concepts techniques, de saisir rapidement les enjeux et opportunités de l'automatisation."
-    author: "Marie Laurent"
-    position: "Directrice des Opérations"
-    company: "Groupe C"
-  
-  - content: "La formation a parfaitement répondu à nos attentes. Le formateur a su adapter son discours à notre secteur d'activité et nous proposer des cas pratiques pertinents."
-    author: "Jean Moreau"
-    position: "Directeur Innovation"
-    company: "Entreprise A"
+    company: "Indigomaze"
 
 # Section CTA
 cta:
