@@ -2,8 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { getContactInfo } from "@/lib/contact";
 
-export function Footer() {
+export async function Footer() {
+  const contactInfo = await getContactInfo();
+  
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4">
@@ -27,13 +30,13 @@ export function Footer() {
               Expertise IT & IA au service de votre transformation numérique
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+              <Link href={contactInfo.social_media.twitter} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faTwitter} className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+              <Link href={contactInfo.social_media.linkedin} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+              <Link href={contactInfo.social_media.facebook} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faFacebook} className="h-5 w-5" />
               </Link>
             </div>
@@ -89,20 +92,20 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4 dark:text-white">Contact</h3>
             <address className="not-italic text-gray-600 dark:text-gray-400">
-              123 Avenue des Champs-Élysées<br />
-              75008 Paris, France<br /><br />
-              <a href="mailto:contact@votreentreprise.com" className="hover:text-[#00f65e]">
-                contact@votreentreprise.com
+              {contactInfo.address.street}<br />
+              {contactInfo.address.postal_code} {contactInfo.address.city}, {contactInfo.address.country}<br /><br />
+              <a href={`mailto:${contactInfo.email.main}`} className="hover:text-[#00f65e]">
+                {contactInfo.email.main}
               </a><br />
-              <a href="tel:+33123456789" className="hover:text-[#00f65e]">
-                +33 (0)1 23 45 67 89
+              <a href={`tel:${contactInfo.phone.main.replace(/\s/g, '')}`} className="hover:text-[#00f65e]">
+                {contactInfo.phone.main}
               </a>
             </address>
           </div>
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Votre Entreprise. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} {contactInfo.company_name}. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

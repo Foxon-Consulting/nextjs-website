@@ -43,7 +43,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-950 dark:border-gray-800">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2 ml-2">
           <Image 
             src="/images/logo/new/GREEN-BLACK-C.png" 
             alt="Logo" 
