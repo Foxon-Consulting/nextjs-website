@@ -25,17 +25,51 @@ import { readFile } from 'fs/promises';
 import yaml from 'js-yaml';
 import path from 'path';
 
-// Type pour les études de cas
+// Types pour toutes les données du YAML
 interface CaseStudy {
   title: string;
   description: string;
   technologies: string[];
 }
 
-// Type pour les catégories de technologies
 interface TechnologyCategory {
   name: string;
   technologies: string[];
+}
+
+interface ServiceItem {
+  title: string;
+  icon: string;
+  description: string;
+}
+
+interface ProcessStep {
+  number: number;
+  title: string;
+  description: string;
+}
+
+interface PageData {
+  hero: {
+    title: string;
+    description: string;
+    video: string;
+  };
+  services: {
+    title: string;
+    description: string;
+    items: ServiceItem[];
+  };
+  process: {
+    title: string;
+    steps: ProcessStep[];
+  };
+  caseStudies: CaseStudy[];
+  techCategories: TechnologyCategory[];
+  cta: {
+    title: string;
+    description: string;
+  };
 }
 
 export const metadata = {
@@ -44,10 +78,7 @@ export const metadata = {
 };
 
 // Fonction pour charger les données YAML
-async function loadYamlData(): Promise<{
-  caseStudies: CaseStudy[],
-  techCategories: TechnologyCategory[]
-}> {
+async function loadYamlData(): Promise<PageData> {
   try {
     // Chemin vers le fichier YAML
     const filePath = path.join(process.cwd(), 'src/app/(routes)/consulting-it/consulting-it.yaml');
@@ -70,8 +101,26 @@ async function loadYamlData(): Promise<{
     }
     
     interface YamlData {
+      'hero': {
+        title: string;
+        description: string;
+        video: string;
+      };
+      'services': {
+        title: string;
+        description: string;
+        items: ServiceItem[];
+      };
+      'process': {
+        title: string;
+        steps: ProcessStep[];
+      };
       'Etude de cas': YamlStudyEntry[];
       'Technologies'?: YamlTechnologyCategory[];
+      'cta': {
+        title: string;
+        description: string;
+      };
     }
     
     // Parser le contenu YAML
@@ -119,12 +168,76 @@ async function loadYamlData(): Promise<{
         };
       }) : [];
     
-    return { caseStudies, techCategories };
+    // Retourner toutes les sections du YAML
+    return { 
+      hero: data.hero,
+      services: data.services,
+      process: data.process,
+      caseStudies,
+      techCategories,
+      cta: data.cta
+    };
   } catch (error) {
     console.error('Erreur lors du chargement du fichier YAML:', error);
     
     // Retourner les données par défaut en cas d'erreur
     return { 
+      hero: {
+        title: "Consulting IT",
+        description: "Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, piloter et optimiser vos solutions logicielles.",
+        video: "/videos/consulting_it.mp4"
+      },
+      services: {
+        title: "Nos services de Consulting IT",
+        description: "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.",
+        items: [
+          {
+            title: "Développement de logiciel à la demande",
+            icon: "faCheckCircle",
+            description: "Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques."
+          },
+          {
+            title: "Pilotage de la chaîne logicielle",
+            icon: "faCheckCircle",
+            description: "Mise en place et optimisation de votre chaîne de développement, de l'idée à la production."
+          },
+          {
+            title: "Audit technique et amélioration",
+            icon: "faCheckCircle",
+            description: "Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité."
+          },
+          {
+            title: "Déploiement d'infrastructure",
+            icon: "faCheckCircle",
+            description: "Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes."
+          }
+        ]
+      },
+      process: {
+        title: "Notre processus",
+        steps: [
+          {
+            number: 1,
+            title: "Analyse des besoins",
+            description: "Compréhension approfondie de vos objectifs et contraintes"
+          },
+          {
+            number: 2,
+            title: "Conception de la solution",
+            description: "Élaboration d'une architecture et d'une stratégie sur mesure"
+          },
+          {
+            number: 3,
+            title: "Développement & Tests",
+            description: "Mise en œuvre agile avec cycles de feedback réguliers"
+          },
+          {
+            number: 4,
+            title: "Déploiement & Support",
+            description: "Mise en production et accompagnement continu"
+          }
+        ]
+      },
       caseStudies: [
         {
           title: "Audit des pipeline CI/CD dans le cadre d'une migration de l'infrastructure cloud",
@@ -150,14 +263,18 @@ async function loadYamlData(): Promise<{
           name: "Cloud",
           technologies: ["AWS", "Azure", "GCP"]
         }
-      ]
+      ],
+      cta: {
+        title: "Prêt à transformer votre infrastructure IT ?",
+        description: "Contactez-nous dès aujourd'hui pour discuter de vos besoins en consulting IT"
+      }
     };
   }
 }
 
 export default async function ConsultingIT() {
-  // Charger les études de cas depuis le fichier YAML
-  const { caseStudies, techCategories } = await loadYamlData();
+  // Charger toutes les données depuis le fichier YAML
+  const pageData = await loadYamlData();
   
   return (
     <>
@@ -172,7 +289,7 @@ export default async function ConsultingIT() {
             loop 
             playsInline
           >
-            <source src="/videos/consulting_it.mp4" type="video/mp4" />
+            <source src={pageData.hero.video} type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
           <div 
@@ -185,10 +302,9 @@ export default async function ConsultingIT() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Consulting IT</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">{pageData.hero.title}</h1>
             <p className="text-xl mb-8 text-white">
-              Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, 
-              piloter et optimiser vos solutions logicielles.
+              {pageData.hero.description}
             </p>
           </div>
         </div>
@@ -198,59 +314,25 @@ export default async function ConsultingIT() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div>
-            <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services de Consulting IT</h2>
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">{pageData.services.title}</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-              Notre équipe d&apos;experts vous accompagne dans tous vos projets IT, du développement
-              à la mise en production, en passant par l&apos;audit et l&apos;optimisation de vos infrastructures.
+              {pageData.services.description}
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
+              {pageData.services.items.map((service, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">{service.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Développement de logiciel à la demande</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Pilotage de la chaîne logicielle</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Mise en place et optimisation de votre chaîne de développement, de l&apos;idée à la production.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Audit technique et amélioration</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement d&apos;infrastructure</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Conception et mise en place d&apos;infrastructures cloud sécurisées, évolutives et performantes.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -259,32 +341,16 @@ export default async function ConsultingIT() {
       {/* Process Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Notre processus</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{pageData.process.title}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse des besoins</h3>
-              <p className="text-gray-600 dark:text-gray-400">Compréhension approfondie de vos objectifs et contraintes</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Conception de la solution</h3>
-              <p className="text-gray-600 dark:text-gray-400">Élaboration d&apos;une architecture et d&apos;une stratégie sur mesure</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Développement & Tests</h3>
-              <p className="text-gray-600 dark:text-gray-400">Mise en œuvre agile avec cycles de feedback réguliers</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Déploiement & Support</h3>
-              <p className="text-gray-600 dark:text-gray-400">Mise en production et accompagnement continu</p>
-            </div>
+            {pageData.process.steps.map((step, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">{step.number}</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -294,7 +360,7 @@ export default async function ConsultingIT() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Technologies utilisées</h2>
           
-          {techCategories.map((category, categoryIndex) => (
+          {pageData.techCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-12">
               <h3 className="text-2xl font-bold mb-6 dark:text-white">{category.name}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -422,14 +488,14 @@ export default async function ConsultingIT() {
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Études de cas</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {caseStudies.map((study: CaseStudy, index: number) => (
+            {pageData.caseStudies.map((study, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4 dark:text-white">{study.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
                   {study.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {study.technologies.map((tech: string, techIndex: number) => (
+                  {study.technologies.map((tech, techIndex) => (
                     <span key={techIndex} className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">{tech}</span>
                   ))}
                 </div>
@@ -442,9 +508,9 @@ export default async function ConsultingIT() {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à transformer votre infrastructure IT ?</h2>
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">{pageData.cta.title}</h2>
           <p className="text-xl font-semibold text-center mb-6">
-            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en consulting IT
+            {pageData.cta.description}
           </p>
           <Link href="/contact">
             <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">

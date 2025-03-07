@@ -1,26 +1,92 @@
+# Consulting IT YAML
+
+# Section Hero
+hero:
+  title: "IT Consulting"
+  description: "Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, piloter et optimiser vos solutions logicielles."
+  video: "/videos/consulting_it.mp4"
+
+# Section Services
+services:
+  title: "Nos services de Consulting IT"
+  description: "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures."
+  items:
+    - title: "Développement de logiciel à la demande"
+      icon: "faCheckCircle"
+      description: "Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques."
+    
+    - title: "Pilotage de la chaîne logicielle"
+      icon: "faCheckCircle"
+      description: "Mise en place et optimisation de votre chaîne de développement, de l'idée à la production."
+    
+    - title: "Audit technique et amélioration"
+      icon: "faCheckCircle"
+      description: "Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité."
+    
+    - title: "Déploiement d'infrastructure"
+      icon: "faCheckCircle"
+      description: "Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes."
+
+# Section Process
+process:
+  title: "Notre processus"
+  steps:
+    - number: 1
+      title: "Analyse des besoins"
+      description: "Compréhension approfondie de vos objectifs et contraintes"
+    
+    - number: 2
+      title: "Conception de la solution"
+      description: "Élaboration d'une architecture et d'une stratégie sur mesure"
+    
+    - number: 3
+      title: "Développement & Tests"
+      description: "Mise en œuvre agile avec cycles de feedback réguliers"
+    
+    - number: 4
+      title: "Déploiement & Support"
+      description: "Mise en production et accompagnement continu"
+
+# Section Technologies
 Technologies:
-- Developpement:
-  - C++
-  - Python
-  - C#
-  - Java
-  - NextJS
-  - Qt
-- DevOps:
-  - Jenkins
-  - Github Actions
-  - Sonarqube
-  - Docker
-  - Kubernetes
-  - Terraform
-  - Ansible
-- Cloud:
-  - AWS
-  - Azure
-  - GCP
+  - Frontend:
+    - "JavaScript"
+    - "TypeScript"
+    - "React"
+    - "Angular"
+    - "Vue.js"
+    - "HTML5"
+    - "CSS3"
+  
+  - Backend:
+    - "Node.js"
+    - "Python"
+    - "Java"
+    - "C++"
+    - "C#"
+  
+  - Base de données:
+    - "PostgreSQL"
+    - "MySQL"
+    - "MongoDB"
+    - "MariaDB"
+    - "SQLite"
+  
+  - DevOps:
+    - "Docker"
+    - "Kubernetes"
+    - "Jenkins"
+    - "Git"
+    - "GitHub Actions"
+    - "Terraform"
+    - "Ansible"
+  
+  - Cloud:
+    - "AWS"
+    - "Azure"
+    - "GCP"
 
-
-
+# Section Études de cas
 Etude de cas:
 - Audit des pipeline CI/CD dans le cadre d'une migration de l'infrastructure cloud:
   - description: Analyse des pipelines CI/CD existants et recommandations pour améliorer la qualité et la sécurité des pipelines. Aide à la migration vers Azure.
@@ -38,3 +104,9 @@ Etude de cas:
     - MariaDB
     - Github Actions
       
+
+
+# Section CTA
+cta:
+  title: "Prêt à transformer votre infrastructure IT ?"
+  description: "Contactez-nous dès aujourd'hui pour discuter de vos besoins en consulting IT"

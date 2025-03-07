@@ -20,13 +20,60 @@ interface Technology {
   name: string;
 }
 
+// Type pour la section hero
+interface Hero {
+  title: string;
+  description: string;
+  video: string;
+}
+
+// Type pour un service
+interface Service {
+  title: string;
+  icon: string;
+  description: string;
+}
+
+// Type pour la section services
+interface Services {
+  title: string;
+  description: string;
+  items: Service[];
+}
+
+// Type pour une étape du processus
+interface ProcessStep {
+  number: number;
+  title: string;
+  description: string;
+}
+
+// Type pour la section processus
+interface DataProcess {
+  title: string;
+  steps: ProcessStep[];
+}
+
+// Type pour la section CTA
+interface CTA {
+  title: string;
+  description: string;
+}
+
 export const metadata = {
   title: "Exploitation de données avec l&apos;IA | Services IT & IA",
   description: "Services d&apos;exploitation de données avec l&apos;intelligence artificielle pour optimiser vos performances et prendre des décisions éclairées.",
 };
 
 // Fonction pour charger les données YAML
-async function loadYamlData(): Promise<{ caseStudies: CaseStudy[], technologies: Technology[] }> {
+async function loadYamlData(): Promise<{ 
+  hero: Hero,
+  services: Services,
+  dataProcess: DataProcess,
+  caseStudies: CaseStudy[], 
+  technologies: Technology[],
+  cta: CTA
+}> {
   try {
     // Chemin vers le fichier YAML
     const filePath = path.join(process.cwd(), 'src/app/(routes)/data-ia/data-ia.yaml');
@@ -45,8 +92,34 @@ async function loadYamlData(): Promise<{ caseStudies: CaseStudy[], technologies:
     }
     
     interface YamlData {
+      hero?: {
+        title: string;
+        description: string;
+        video: string;
+      };
+      services?: {
+        title: string;
+        description: string;
+        items: {
+          title: string;
+          icon: string;
+          description: string;
+        }[];
+      };
+      process?: {
+        title: string;
+        steps: {
+          number: number;
+          title: string;
+          description: string;
+        }[];
+      };
       'Etude de cas': YamlStudyEntry[];
       'Technologies'?: string[];
+      cta?: {
+        title: string;
+        description: string;
+      };
     }
     
     // Parser le contenu YAML
@@ -89,54 +162,131 @@ async function loadYamlData(): Promise<{ caseStudies: CaseStudy[], technologies:
       data.Technologies.map((tech: string) => ({ name: tech })) : 
       [];
     
-    return { caseStudies, technologies };
+    // Extraire les autres sections
+    const hero: Hero = data.hero || {
+      title: "Exploitation de données avec l'IA",
+      description: "Transformez vos données en insights stratégiques grâce à nos solutions d'intelligence artificielle sur mesure.",
+      video: "/videos/data_exploitation.mp4"
+    };
+    
+    const services: Services = data.services || {
+      title: "Nos services d'exploitation de données",
+      description: "Notre équipe d'experts en data science et en IA vous aide à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées.",
+      items: []
+    };
+    
+    const dataProcess: DataProcess = data.process || {
+      title: "Notre processus d'exploitation de données",
+      steps: []
+    };
+    
+    const cta: CTA = data.cta || {
+      title: "Prêt à valoriser vos données ?",
+      description: "Contactez-nous dès aujourd'hui pour discuter de vos besoins en exploitation de données et découvrir comment nous pouvons vous aider à tirer le meilleur parti de vos données."
+    };
+    
+    return { 
+      hero,
+      services,
+      dataProcess,
+      caseStudies, 
+      technologies,
+      cta
+    };
   } catch (error) {
     console.error('Erreur lors du chargement du fichier YAML:', error);
     
     // Retourner les données par défaut en cas d'erreur
     return { 
+      hero: {
+        title: "Exploitation de données avec l'IA",
+        description: "Transformez vos données en insights stratégiques grâce à nos solutions d'intelligence artificielle sur mesure.",
+        video: "/videos/data_exploitation.mp4"
+      },
+      services: {
+        title: "Nos services d'exploitation de données",
+        description: "Notre équipe d'experts en data science et en IA vous aide à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées.",
+        items: [
+          {
+            title: "Collecte et intégration de données",
+            icon: "faCheckCircle",
+            description: "Mise en place de systèmes de collecte et d'intégration de données provenant de sources diverses."
+          },
+          {
+            title: "Stockage optimisé et sécurisé",
+            icon: "faCheckCircle",
+            description: "Conception d'architectures de stockage performantes et sécurisées pour vos données."
+          },
+          {
+            title: "Analyse prédictive et prescriptive",
+            icon: "faCheckCircle",
+            description: "Développement de modèles d'IA pour prédire les tendances et recommander des actions."
+          },
+          {
+            title: "Tableaux de bord interactifs",
+            icon: "faCheckCircle",
+            description: "Création de visualisations interactives pour explorer et comprendre vos données."
+          }
+        ]
+      },
+      dataProcess: {
+        title: "Notre processus d'exploitation de données",
+        steps: [
+          {
+            number: 1,
+            title: "Collecte",
+            description: "Identification et collecte des données pertinentes pour votre activité"
+          },
+          {
+            number: 2,
+            title: "Traitement",
+            description: "Nettoyage, transformation et enrichissement des données brutes"
+          },
+          {
+            number: 3,
+            title: "Analyse",
+            description: "Application d'algorithmes d'IA pour extraire des insights pertinents"
+          },
+          {
+            number: 4,
+            title: "Visualisation",
+            description: "Présentation des résultats sous forme de tableaux de bord interactifs"
+          }
+        ]
+      },
       caseStudies: [
         {
           title: "Maintenance prédictive pour l'industrie",
-          description: "Développement d'un système de maintenance prédictive basé sur l'IA pour une entreprise industrielle, permettant de réduire les temps d'arrêt de 35% et les coûts de maintenance de 25%.",
-          technologies: ["IoT", "TensorFlow", "Time Series", "AWS"]
+          description: "Développement d'un système de maintenance prédictive utilisant des capteurs IoT et des algorithmes d'IA pour prédire les pannes d'équipement industriel avant qu'elles ne se produisent.",
+          technologies: ["Python", "TensorFlow", "IoT", "Azure", "Power BI"]
         },
         {
-          title: "Détection de fraude pour services financiers",
-          description: "Mise en place d'un système de détection de fraude en temps réel pour une institution financière, améliorant la détection de 60% tout en réduisant les faux positifs de 40%.",
-          technologies: ["Machine Learning", "Kafka", "Spark", "Real-time"]
-        },
-        {
-          title: "Optimisation de la chaîne logistique",
-          description: "Développement d'un système d'optimisation de la chaîne logistique basé sur l'IA pour un distributeur, réduisant les coûts de transport de 15% et les délais de livraison de 20%.",
-          technologies: ["Optimisation", "Python", "OR-Tools", "GCP"]
-        },
-        {
-          title: "Analyse de sentiment pour le service client",
-          description: "Implémentation d'un système d'analyse de sentiment pour le service client d'une entreprise de télécommunications, améliorant la satisfaction client de 25% et réduisant le temps de résolution des problèmes de 30%.",
-          technologies: ["NLP", "BERT", "Hugging Face", "Azure"]
+          title: "Optimisation de la chaîne d'approvisionnement",
+          description: "Création d'un système d'optimisation de la chaîne d'approvisionnement utilisant l'apprentissage automatique pour prévoir la demande et optimiser les niveaux de stock.",
+          technologies: ["Python", "Scikit-learn", "Tableau", "AWS", "PostgreSQL"]
         }
       ],
       technologies: [
-        { name: "LLM" },
-        { name: "Embeddings" },
-        { name: "Vector Databases" },
-        { name: "Prompt Engineering" },
-        { name: "RAG" },
-        { name: "LangChain" },
-        { name: "Hugging Face" },
-        { name: "Fine-tuning" },
-        { name: "AWS Bedrock" },
-        { name: "AWS SageMaker" },
-        { name: "AWS Datazone" }
-      ]
+        { name: "Python" },
+        { name: "TensorFlow" },
+        { name: "PyTorch" },
+        { name: "Scikit-learn" },
+        { name: "Pandas" },
+        { name: "NumPy" },
+        { name: "Tableau" },
+        { name: "Power BI" }
+      ],
+      cta: {
+        title: "Prêt à valoriser vos données ?",
+        description: "Contactez-nous dès aujourd'hui pour discuter de vos besoins en exploitation de données et découvrir comment nous pouvons vous aider à tirer le meilleur parti de vos données."
+      }
     };
   }
 }
 
 export default async function DataIA() {
   // Charger les données depuis le fichier YAML
-  const { caseStudies, technologies } = await loadYamlData();
+  const { hero, services, dataProcess, caseStudies, technologies, cta } = await loadYamlData();
   
   return (
     <>
@@ -151,7 +301,7 @@ export default async function DataIA() {
             loop 
             playsInline
           >
-            <source src="/videos/data_exploitation.mp4" type="video/mp4" />
+            <source src={hero.video} type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
           <div 
@@ -164,10 +314,9 @@ export default async function DataIA() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Exploitation de données avec l&apos;IA</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">{hero.title}</h1>
             <p className="text-xl mb-8 text-white">
-              Transformez vos données en insights stratégiques grâce à nos solutions 
-              d&apos;intelligence artificielle sur mesure.
+              {hero.description}
             </p>
           </div>
         </div>
@@ -177,60 +326,25 @@ export default async function DataIA() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div>
-            <h2 className="text-3xl font-bold mb-6 dark:text-white">Nos services d&apos;exploitation de données</h2>
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">{services.title}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Notre équipe d&apos;experts en data science et en IA vous aide à tirer le meilleur parti 
-              de vos données pour améliorer vos processus et prendre des décisions éclairées.
+              {services.description}
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
+              {services.items.map((service, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="text-[#00f65e] text-xl mr-4 mt-1">
+                    <FontAwesomeIcon icon={faCheckCircle} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">{service.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Collecte et intégration de données</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Mise en place de systèmes de collecte et d&apos;intégration de données provenant de sources diverses.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Stockage optimisé et sécurisé</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Conception d&apos;architectures de stockage performantes et sécurisées pour vos données.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse prédictive et prescriptive</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Développement de modèles d&apos;IA pour prédire les tendances et recommander des actions.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="text-[#00f65e] text-xl mr-4 mt-1">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">Tableaux de bord interactifs</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Création de visualisations interactives pour explorer et comprendre vos données.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -239,32 +353,16 @@ export default async function DataIA() {
       {/* Process Section */}
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Notre processus d&apos;exploitation de données</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{dataProcess.title}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Collecte</h3>
-              <p className="text-gray-600 dark:text-gray-400">Identification et collecte des données pertinentes pour votre activité</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Traitement</h3>
-              <p className="text-gray-600 dark:text-gray-400">Nettoyage, transformation et enrichissement des données brutes</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Analyse</h3>
-              <p className="text-gray-600 dark:text-gray-400">Application d&apos;algorithmes d&apos;IA pour extraire des insights pertinents</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">Visualisation</h3>
-              <p className="text-gray-600 dark:text-gray-400">Présentation des résultats sous forme de tableaux de bord interactifs</p>
-            </div>
+            {dataProcess.steps.map((step, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+                <div className="w-12 h-12 bg-[#00f65e] text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">{step.number}</div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -313,10 +411,9 @@ export default async function DataIA() {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 dark:text-white">Prêt à valoriser vos données ?</h2>
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">{cta.title}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-            Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins en exploitation de données 
-            et découvrir comment nous pouvons vous aider à tirer le meilleur parti de vos données.
+            {cta.description}
           </p>
           <Link href="/contact">
             <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">

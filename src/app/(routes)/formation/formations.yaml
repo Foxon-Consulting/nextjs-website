@@ -1,24 +1,31 @@
+# Section Hero
+hero:
+  title: "Formations pour les décideurs"
+  description: "Des formations techniques adaptées aux décideurs pour comprendre et exploiter le potentiel de l'IA et de l'automatisation dans votre entreprise."
+  video: "/videos/formation.mp4"
+
+# Section Formations
 formations:
   - title: "L'IA pour les décideurs"
-    icon: faLightbulb
+    icon: "faLightbulb"
     duration: "2 jours"
     description: "Une formation complète pour comprendre les fondamentaux de l'IA, ses applications concrètes en entreprise et son impact stratégique sur votre secteur d'activité."
     modules:
       - "Introduction aux concepts clés de l'IA"
       - "Applications sectorielles et études de cas"
       - "Stratégies d'intégration de l'IA"
-
+  
   - title: "Automatisation des processus"
-    icon: faRobot
+    icon: "faRobot"
     duration: "1 jour"
     description: "Découvrez les outils modernes d'automatisation et leur potentiel pour optimiser les processus métier de votre entreprise."
     modules:
       - "Panorama des technologies d'automatisation"
       - "Identification des processus automatisables"
       - "Méthodologie de mise en œuvre"
-
+  
   - title: "Data-driven decision making"
-    icon: faChartLine
+    icon: "faChartLine"
     duration: "2 jours"
     description: "Apprenez à exploiter les données pour prendre des décisions stratégiques éclairées et piloter votre entreprise avec précision."
     modules:
@@ -26,6 +33,7 @@ formations:
       - "Interprétation et visualisation des données"
       - "Mise en place d'une culture data-driven"
 
+# Section Pédagogie
 pedagogie:
   - title: "Simplification"
     description: "Nous rendons accessibles des concepts techniques complexes"
@@ -43,6 +51,7 @@ pedagogie:
     description: "Nous vous accompagnons après la formation pour la mise en pratique"
     step: 4
 
+# Section FAQ
 faq:
   - question: "Faut-il avoir des connaissances techniques préalables ?"
     reponse: "Non, nos formations sont spécifiquement conçues pour les décideurs sans bagage technique. Nous rendons accessibles des concepts complexes en utilisant un langage clair et des exemples concrets."
@@ -57,4 +66,26 @@ faq:
     reponse: "Pour garantir une expérience d'apprentissage optimale et favoriser les interactions, nous recommandons des groupes de 5 à 10 participants. Cela permet à chacun de bénéficier d'une attention personnalisée tout en profitant de la richesse des échanges."
   
   - question: "Y a-t-il un suivi après la formation ?"
-    reponse: "Oui, nous proposons un accompagnement post-formation qui comprend des sessions de questions-réponses, des ressources complémentaires et un accès à nos experts pour vous aider à mettre en pratique les connaissances acquises." 
+    reponse: "Oui, nous proposons un accompagnement post-formation qui comprend des sessions de questions-réponses, des ressources complémentaires et un accès à nos experts pour vous aider à mettre en pratique les connaissances acquises."
+
+# Section Témoignages
+testimonials:
+  - content: "La formation sur l'IA pour les décideurs a été une révélation pour notre équipe dirigeante. Nous avons enfin compris comment exploiter concrètement ces technologies dans notre stratégie."
+    author: "Thomas Dubois"
+    position: "CEO"
+    company: "Entreprise B"
+  
+  - content: "Une approche pédagogique remarquable qui a permis à notre équipe de direction, peu familière avec les concepts techniques, de saisir rapidement les enjeux et opportunités de l'automatisation."
+    author: "Marie Laurent"
+    position: "Directrice des Opérations"
+    company: "Groupe C"
+  
+  - content: "La formation a parfaitement répondu à nos attentes. Le formateur a su adapter son discours à notre secteur d'activité et nous proposer des cas pratiques pertinents."
+    author: "Jean Moreau"
+    position: "Directeur Innovation"
+    company: "Entreprise A"
+
+# Section CTA
+cta:
+  title: "Prêt à former vos équipes ?"
+  description: "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos formations peuvent transformer votre approche de l'IA et de l'automatisation."
