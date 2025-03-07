@@ -4,13 +4,140 @@ import {
   faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
+import { readFile } from 'fs/promises';
+import yaml from 'js-yaml';
+import path from 'path';
+
+// Type pour les études de cas
+interface CaseStudy {
+  title: string;
+  description: string;
+  technologies: string[];
+}
+
+// Type pour les technologies
+interface Technology {
+  name: string;
+}
 
 export const metadata = {
   title: "Exploitation de données avec l&apos;IA | Services IT & IA",
   description: "Services d&apos;exploitation de données avec l&apos;intelligence artificielle pour optimiser vos performances et prendre des décisions éclairées.",
 };
 
-export default function DataIA() {
+// Fonction pour charger les données YAML
+async function loadYamlData(): Promise<{ caseStudies: CaseStudy[], technologies: Technology[] }> {
+  try {
+    // Chemin vers le fichier YAML
+    const filePath = path.join(process.cwd(), 'src/app/(routes)/data-ia/data-ia.yaml');
+    
+    // Lire le contenu du fichier de manière asynchrone
+    const fileContents = await readFile(filePath, 'utf8');
+    
+    // Types pour la structure du YAML
+    interface YamlStudyItem {
+      description?: string;
+      technologies?: string[];
+    }
+    
+    interface YamlStudyEntry {
+      [title: string]: YamlStudyItem[];
+    }
+    
+    interface YamlData {
+      'Etude de cas': YamlStudyEntry[];
+      'Technologies'?: string[];
+    }
+    
+    // Parser le contenu YAML
+    const data = yaml.load(fileContents) as unknown as YamlData;
+    
+    // Vérifier la structure du fichier YAML
+    if (!data || !data['Etude de cas'] || !Array.isArray(data['Etude de cas'])) {
+      console.error('Structure du fichier YAML incorrecte');
+      throw new Error('Structure du fichier YAML incorrecte');
+    }
+    
+    // Transformer les études de cas au format attendu
+    const caseStudies: CaseStudy[] = data['Etude de cas'].map((studyEntry: YamlStudyEntry) => {
+      // Chaque entrée est un objet avec un seul clé qui est le titre
+      const title = Object.keys(studyEntry)[0];
+      const studyData = studyEntry[title];
+      
+      // Extraire la description et les technologies
+      let description = '';
+      let technologies: string[] = [];
+      
+      // Parcourir les propriétés de l'étude de cas
+      studyData.forEach((item: YamlStudyItem) => {
+        if (item.description) {
+          description = item.description;
+        } else if (item.technologies) {
+          technologies = item.technologies;
+        }
+      });
+      
+      return {
+        title,
+        description,
+        technologies
+      };
+    });
+    
+    // Transformer les technologies au format attendu
+    const technologies: Technology[] = data.Technologies ? 
+      data.Technologies.map((tech: string) => ({ name: tech })) : 
+      [];
+    
+    return { caseStudies, technologies };
+  } catch (error) {
+    console.error('Erreur lors du chargement du fichier YAML:', error);
+    
+    // Retourner les données par défaut en cas d'erreur
+    return { 
+      caseStudies: [
+        {
+          title: "Maintenance prédictive pour l'industrie",
+          description: "Développement d'un système de maintenance prédictive basé sur l'IA pour une entreprise industrielle, permettant de réduire les temps d'arrêt de 35% et les coûts de maintenance de 25%.",
+          technologies: ["IoT", "TensorFlow", "Time Series", "AWS"]
+        },
+        {
+          title: "Détection de fraude pour services financiers",
+          description: "Mise en place d'un système de détection de fraude en temps réel pour une institution financière, améliorant la détection de 60% tout en réduisant les faux positifs de 40%.",
+          technologies: ["Machine Learning", "Kafka", "Spark", "Real-time"]
+        },
+        {
+          title: "Optimisation de la chaîne logistique",
+          description: "Développement d'un système d'optimisation de la chaîne logistique basé sur l'IA pour un distributeur, réduisant les coûts de transport de 15% et les délais de livraison de 20%.",
+          technologies: ["Optimisation", "Python", "OR-Tools", "GCP"]
+        },
+        {
+          title: "Analyse de sentiment pour le service client",
+          description: "Implémentation d'un système d'analyse de sentiment pour le service client d'une entreprise de télécommunications, améliorant la satisfaction client de 25% et réduisant le temps de résolution des problèmes de 30%.",
+          technologies: ["NLP", "BERT", "Hugging Face", "Azure"]
+        }
+      ],
+      technologies: [
+        { name: "LLM" },
+        { name: "Embeddings" },
+        { name: "Vector Databases" },
+        { name: "Prompt Engineering" },
+        { name: "RAG" },
+        { name: "LangChain" },
+        { name: "Hugging Face" },
+        { name: "Fine-tuning" },
+        { name: "AWS Bedrock" },
+        { name: "AWS SageMaker" },
+        { name: "AWS Datazone" }
+      ]
+    };
+  }
+}
+
+export default async function DataIA() {
+  // Charger les données depuis le fichier YAML
+  const { caseStudies, technologies } = await loadYamlData();
+  
   return (
     <>
       {/* Hero Section with Video Background */}
@@ -147,94 +274,17 @@ export default function DataIA() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Technologies utilisées</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* LLM */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">LLM</span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
+                <div className="mb-4 flex items-center justify-center">
+                  <span className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">
+                    {tech.name.substring(0, 2)}
+                  </span>
+                </div>
+                <h3 className="font-bold dark:text-white">{tech.name}</h3>
               </div>
-              <h3 className="font-bold dark:text-white">Large Language Models</h3>
-            </div>
-
-            {/* Embeddings */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">EMB</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Embeddings</h3>
-            </div>
-
-            {/* Vector Databases */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">VDB</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Vector Databases</h3>
-            </div>
-
-            {/* Prompt Engineering */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">PE</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Prompt Engineering</h3>
-            </div>
-
-            {/* RAG */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">RAG</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Retrieval Augmented Generation</h3>
-            </div>
-
-            {/* LangChain */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">LC</span>
-              </div>
-              <h3 className="font-bold dark:text-white">LangChain</h3>
-            </div>
-
-            {/* Hugging Face */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 text-3xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">🤗</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Hugging Face</h3>
-            </div>
-
-            {/* Fine-tuning */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">FT</span>
-              </div>
-              <h3 className="font-bold dark:text-white">Fine-tuning</h3>
-            </div>
-
-            {/* AWS Bedrock */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">AWS</span>
-              </div>
-              <h3 className="font-bold dark:text-white">AWS Bedrock</h3>
-            </div>
-
-            {/* AWS SageMaker */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">SM</span>
-              </div>
-              <h3 className="font-bold dark:text-white">AWS SageMaker</h3>
-            </div>
-
-            {/* AWS Datazone */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-              <div className="mb-4 flex items-center justify-center">
-                <span className="bg-sky-100 dark:bg-sky-900 text-sky-600 dark:text-sky-300 text-2xl font-bold p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-inner">DZ</span>
-              </div>
-              <h3 className="font-bold dark:text-white">AWS Datazone</h3>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -245,61 +295,17 @@ export default function DataIA() {
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Études de cas</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Maintenance prédictive pour l&apos;industrie</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Développement d&apos;un système de maintenance prédictive basé sur l&apos;IA pour une entreprise industrielle, 
-                permettant de réduire les temps d&apos;arrêt de 35% et les coûts de maintenance de 25%.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">IoT</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">TensorFlow</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Time Series</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">AWS</span>
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 dark:text-white">{study.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{study.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {study.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">{tech}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Détection de fraude pour services financiers</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Mise en place d&apos;un système de détection de fraude en temps réel pour une institution financière, 
-                améliorant la détection de 60% tout en réduisant les faux positifs de 40%.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Machine Learning</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Kafka</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Spark</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Real-time</span>
-              </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Optimisation de la chaîne logistique</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Développement d&apos;un système d&apos;optimisation de la chaîne logistique basé sur l&apos;IA pour un distributeur, 
-                réduisant les coûts de transport de 15% et les délais de livraison de 20%.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Optimisation</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Python</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">OR-Tools</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">GCP</span>
-              </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Analyse de sentiment pour le service client</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Implémentation d&apos;un système d&apos;analyse de sentiment pour le service client d&apos;une entreprise de télécommunications, 
-                améliorant la satisfaction client de 25% et réduisant le temps de résolution des problèmes de 30%.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">NLP</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">BERT</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Hugging Face</span>
-                <span className="bg-gray-200 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">Azure</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

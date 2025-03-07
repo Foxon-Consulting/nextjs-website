@@ -13,12 +13,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CountUp } from "@/components/ui/CountUp";
+import { getContactInfo } from "@/lib/contact";
 
-export default function Home() {
+export default async function Home() {
+  const contactInfo = await getContactInfo();
+  
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 hero-pattern text-white">
+      <section className="relative py-20 hero-pattern text-white overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/videos/landing_page.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay avec gradient linéaire */}
+          <div 
+            className="absolute inset-0 z-0" 
+            style={{ 
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
+            }}
+          ></div>
+        </div>
+        
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -39,53 +62,11 @@ export default function Home() {
                   Nos services
                 </Button>
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Figures Section */}
-      <section id="key-figures" className="py-16 bg-gray-100 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
-                <FontAwesomeIcon icon={faProjectDiagram} />
-              </div>
-              <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={150} duration={2.5} />+
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Projets réalisés</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
-                <FontAwesomeIcon icon={faUsers} />
-              </div>
-              <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={50} duration={2.5} />+
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Clients satisfaits</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
-                <FontAwesomeIcon icon={faCodeBranch} />
-              </div>
-              <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={15} duration={2.5} />+
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Technologies maîtrisées</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
-              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
-                <FontAwesomeIcon icon={faAward} />
-              </div>
-              <div className="text-3xl font-bold mb-2 dark:text-white">
-                <CountUp end={8} duration={2.5} />+
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Années d&apos;expérience</p>
+              <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
+                <Button className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg">
+                  {contactInfo.booking.text}
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -198,6 +179,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Key Figures Section */}
+      <section id="key-figures" className="py-16 bg-gray-100 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faProjectDiagram} />
+              </div>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={100} duration={2.5} />+
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Projets réalisés</p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faUsers} />
+              </div>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={30} duration={2.5} />+
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Clients satisfaits</p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faCodeBranch} />
+              </div>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={15} duration={2.5} />+
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Technologies maîtrisées</p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
+              <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
+                <FontAwesomeIcon icon={faAward} />
+              </div>
+              <div className="text-3xl font-bold mb-2 dark:text-white">
+                <CountUp end={12} duration={2.5} />+
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Années d&apos;expérience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
@@ -257,7 +285,7 @@ export default function Home() {
                       pour offrir des solutions innovantes à nos clients.
                     </p>
                   </div>
-          </li>
+                </li>
               </ul>
             </div>
           </div>
@@ -414,12 +442,19 @@ export default function Home() {
             Contactez-nous dès aujourd&apos;hui pour discuter de vos besoins et découvrir 
             comment nous pouvons vous aider à atteindre vos objectifs.
           </p>
-          <Link href="/contact">
-            <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-              Contactez-nous
-            </Button>
-          </Link>
-    </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
+                Contactez-nous
+              </Button>
+            </Link>
+            <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg">
+                {contactInfo.booking.text}
+              </Button>
+            </a>
+          </div>
+        </div>
       </section>
     </>
   );
