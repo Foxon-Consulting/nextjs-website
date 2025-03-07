@@ -56,7 +56,7 @@ export default async function Home() {
                 </Button>
               </Link>
               <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg">
+                <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
                   {contactInfo.booking.text}
                 </Button>
               </a>
@@ -240,7 +240,7 @@ export default async function Home() {
               </Button>
             </Link>
             <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg">
+              <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
                 {contactInfo.booking.text}
               </Button>
             </a>

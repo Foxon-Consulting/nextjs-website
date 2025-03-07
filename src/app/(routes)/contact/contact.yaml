@@ -27,3 +27,12 @@ social_media:
 booking:
   url: "https://book.morgen.so/foxonconsulting/meeting"
   text: "Prendre rendez-vous" 
+
+# Configuration SMTP (informations non sensibles)
+email_smtp:
+  host: "mail.infomaniak.com"
+  port: 587
+  secure: false
+  from_email: "contact@foxonconsulting.com"
+  from_name: "Formulaire de Contact FOXON"
+  to_email: "mehdi.halitim@foxonconsulting.com" 

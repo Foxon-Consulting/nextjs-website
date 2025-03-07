@@ -27,6 +27,14 @@ export interface ContactInfo {
     url: string;
     text: string;
   };
+  email_smtp?: {
+    host: string;
+    port: number;
+    secure: boolean;
+    from_email: string;
+    from_name: string;
+    to_email: string;
+  };
 }
 
 export async function getContactInfo(): Promise<ContactInfo> {
