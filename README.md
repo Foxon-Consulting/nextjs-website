@@ -129,16 +129,23 @@ prefixlist = ["www", "app"]
 | `basic_auth_password` | Mot de passe pour l'authentification basique (environnements non-production) |
 | `prefixlist` | Liste des préfixes de sous-domaines à rediriger vers le domaine principal |
 
-### Activation du déploiement continu
+### Premier déploiement
 
-Après avoir appliqué la configuration Terraform, vous devez lancer les jobs des branches correspondantes dans l'interface AWS Amplify pour que l'application soit complètement déployée.
+1. **Configuration initiale sur AWS Amplify** :
+   - Accédez à la console AWS Amplify
+   - Configurez les variables d'environnement nécessaires :
+     * `USER_EMAIL` : adresse email pour les notifications
+     * `USER_PASSWORD` : mot de passe pour l'accès sécurisé
 
-1. Accéder à la console AWS Amplify
-2. Sélectionner l'application créée
-3. Dans l'onglet "Branches", déclencher le build pour la branche principale (main)
-4. Attendre que le déploiement soit terminé
+2. **Déclenchement du processus de déploiement** :
+   - Lancez un job de déploiement initial via la console AWS Amplify
+   - Vérifiez que le build et le déploiement se terminent avec succès
 
-Une fois le déploiement terminé, le site sera accessible à l'adresse configurée dans les variables Terraform.
+3. **Déploiement continu** :
+   - Le système est configuré pour le déploiement automatique :
+     * Chaque commit sur la branche `uat` déclenche automatiquement un déploiement dans l'environnement UAT
+     * Chaque commit sur la branche `main` (ou votre branche de production configurée) déclenche automatiquement un déploiement en production
+   - Vous pouvez suivre l'état des déploiements directement depuis la console AWS Amplify
 
 ## Personnalisation
 
