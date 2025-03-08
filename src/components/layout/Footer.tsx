@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter, faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { getContactInfo } from "@/lib/contact";
 
 export async function Footer() {
@@ -10,7 +10,7 @@ export async function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Image 
               src="/images/logo/new/GREEN-BLACK-C.png" 
@@ -31,7 +31,7 @@ export async function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link href={contactInfo.social_media.twitter} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
-                <FontAwesomeIcon icon={faTwitter} className="h-5 w-5" />
+                <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5" />
               </Link>
               <Link href={contactInfo.social_media.linkedin} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
@@ -58,32 +58,6 @@ export async function Footer() {
               <li>
                 <Link href="/formation" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                   Formations
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-bold text-lg mb-4 dark:text-white">Liens utiles</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
-                  Accueil
-                </Link>
-              </li>
-              <li>
-                <Link href="/#approach" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
-                  Notre approche
-                </Link>
-              </li>
-              <li>
-                <Link href="/#testimonials" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
-                  Témoignages
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
-                  FAQ
                 </Link>
               </li>
             </ul>
