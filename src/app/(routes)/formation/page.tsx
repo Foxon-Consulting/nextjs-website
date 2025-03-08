@@ -4,7 +4,8 @@ import {
   faLightbulb, 
   faRobot, 
   faCheckCircle,
-  faChartLine
+  faChartLine,
+  faLink
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -131,6 +132,8 @@ function getIconComponent(iconName: string) {
       return faRobot;
     case 'faChartLine':
       return faChartLine;
+    case 'faLink':
+      return faLink;
     default:
       return faLightbulb;
   }
@@ -282,14 +285,14 @@ export default async function Formation() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-[#00f65e]">
+        <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">{cta.title}</h2>
-            <p className="text-xl mb-8 text-gray-800 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">{cta.title}</h2>
+            <p className="text-xl font-semibold text-center mb-6 text-gray-600 dark:text-gray-400">
               {cta.description}
             </p>
             <Link href="/contact">
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-lg">
+              <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
                 Demander un devis
               </Button>
             </Link>

@@ -78,23 +78,6 @@ about:
       icon: "faCodeBranch"
       description: "Nous explorons constamment de nouvelles technologies et approches pour offrir des solutions innovantes à nos clients."
 
-# Section Témoignages
-testimonials:
-  - content: "L'équipe a su comprendre nos besoins et nous proposer une solution parfaitement adaptée à notre problématique. Leur expertise en IA nous a permis d'optimiser considérablement nos processus."
-    author: "Sophie Martin"
-    position: "Directrice Innovation"
-    company: "Entreprise A"
-  
-  - content: "La formation sur l'IA pour les décideurs a été une révélation pour notre équipe dirigeante. Nous avons enfin compris comment exploiter concrètement ces technologies dans notre stratégie."
-    author: "Thomas Dubois"
-    position: "CEO"
-    company: "Entreprise B"
-  
-  - content: "Le système d'analyse prédictive développé par l'équipe nous a permis de réduire nos coûts de maintenance de 30% et d'améliorer la disponibilité de nos équipements."
-    author: "Julie Leroy"
-    position: "Directrice Technique"
-    company: "Entreprise C"
-
 # Section FAQ
 faq:
   - question: "Comment démarrer une collaboration avec vous ?"
