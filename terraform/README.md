@@ -14,8 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_amplify_app"></a> [amplify\_app](#module\_amplify\_app) | ./_modules/amplify | n/a |
-| <a name="module_route53"></a> [route53](#module\_route53) | ./_modules/route53 | n/a |
+| <a name="module_amplify_app"></a> [amplify\_app](#module\_amplify\_app) | ./_modules/frontend | n/a |
 
 ## Resources
 

@@ -166,39 +166,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">Témoignages</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Ce que nos clients disent de nous
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {landingData.testimonials.map((testimonial, index) => (
-              <Card key={index} className="dark:bg-gray-800 dark:border-gray-700">
-                <CardContent className="pt-6">
-                  <div className="flex items-center mb-4">
-                    <div className="text-[#00f65e]">
-                      <span className="text-2xl">★★★★★</span>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6">
-                    &quot;{testimonial.content}&quot;
-                  </p>
-                  <div>
-                    <p className="font-bold dark:text-white">{testimonial.author}</p>
-                    <p className="text-gray-600 dark:text-gray-400">{testimonial.position}, {testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">

@@ -9,7 +9,8 @@ import {
   faCheckCircle,
   faLightbulb,
   faRobot,
-  faChartLine
+  faChartLine,
+  faLink
 } from "@fortawesome/free-solid-svg-icons";
 
 /**
@@ -41,6 +42,8 @@ export function getIconByName(iconName: string) {
       return faRobot;
     case 'faChartLine':
       return faChartLine;
+    case 'faLink':
+      return faLink;
     default:
       return faCheckCircle; // Icône par défaut
   }
