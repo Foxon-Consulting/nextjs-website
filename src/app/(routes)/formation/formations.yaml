@@ -70,20 +70,20 @@ faq:
 
 # Section Témoignages
 testimonials:
-  - content: "Nous recherchions un véritable accompagnement technique pour optimiser nos processus et renforcer notre infrastructure IT. Grâce à l'expertise apportée, nous avons pu structurer nos projets d'infrastructure de manière plus efficace, en mettant en place des solutions DevOps adaptées à nos enjeux. Cet accompagnement nous a permis d'automatiser plusieurs processus clés, d'améliorer la fiabilité de nos systèmes et d'optimiser nos ressources IT. Cela a été un levier majeur pour garantir une performance optimale et répondre aux exigences de notre entreprise."
-    author: "Fabien Jallot"
-    position: "Directeur Technique"
-    company: "Deloitte"
+  # - content: "Nous recherchions un véritable accompagnement technique pour optimiser nos processus et renforcer notre infrastructure IT. Grâce à l'expertise apportée, nous avons pu structurer nos projets d'infrastructure de manière plus efficace, en mettant en place des solutions DevOps adaptées à nos enjeux. Cet accompagnement nous a permis d'automatiser plusieurs processus clés, d'améliorer la fiabilité de nos systèmes et d'optimiser nos ressources IT. Cela a été un levier majeur pour garantir une performance optimale et répondre aux exigences de notre entreprise."
+  #   author: "Fabien Jallot"
+  #   position: "Directeur Technique"
+  #   company: "Deloitte"
   
-  - content: ""
-    author: "Jean-François Metzger"
-    position: "Cloud Transformation Program Manager"
-    company: "Société Générale"
+  # - content: ""
+  #   author: "Jean-François Metzger"
+  #   position: "Cloud Transformation Program Manager"
+  #   company: "Société Générale"
 
-  - content: "Dans notre secteur, la gestion d'événements à grande échelle dépend d'une infrastructure IT redondante et d'une approche DevOps efficace pour garantir la performance et la disponibilité de nos services. La formation nous a permis de comprendre comment intégrer ces pratiques dans notre organisation pour améliorer la gestion de notre infrastructure, automatiser les processus et assurer une continuité optimale des services. Grâce à cette approche, nous avons renforcé notre capacité à réagir rapidement aux besoins de nos événements et à optimiser nos ressources IT de manière flexible et sécurisée."
+  - content: "Pour gérer des événements à grande échelle, nous avons renforcé notre infrastructure IT avec une approche DevOps. L'accompagnement technique nous a permis d'optimiser la gestion des ressources, d'automatiser les processus et d'assurer la continuité des services, tout en réduisant les risques et en améliorant la réactivité."
     author: "Julien Cugniez"
     position: "CEO"
-    company: "Director, Indigomaze"
+    company: "Director Indigomaze"
   
   - content: "Grâce à la formation dispensée par FOXON CONSULTING, j’ai pu mieux comprendre et exploiter l’IA dans mon métier SI/finance. Les outils et méthodes enseignés m’ont permis d’automatiser des tâches, d’optimiser mes analyses et d’améliorer ma productivité. Une formation claire, concrète et essentielle pour gagner en efficacité !"
     author: "Pierre Croissant"
