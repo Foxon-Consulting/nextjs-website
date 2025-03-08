@@ -1,0 +1,3 @@
+bucket = "foxon-consulting-tf-states-npe"
+key = "nextjs-website/dev/terraform.tfstate"
+region = "eu-west-1"

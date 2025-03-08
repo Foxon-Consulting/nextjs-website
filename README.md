@@ -63,14 +63,89 @@ npm run dev
 
 ## Déploiement
 
-Ce site peut être déployé sur n'importe quelle plateforme supportant Next.js, comme Vercel, Netlify ou AWS Amplify.
+Le déploiement de ce site est géré par Terraform qui configure AWS Amplify et Route53 pour l'hébergement et le domaine.
 
-### Déploiement sur Vercel
+### Déploiement avec Terraform
 
-1. Créer un compte sur [Vercel](https://vercel.com/)
-2. Importer le projet depuis GitHub
-3. Configurer les variables d'environnement si nécessaire
-4. Déployer
+1. Accéder au répertoire terraform :
+```bash
+cd terraform
+```
+
+2. Initialiser Terraform :
+```bash
+make init
+```
+
+3. Planifier les modifications :
+```bash
+make plan
+```
+
+4. Appliquer les modifications :
+```bash
+make apply
+```
+
+La configuration Terraform crée :
+- Une application AWS Amplify connectée au dépôt GitHub
+- La configuration des domaines dans Route53
+- Les règles de redirection nécessaires
+
+### Variables de déploiement requises
+
+Pour déployer l'infrastructure, vous devez configurer les variables suivantes dans le fichier `terraform/amplify.tfvars` :
+
+```
+# Informations générales
+client          = "nom-du-client"
+environment     = "production"
+app_name        = "nom-application"
+domain_name     = "exemple.com"
+
+# Configuration du dépôt
+repository_url  = "https://github.com/organisation/repo"
+access_token    = "github-personal-access-token"
+prd_branch_name = "main"
+
+# Sécurité (pour environnement UAT)
+basic_auth_username = "utilisateur"
+basic_auth_password = "mot-de-passe"
+
+# Optionnel - Liste des préfixes pour les sous-domaines à rediriger vers le domaine principal
+prefixlist = ["www", "app"]
+```
+
+| Variable | Description |
+|----------|-------------|
+| `client` | Nom du client ou de l'organisation |
+| `environment` | Environnement de déploiement (production, staging, etc.) |
+| `app_name` | Nom de l'application Amplify |
+| `domain_name` | Nom de domaine principal |
+| `repository_url` | URL du dépôt GitHub (sans .git) |
+| `access_token` | Token d'accès GitHub pour Amplify |
+| `prd_branch_name` | Nom de la branche de production |
+| `basic_auth_username` | Nom d'utilisateur pour l'authentification basique (environnements non-production) |
+| `basic_auth_password` | Mot de passe pour l'authentification basique (environnements non-production) |
+| `prefixlist` | Liste des préfixes de sous-domaines à rediriger vers le domaine principal |
+
+### Premier déploiement
+
+1. **Configuration initiale sur AWS Amplify** :
+   - Accédez à la console AWS Amplify
+   - Configurez les variables d'environnement nécessaires :
+     * `USER_EMAIL` : adresse email pour les notifications
+     * `USER_PASSWORD` : mot de passe pour l'accès sécurisé
+
+2. **Déclenchement du processus de déploiement** :
+   - Lancez un job de déploiement initial via la console AWS Amplify
+   - Vérifiez que le build et le déploiement se terminent avec succès
+
+3. **Déploiement continu** :
+   - Le système est configuré pour le déploiement automatique :
+     * Chaque commit sur la branche `uat` déclenche automatiquement un déploiement dans l'environnement UAT
+     * Chaque commit sur la branche `main` (ou votre branche de production configurée) déclenche automatiquement un déploiement en production
+   - Vous pouvez suivre l'état des déploiements directement depuis la console AWS Amplify
 
 ## Personnalisation
 
@@ -87,6 +162,6 @@ Les couleurs principales du site sont définies dans le fichier `tailwind.config
 
 Le site utilise la police Poppins, importée depuis Google Fonts dans le fichier `layout.tsx`.
 
-## Licence
+## Licence et Copyright
 
-Ce projet est sous licence [MIT](LICENSE).
+Ce projet est la propriété exclusive de FOXON CONSULTING FR. Tous droits réservés.
