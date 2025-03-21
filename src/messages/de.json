@@ -1,0 +1,448 @@
+{
+  "common": {
+    "contact_us": "Kontaktieren Sie uns",
+    "learn_more": "Mehr erfahren",
+    "request_quote": "Angebot anfordern",
+    "language": {
+      "select": "Sprache auswählen",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "IT & KI Exzellenz für Unternehmen",
+      "description": "Wir unterstützen Ihre digitale Transformation mit IT-Beratung, KI-gestützter Datennutzung und Schulungen für Entscheidungsträger.",
+      "services_button": "Unsere Dienstleistungen",
+      "booking": {
+        "text": "Termin vereinbaren",
+        "url": "https://calendly.com/your-company"
+      }
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "description": "Maßgeschneiderte Lösungen für Ihre technologischen und innovativen Anforderungen",
+      "consulting": {
+        "icon": "server",
+        "title": "IT-Beratung",
+        "description": "Technische Expertise und strategische Unterstützung",
+        "details": "Unser Expertenteam begleitet Sie bei allen IT-Projekten, von der Entwicklung bis zur Produktion, einschließlich Audit und Infrastrukturoptimierung.",
+        "features": {
+          "feature1": "Individuelle Softwareentwicklung",
+          "feature2": "Software-Chain-Management",
+          "feature3": "Technisches Audit und Verbesserung",
+          "feature4": "Infrastruktur-Deployment"
+        },
+        "link": "/consulting-it"
+      },
+      "data": {
+        "icon": "database",
+        "title": "Datennutzung mit KI",
+        "description": "Nutzen Sie Ihre Daten durch künstliche Intelligenz",
+        "details": "Wir helfen Ihnen, das Beste aus Ihren Daten herauszuholen, um Ihre Prozesse zu verbessern und fundierte Entscheidungen mit künstlicher Intelligenz zu treffen.",
+        "features": {
+          "feature1": "Datenerfassung und -integration",
+          "feature2": "Optimierte Speicherung",
+          "feature3": "Prädiktive Analyse",
+          "feature4": "Interaktive Dashboards"
+        },
+        "link": "/data-ia"
+      },
+      "training": {
+        "icon": "graduation-cap",
+        "title": "Schulung",
+        "description": "Technische Schulung für Entscheidungsträger",
+        "details": "Unsere Schulungsprogramme sind speziell für Entscheidungsträger konzipiert, die die Herausforderungen und Chancen moderner Technologien verstehen möchten.",
+        "features": {
+          "feature1": "KI für Entscheidungsträger",
+          "feature2": "Prozessautomatisierung",
+          "feature3": "Digitale Transformation",
+          "feature4": "Datenbasierte Entscheidungsfindung"
+        },
+        "link": "/training"
+      }
+    },
+    "key_figures": {
+      "clients": {
+        "icon": "users",
+        "value": "30",
+        "label": "Zufriedene Kunden"
+      },
+      "projects": {
+        "icon": "project-diagram",
+        "value": "100",
+        "label": "Abgeschlossene Projekte"
+      },
+      "experience": {
+        "icon": "code-branch",
+        "value": "15",
+        "label": "Beherrschte Technologien"
+      },
+      "satisfaction": {
+        "icon": "award",
+        "value": "12",
+        "label": "Jahre Erfahrung"
+      }
+    },
+    "about": {
+      "title": "Über uns",
+      "description": "Unser Unternehmen ist spezialisiert auf IT- und KI-Dienstleistungen, mit besonderer Expertise in der Entwicklung maßgeschneiderter Lösungen, Datennutzung und Schulung von Entscheidungsträgern.",
+      "values_title": "Unsere Werte",
+      "paragraphs": {
+        "p1": "Wir zeichnen uns durch unseren pragmatischen Ansatz und unsere Fähigkeit aus, komplexe technische Konzepte in konkrete und zugängliche Lösungen zu übersetzen.",
+        "p2": "Unsere Mission ist es, Sie bei Ihrer digitalen Transformation zu begleiten, indem wir Ihnen die Werkzeuge, das Wissen und die Expertise zur Verfügung stellen, die Sie für den Erfolg in einer sich ständig weiterentwickelnden Welt benötigen."
+      },
+      "values": {
+        "excellence": {
+          "icon": "award",
+          "title": "Exzellenz",
+          "description": "Wir streben in jedem Projekt nach Exzellenz, wenden Best Practices an und bleiben an der Spitze der Innovation."
+        },
+        "collaboration": {
+          "icon": "users",
+          "title": "Zusammenarbeit",
+          "description": "Wir glauben an die Kraft der Zusammenarbeit und arbeiten eng mit unseren Kunden zusammen, um ihre Ziele zu erreichen."
+        },
+        "innovation": {
+          "icon": "code-branch",
+          "title": "Innovation",
+          "description": "Wir erforschen ständig neue Technologien und Ansätze, um unseren Kunden innovative Lösungen anzubieten."
+        }
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "description": "Alles, was Sie über unsere Dienstleistungen wissen müssen",
+      "q1": {
+        "question": "Wie beginnen wir die Zusammenarbeit?",
+        "reponse": "Der erste Schritt ist ein Erstkontakt für ein initiales Gespräch, bei dem wir Ihre Bedürfnisse und Ziele besprechen. Anschließend schlagen wir einen personalisierten Ansatz und ein detailliertes Angebot vor."
+      },
+      "q2": {
+        "question": "Mit welchen Unternehmenstypen arbeiten Sie?",
+        "reponse": "Wir arbeiten mit Unternehmen aller Größen, von Startups bis hin zu Großunternehmen, in verschiedenen Branchen. Unser Ansatz wird an die spezifischen Bedürfnisse jedes Kunden angepasst."
+      },
+      "q3": {
+        "question": "Wie viel kosten Ihre Dienstleistungen?",
+        "reponse": "Unsere Tarife variieren je nach Art und Umfang des Projekts. Wir bieten Lösungen für verschiedene Budgets an und arbeiten mit vollständiger Kostentransparenz."
+      },
+      "q4": {
+        "question": "Wie gehen Sie mit Vertraulichkeit um?",
+        "reponse": "Vertraulichkeit hat für uns oberste Priorität. Alle unsere Verträge enthalten strenge Vertraulichkeitsklauseln, und wir implementieren robuste Sicherheitsmaßnahmen zum Schutz Ihrer Daten."
+      },
+      "q5": {
+        "question": "Bieten Sie Support nach Projektabschluss an?",
+        "reponse": "Absolut! Wir bieten Wartungs- und Supportservices an, um die Langlebigkeit und Weiterentwicklung Ihrer Lösungen sicherzustellen. Wir bleiben langfristig für Sie verfügbar."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Unternehmen zu transformieren?",
+      "description": "Kontaktieren Sie uns noch heute, um Ihre Bedürfnisse zu besprechen und zu entdecken, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.",
+      "booking": {
+        "text": "Termin vereinbaren",
+        "url": "https://calendly.com/your-company"
+      }
+    }
+  },
+  "consulting_page": {
+    "hero": {
+      "title": "IT-Beratung",
+      "description": "Technische Expertise und Unterstützung für Ihre IT-Projekte. Wir helfen Ihnen bei der Entwicklung, Verwaltung und Optimierung Ihrer Softwarelösungen."
+    },
+    "services": {
+      "title": "Unsere IT-Beratungsleistungen",
+      "description": "Unser Expertenteam begleitet Sie bei allen IT-Projekten, von der Entwicklung bis zur Produktion, einschließlich Audit und Infrastrukturoptimierung.",
+      "items": [
+        {
+          "title": "Individuelle Softwareentwicklung",
+          "description": "Design und Entwicklung maßgeschneiderter Softwarelösungen, angepasst an Ihre spezifischen Bedürfnisse."
+        },
+        {
+          "title": "Software-Chain-Management",
+          "description": "Implementierung und Optimierung Ihrer Entwicklungskette, von der Idee bis zur Produktion."
+        },
+        {
+          "title": "Technisches Audit und Verbesserung",
+          "description": "Analyse Ihrer bestehenden Systeme und Empfehlungen zur Verbesserung von Leistung und Sicherheit."
+        },
+        {
+          "title": "Infrastruktur-Deployment",
+          "description": "Design und Implementierung sicherer, skalierbarer und leistungsstarker Cloud-Infrastrukturen."
+        }
+      ]
+    },
+    "process": {
+      "title": "Unser Prozess",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Bedarfsanalyse",
+          "description": "Tiefgehendes Verständnis Ihrer Ziele und Einschränkungen"
+        },
+        {
+          "number": 2,
+          "title": "Lösungsdesign",
+          "description": "Entwicklung einer maßgeschneiderten Architektur und Strategie"
+        },
+        {
+          "number": 3,
+          "title": "Entwicklung & Tests",
+          "description": "Agile Implementierung mit regelmäßigen Feedback-Zyklen"
+        },
+        {
+          "number": 4,
+          "title": "Deployment & Support",
+          "description": "Produktivsetzung und kontinuierliche Unterstützung"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Eingesetzte Technologien",
+      "categories": {
+        "development": "Entwicklung",
+        "devops": "DevOps",
+        "cloud": "Cloud"
+      }
+    },
+    "case_studies": {
+      "title": "Fallstudien",
+      "items": [
+        {
+          "title": "CI/CD-Pipeline-Audit für Cloud-Infrastruktur-Migration",
+          "description": "Analyse bestehender CI/CD-Pipelines und Empfehlungen zur Verbesserung der Pipeline-Qualität und -Sicherheit. Unterstützung bei der Azure-Migration.",
+          "technologies": ["Jenkins", "GitHub Actions", "Azure", "Kubernetes"]
+        },
+        {
+          "title": "ERP-Lösung-Deployment auf AWS",
+          "description": "Deployment einer ERP-Lösung auf AWS mit hochverfügbarer und skalierbarer Architektur.",
+          "technologies": ["AWS", "Terraform", "MariaDB", "Github Actions"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre IT-Infrastruktur zu transformieren?",
+      "description": "Kontaktieren Sie uns noch heute, um Ihre IT-Beratungsbedürfnisse zu besprechen"
+    }
+  },
+  "data_ia_page": {
+    "hero": {
+      "title": "Datennutzung mit KI",
+      "description": "Transformieren Sie Ihre Daten in strategische Erkenntnisse mit unseren maßgeschneiderten KI-Lösungen."
+    },
+    "services": {
+      "title": "Unsere Datenservices",
+      "description": "Unser Team von Data Science- und KI-Experten hilft Ihnen, das Beste aus Ihren Daten herauszuholen, um Ihre Prozesse zu verbessern und fundierte Entscheidungen zu treffen.",
+      "items": [
+        {
+          "title": "Datenerfassung und -integration",
+          "description": "Implementierung von Systemen zur Erfassung und Integration von Daten aus verschiedenen Quellen."
+        },
+        {
+          "title": "Optimierte und sichere Speicherung",
+          "description": "Design von leistungsstarken und sicheren Speicherarchitekturen für Ihre Daten."
+        },
+        {
+          "title": "Prädiktive und präskriptive Analyse",
+          "description": "Entwicklung von KI-Modellen zur Vorhersage von Trends und Handlungsempfehlungen."
+        },
+        {
+          "title": "Interaktive Dashboards",
+          "description": "Erstellung interaktiver Visualisierungen zur Exploration und zum Verständnis Ihrer Daten."
+        }
+      ]
+    },
+    "process": {
+      "title": "Unser Datenprozess",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Erfassung",
+          "description": "Identifizierung und Sammlung relevanter Daten für Ihr Geschäft"
+        },
+        {
+          "number": 2,
+          "title": "Verarbeitung",
+          "description": "Bereinigung, Transformation und Anreicherung von Rohdaten"
+        },
+        {
+          "number": 3,
+          "title": "Analyse",
+          "description": "Anwendung von KI-Algorithmen zur Extraktion relevanter Erkenntnisse"
+        },
+        {
+          "number": 4,
+          "title": "Visualisierung",
+          "description": "Präsentation der Ergebnisse in Form von interaktiven Dashboards"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Eingesetzte Technologien"
+    },
+    "case_studies": {
+      "title": "Fallstudien",
+      "items": [
+        {
+          "title": "Prädiktive Wartung für die Industrie",
+          "description": "Entwicklung eines prädiktiven Wartungssystems unter Verwendung von IoT-Sensoren und KI-Algorithmen zur Vorhersage von Geräteausfällen, bevor sie auftreten.",
+          "technologies": ["Python", "TensorFlow", "IoT", "Azure", "Power BI"]
+        },
+        {
+          "title": "Optimierung der Lieferkette",
+          "description": "Erstellung eines Lieferketten-Optimierungssystems unter Verwendung von maschinellem Lernen zur Nachfrageprognose und Optimierung der Lagerbestände.",
+          "technologies": ["Python", "Scikit-learn", "Tableau", "AWS", "PostgreSQL"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre Daten zu nutzen?",
+      "description": "Kontaktieren Sie uns noch heute, um Ihre Datenanforderungen zu besprechen und zu entdecken, wie wir Ihnen helfen können, das Beste daraus zu machen."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Kontakt",
+      "description": "Unser Expertenteam steht Ihnen zur Verfügung, um Ihre Fragen zu beantworten und Sie bei Ihren Projekten zu unterstützen."
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "message": "Ihre Nachricht",
+      "submit": "Senden"
+    },
+    "info": {
+      "address": {
+        "title": "Adresse"
+      },
+      "email": {
+        "title": "E-Mail"
+      },
+      "phone": {
+        "title": "Telefon"
+      }
+    }
+  },
+  "formation_page": {
+    "hero": {
+      "title": "Schulungen für Entscheidungsträger",
+      "description": "Technische Schulungen für Entscheidungsträger zum Verständnis und zur Nutzung des Potenzials von KI und Automatisierung in Ihrem Unternehmen.",
+      "video": "/videos/formation.mp4"
+    },
+    "formations": {
+      "title": "Unsere Schulungsprogramme",
+      "items": [
+        {
+          "title": "KI für Entscheidungsträger",
+          "icon": "faLightbulb",
+          "duration": "3 Tage",
+          "description": "Eine umfassende Schulung zum Verständnis der KI-Grundlagen, ihrer konkreten Geschäftsanwendungen und ihrer strategischen Auswirkungen auf Ihre Branche.",
+          "modules": [
+            "Einführung in die wichtigsten KI-Konzepte",
+            "Branchenanwendungen und Fallstudien",
+            "KI-Integrationsstrategien"
+          ]
+        },
+        {
+          "title": "Prozessautomatisierung",
+          "icon": "faRobot",
+          "duration": "3 Tage",
+          "description": "Entdecken Sie moderne Automatisierungstools und ihr Potenzial zur Optimierung Ihrer Geschäftsprozesse.",
+          "modules": [
+            "Überblick über Automatisierungstechnologien",
+            "Identifizierung automatisierbarer Prozesse",
+            "Implementierungsmethodik"
+          ]
+        },
+        {
+          "title": "Blockchain für Entscheidungsträger",
+          "icon": "faLink",
+          "duration": "2 Tage",
+          "description": "Beherrschen Sie die wichtigsten Blockchain-Konzepte und entdecken Sie, wie diese Technologie Ihre Branche transformieren und neue strategische Möglichkeiten schaffen kann.",
+          "modules": [
+            "Grundlagen der Blockchain und verteilten Technologien",
+            "Branchenanwendungsfälle und Disruptionspotenzial",
+            "Integrationsstrategien und Blockchain-Projekt-Governance"
+          ]
+        }
+      ]
+    },
+    "pedagogie": {
+      "title": "Unser pädagogischer Ansatz",
+      "items": [
+        {
+          "step": 1,
+          "title": "Vereinfachung",
+          "description": "Wir machen komplexe technische Konzepte zugänglich"
+        },
+        {
+          "step": 2,
+          "title": "Praxisfälle",
+          "description": "Wir verwenden konkrete Beispiele aus Ihrer Branche"
+        },
+        {
+          "step": 3,
+          "title": "Interaktivität",
+          "description": "Unsere Workshops fördern den Austausch und aktive Teilnahme"
+        },
+        {
+          "step": 4,
+          "title": "Personalisierte Nachbetreuung",
+          "description": "Wir unterstützen Sie nach der Schulung bei der praktischen Umsetzung"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Referenzen",
+      "subtitle": "Was unsere Kunden über unsere Schulungen sagen",
+      "items": [
+        {
+          "content": "Für die Verwaltung von Großveranstaltungen haben wir unsere IT-Infrastruktur mit einem DevOps-Ansatz gestärkt. Die technische Unterstützung half uns, das Ressourcenmanagement zu optimieren, Prozesse zu automatisieren und die Servicekontinuität sicherzustellen, während Risiken reduziert und die Reaktionsfähigkeit verbessert wurden.",
+          "author": "Julien Cugniez",
+          "position": "CEO",
+          "company": "Director Indigomaze"
+        },
+        {
+          "content": "Dank der von FOXON CONSULTING durchgeführten Schulung konnte ich KI in meinem IT/Finanz-Beruf besser verstehen und nutzen. Die vermittelten Tools und Methoden ermöglichten es mir, Aufgaben zu automatisieren, meine Analysen zu optimieren und meine Produktivität zu steigern. Eine klare, konkrete und essentielle Schulung für mehr Effizienz!",
+          "author": "Pierre Croissant",
+          "position": "CEO Tutasson Conseil Limited"
+        },
+        {
+          "content": "Das FOXON-Team bot mir eine personalisierte Schulung in IT-Projektmanagement und DevOps-Entwicklung an. Der Trainer zeigte große Aufmerksamkeit, verstand meine Bedürfnisse und demonstrierte echte Pädagogik bei der Vermittlung seiner Lehren. Die erhaltenen Informationen und Schulungsmaterialien sind mir heute täglich nützlich und ermöglichen es mir, in meinen verschiedenen Projekten effektiver zu sein.",
+          "author": "Guillaume D.",
+          "position": "Freiberufler"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Sind technische Vorkenntnisse erforderlich?",
+          "reponse": "Nein, unsere Schulungen sind speziell für Entscheidungsträger ohne technischen Hintergrund konzipiert. Wir machen komplexe Konzepte durch klare Sprache und konkrete Beispiele zugänglich."
+        },
+        {
+          "question": "Können die Schulungen angepasst werden?",
+          "reponse": "Absolut! Wir passen den Inhalt unserer Schulungen an Ihre Branche, spezifischen Herausforderungen und strategischen Ziele an. Kontaktieren Sie uns, um Ihre besonderen Bedürfnisse zu besprechen."
+        },
+        {
+          "question": "Bieten Sie Inhouse-Schulungen an?",
+          "reponse": "Ja, wir bieten Inhouse-Schulungen an, die es ermöglichen, den Inhalt an Ihren spezifischen Kontext anzupassen und mehrere Mitarbeiter gleichzeitig zu schulen. Dies ist oft die effektivste Lösung für Führungsteams."
+        },
+        {
+          "question": "Was ist die ideale Teilnehmerzahl?",
+          "reponse": "Um eine optimale Lernerfahrung zu gewährleisten und Interaktionen zu fördern, empfehlen wir Gruppen von 5 bis 10 Teilnehmern. Dies ermöglicht es jedem, von persönlicher Aufmerksamkeit zu profitieren und gleichzeitig vom reichhaltigen Austausch zu profitieren."
+        },
+        {
+          "question": "Gibt es eine Nachbetreuung nach der Schulung?",
+          "reponse": "Ja, wir bieten eine Nachbetreuung an, die Frage-und-Antwort-Sessions, zusätzliche Ressourcen und Zugang zu unseren Experten umfasst, um Ihnen bei der praktischen Umsetzung des erworbenen Wissens zu helfen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre Teams zu schulen?",
+      "description": "Kontaktieren Sie uns, um Ihre spezifischen Bedürfnisse zu besprechen und zu entdecken, wie unsere Schulung Ihren Ansatz zu KI und Automatisierung transformieren kann."
+    }
+  }
+} 

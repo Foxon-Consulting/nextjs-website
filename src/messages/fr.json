@@ -1,0 +1,448 @@
+{
+  "common": {
+    "contact_us": "Nous contacter",
+    "learn_more": "En savoir plus",
+    "request_quote": "Demander un devis",
+    "language": {
+      "select": "Sélectionner la langue",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "Excellence IT & IA pour les Entreprises",
+      "description": "Nous accompagnons votre transformation numérique avec des services de conseil IT, d'exploitation de données avec l'IA et de formation pour décideurs.",
+      "services_button": "Nos services",
+      "booking": {
+        "text": "Prendre rendez-vous",
+        "url": "https://calendly.com/your-company"
+      }
+  },
+  "services": {
+      "title": "Nos Services",
+      "description": "Des solutions sur mesure pour répondre à vos besoins technologiques et d'innovation",
+    "consulting": {
+        "icon": "server",
+        "title": "Conseil IT",
+      "description": "Expertise technique et accompagnement stratégique",
+        "details": "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la production, en passant par l'audit et l'optimisation de vos infrastructures.",
+        "features": {
+          "feature1": "Développement logiciel sur mesure",
+          "feature2": "Gestion de la chaîne logicielle",
+          "feature3": "Audit technique et amélioration",
+          "feature4": "Déploiement d'infrastructure"
+        },
+        "link": "/consulting-it"
+    },
+    "data": {
+        "icon": "database",
+      "title": "Exploitation de données avec l'IA",
+      "description": "Valorisez vos données grâce à l'intelligence artificielle",
+      "details": "Nous vous aidons à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées grâce à l'intelligence artificielle.",
+        "features": {
+          "feature1": "Collecte et intégration de données",
+          "feature2": "Stockage optimisé",
+          "feature3": "Analyse prédictive",
+          "feature4": "Tableaux de bord interactifs"
+        },
+        "link": "/data-ia"
+      },
+      "training": {
+        "icon": "graduation-cap",
+        "title": "Formation",
+        "description": "Formation technique adaptée aux décideurs",
+        "details": "Nos programmes de formation sont spécialement conçus pour les décideurs qui souhaitent comprendre les enjeux et les opportunités des technologies modernes.",
+        "features": {
+          "feature1": "IA pour les décideurs",
+          "feature2": "Automatisation des processus",
+          "feature3": "Transformation numérique",
+          "feature4": "Prise de décision basée sur les données"
+        },
+        "link": "/training"
+      }
+    },
+    "key_figures": {
+      "clients": {
+        "icon": "users",
+        "value": "30",
+        "label": "Clients Satisfaits"
+      },
+      "projects": {
+        "icon": "project-diagram",
+        "value": "100",
+        "label": "Projets Réalisés"
+      },
+      "experience": {
+        "icon": "code-branch",
+        "value": "15",
+        "label": "Technologies Maîtrisées"
+      },
+      "satisfaction": {
+        "icon": "award",
+        "value": "12",
+        "label": "Années d'Expérience"
+      }
+    },
+    "about": {
+      "title": "À Propos",
+      "description": "Notre entreprise est spécialisée dans les services IT et IA, avec une expertise particulière dans le développement de solutions sur mesure, l'exploitation de données et la formation des décideurs.",
+      "values_title": "Nos Valeurs",
+      "paragraphs": {
+        "p1": "Nous nous distinguons par notre approche pragmatique et notre capacité à traduire des concepts techniques complexes en solutions concrètes et accessibles.",
+        "p2": "Notre mission est de vous accompagner dans votre transformation numérique en vous apportant les outils, les connaissances et l'expertise nécessaires pour réussir dans un monde en constante évolution."
+      },
+      "values": {
+        "excellence": {
+          "icon": "award",
+          "title": "Excellence",
+          "description": "Nous visons l'excellence dans chaque projet, en appliquant les meilleures pratiques et en restant à la pointe de l'innovation."
+        },
+        "collaboration": {
+          "icon": "users",
+          "title": "Collaboration",
+          "description": "Nous croyons en la puissance de la collaboration et travaillons étroitement avec nos clients pour atteindre leurs objectifs."
+        },
+        "innovation": {
+          "icon": "code-branch",
+          "title": "Innovation",
+          "description": "Nous explorons constamment de nouvelles technologies et approches pour offrir des solutions innovantes à nos clients."
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "description": "Tout ce que vous devez savoir sur nos services",
+      "q1": {
+        "question": "Comment commencer à travailler ensemble ?",
+        "reponse": "La première étape consiste à nous contacter pour une réunion initiale où nous discuterons de vos besoins et objectifs. Nous vous proposerons ensuite une approche personnalisée et un devis détaillé."
+      },
+      "q2": {
+        "question": "Avec quels types d'entreprises travaillez-vous ?",
+        "reponse": "Nous travaillons avec des entreprises de toutes tailles, des startups aux grandes entreprises, dans divers secteurs. Notre approche est adaptée aux besoins spécifiques de chaque client."
+      },
+      "q3": {
+        "question": "Combien coûtent vos services ?",
+        "reponse": "Nos tarifs varient en fonction de la nature et de l'ampleur du projet. Nous proposons des solutions adaptées à différents budgets et travaillons en toute transparence sur les coûts."
+      },
+      "q4": {
+        "question": "Quelle est votre approche de la confidentialité ?",
+        "reponse": "Nous accordons une importance primordiale à la confidentialité. Tous nos contrats incluent des clauses de confidentialité strictes, et nous mettons en place des mesures de sécurité robustes pour protéger vos données."
+      },
+      "q5": {
+        "question": "Proposez-vous un support après la réalisation du projet ?",
+        "reponse": "Absolument ! Nous proposons des services de maintenance et de support pour assurer la pérennité et l'évolution de vos solutions. Nous restons disponibles pour vous accompagner sur le long terme."
+      }
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Entreprise ?",
+      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs.",
+      "booking": {
+        "text": "Prendre rendez-vous",
+        "url": "https://calendly.com/your-company"
+      }
+    }
+  },
+  "consulting_page": {
+    "hero": {
+      "title": "Conseil IT",
+      "description": "Expertise technique et accompagnement pour vos projets IT. Nous vous aidons à développer, piloter et optimiser vos solutions logicielles."
+    },
+    "services": {
+      "title": "Nos Services de Conseil IT",
+      "description": "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la production, en passant par l'audit et l'optimisation de vos infrastructures.",
+      "items": [
+        {
+          "title": "Développement de logiciel sur mesure",
+          "description": "Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques."
+        },
+        {
+          "title": "Pilotage de la chaîne logicielle",
+          "description": "Mise en place et optimisation de votre chaîne de développement, de l'idée à la production."
+        },
+        {
+          "title": "Audit technique et amélioration",
+          "description": "Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité."
+        },
+        {
+          "title": "Déploiement d'infrastructure",
+          "description": "Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes."
+        }
+      ]
+    },
+    "process": {
+      "title": "Notre Processus",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Analyse des besoins",
+          "description": "Compréhension approfondie de vos objectifs et contraintes"
+        },
+        {
+          "number": 2,
+          "title": "Conception de la solution",
+          "description": "Élaboration d'une architecture et d'une stratégie sur mesure"
+        },
+        {
+          "number": 3,
+          "title": "Développement & Tests",
+          "description": "Mise en œuvre agile avec cycles de feedback réguliers"
+        },
+        {
+          "number": 4,
+          "title": "Déploiement & Support",
+          "description": "Mise en production et accompagnement continu"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Technologies Utilisées",
+      "categories": {
+        "development": "Développement",
+        "devops": "DevOps",
+        "cloud": "Cloud"
+      }
+    },
+    "case_studies": {
+      "title": "Études de cas",
+      "items": [
+        {
+          "title": "Audit des pipeline CI/CD dans le cadre d'une migration de l'infrastructure cloud",
+          "description": "Analyse des pipelines CI/CD existants et recommandations pour améliorer la qualité et la sécurité des pipelines. Aide à la migration vers Azure.",
+          "technologies": ["Jenkins", "GitHub Actions", "Azure", "Kubernetes"]
+        },
+        {
+          "title": "Déploiement d'une solution ERP sur AWS",
+          "description": "Déploiement d'une solution ERP sur AWS avec une architecture hautement disponible et scalable.",
+          "technologies": ["AWS", "Terraform", "MariaDB", "Github Actions"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à transformer votre infrastructure IT ?",
+      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins en conseil IT"
+    }
+  },
+  "data_ia_page": {
+    "hero": {
+      "title": "Exploitation de données avec l'IA",
+      "description": "Transformez vos données en insights stratégiques grâce à nos solutions d'IA sur mesure."
+    },
+    "services": {
+      "title": "Nos Services de Données",
+      "description": "Notre équipe d'experts en data science et en IA vous aide à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées.",
+      "items": [
+        {
+          "title": "Collecte et intégration de données",
+          "description": "Mise en place de systèmes de collecte et d'intégration de données provenant de sources diverses."
+        },
+        {
+          "title": "Stockage optimisé et sécurisé",
+          "description": "Conception d'architectures de stockage performantes et sécurisées pour vos données."
+        },
+        {
+          "title": "Analyse prédictive et prescriptive",
+          "description": "Développement de modèles d'IA pour prédire les tendances et recommander des actions."
+        },
+        {
+          "title": "Tableaux de bord interactifs",
+          "description": "Création de visualisations interactives pour explorer et comprendre vos données."
+        }
+      ]
+    },
+    "process": {
+      "title": "Notre Processus de Données",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Collecte",
+          "description": "Identification et collecte des données pertinentes pour votre activité"
+        },
+        {
+          "number": 2,
+          "title": "Traitement",
+          "description": "Nettoyage, transformation et enrichissement des données brutes"
+        },
+        {
+          "number": 3,
+          "title": "Analyse",
+          "description": "Application d'algorithmes d'IA pour extraire des insights pertinents"
+        },
+        {
+          "number": 4,
+          "title": "Visualisation",
+          "description": "Présentation des résultats sous forme de tableaux de bord interactifs"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Technologies Utilisées"
+    },
+    "case_studies": {
+      "title": "Études de cas",
+      "items": [
+        {
+          "title": "Maintenance prédictive pour l'industrie",
+          "description": "Développement d'un système de maintenance prédictive utilisant des capteurs IoT et des algorithmes d'IA pour prédire les pannes d'équipement industriel avant qu'elles ne se produisent.",
+          "technologies": ["Python", "TensorFlow", "IoT", "Azure", "Power BI"]
+        },
+        {
+          "title": "Optimisation de la chaîne d'approvisionnement",
+          "description": "Création d'un système d'optimisation de la chaîne d'approvisionnement utilisant l'apprentissage automatique pour prévoir la demande et optimiser les niveaux de stock.",
+          "technologies": ["Python", "Scikit-learn", "Tableau", "AWS", "PostgreSQL"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à valoriser vos données ?",
+      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins en données et découvrir comment nous pouvons vous aider à en tirer le meilleur parti."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contactez-nous",
+      "description": "Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous accompagner dans vos projets."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "submit": "Envoyer"
+    },
+    "info": {
+      "address": {
+        "title": "Adresse"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Téléphone"
+      }
+    }
+  },
+  "formation_page": {
+    "hero": {
+      "title": "Formations pour les décideurs",
+      "description": "Des formations techniques adaptées aux décideurs pour comprendre et exploiter le potentiel de l'IA et de l'automatisation dans votre entreprise.",
+      "video": "/videos/formation.mp4"
+    },
+    "formations": {
+      "title": "Nos formations",
+      "items": [
+        {
+          "title": "L'IA pour les décideurs",
+          "icon": "faLightbulb",
+          "duration": "3 jours",
+          "description": "Une formation complète pour comprendre les fondamentaux de l'IA, ses applications concrètes en entreprise et son impact stratégique sur votre secteur d'activité.",
+          "modules": [
+            "Introduction aux concepts clés de l'IA",
+            "Applications sectorielles et études de cas",
+            "Stratégies d'intégration de l'IA"
+          ]
+        },
+        {
+          "title": "Automatisation des processus",
+          "icon": "faRobot",
+          "duration": "3 jours",
+          "description": "Découvrez les outils modernes d'automatisation et leur potentiel pour optimiser les processus métier de votre entreprise.",
+          "modules": [
+            "Panorama des technologies d'automatisation",
+            "Identification des processus automatisables",
+            "Méthodologie de mise en œuvre"
+          ]
+        },
+        {
+          "title": "Blockchain pour décideurs",
+          "icon": "faLink",
+          "duration": "2 jours",
+          "description": "Maîtrisez les concepts clés de la blockchain et découvrez comment cette technologie peut transformer votre secteur d'activité et créer de nouvelles opportunités stratégiques.",
+          "modules": [
+            "Fondamentaux de la blockchain et des technologies distribuées",
+            "Cas d'usage sectoriels et potentiel de disruption",
+            "Stratégies d'intégration et gouvernance des projets blockchain"
+          ]
+        }
+      ]
+    },
+    "pedagogie": {
+      "title": "Notre approche pédagogique",
+      "items": [
+        {
+          "step": 1,
+          "title": "Simplification",
+          "description": "Nous rendons accessibles des concepts techniques complexes"
+        },
+        {
+          "step": 2,
+          "title": "Cas pratiques",
+          "description": "Nous utilisons des exemples concrets adaptés à votre secteur"
+        },
+        {
+          "step": 3,
+          "title": "Interactivité",
+          "description": "Nos ateliers favorisent les échanges et la participation active"
+        },
+        {
+          "step": 4,
+          "title": "Suivi personnalisé",
+          "description": "Nous vous accompagnons après la formation pour la mise en pratique"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "subtitle": "Ce que nos clients disent de nos formations",
+      "items": [
+        {
+          "content": "Pour gérer des événements à grande échelle, nous avons renforcé notre infrastructure IT avec une approche DevOps. L'accompagnement technique nous a permis d'optimiser la gestion des ressources, d'automatiser les processus et d'assurer la continuité des services, tout en réduisant les risques et en améliorant la réactivité.",
+          "author": "Julien Cugniez",
+          "position": "CEO",
+          "company": "Director Indigomaze"
+        },
+        {
+          "content": "Grâce à la formation dispensée par FOXON CONSULTING, j'ai pu mieux comprendre et exploiter l'IA dans mon métier SI/finance. Les outils et méthodes enseignés m'ont permis d'automatiser des tâches, d'optimiser mes analyses et d'améliorer ma productivité. Une formation claire, concrète et essentielle pour gagner en efficacité !",
+          "author": "Pierre Croissant",
+          "position": "CEO Tutasson Conseil Limited"
+        },
+        {
+          "content": "L'équipe de FOXON a su me proposer une formation personnalisée sur la gestion de projet IT et le développement DevOps. Le formateur a fait preuve d'écoute, a su cerner mon besoin et a démontré une réelle pédagogie pour transmettre ses enseignements. Les informations et supports pédagogiques reçus me sont désormais utiles au quotidien et me permettent d'être plus efficace dans mes différents projets.",
+          "author": "Guillaume D.",
+          "position": "Indépendant"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Faut-il avoir des connaissances techniques préalables ?",
+          "reponse": "Non, nos formations sont spécifiquement conçues pour les décideurs sans bagage technique. Nous rendons accessibles des concepts complexes en utilisant un langage clair et des exemples concrets."
+        },
+        {
+          "question": "Les formations peuvent-elles être personnalisées ?",
+          "reponse": "Absolument ! Nous adaptons le contenu de nos formations à votre secteur d'activité, à vos enjeux spécifiques et à vos objectifs stratégiques. Contactez-nous pour discuter de vos besoins particuliers."
+        },
+        {
+          "question": "Proposez-vous des formations en intra-entreprise ?",
+          "reponse": "Oui, nous proposons des formations en intra-entreprise, ce qui permet d'adapter le contenu à votre contexte spécifique et de former plusieurs collaborateurs simultanément. C'est souvent la solution la plus efficace pour les équipes dirigeantes."
+        },
+        {
+          "question": "Quel est le nombre idéal de participants ?",
+          "reponse": "Pour garantir une expérience d'apprentissage optimale et favoriser les interactions, nous recommandons des groupes de 5 à 10 participants. Cela permet à chacun de bénéficier d'une attention personnalisée tout en profitant de la richesse des échanges."
+        },
+        {
+          "question": "Y a-t-il un suivi après la formation ?",
+          "reponse": "Oui, nous proposons un accompagnement post-formation qui comprend des sessions de questions-réponses, des ressources complémentaires et un accès à nos experts pour vous aider à mettre en pratique les connaissances acquises."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à former vos équipes ?",
+      "description": "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos formations peuvent transformer votre approche de l'IA et de l'automatisation."
+    }
+  }
+}
