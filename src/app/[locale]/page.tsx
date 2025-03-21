@@ -1,16 +1,57 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CountUp } from "@/components/ui/CountUp";
-import { getContactInfo } from "@/lib/contact";
-import { getLandingPageData } from "@/lib/landing";
+// import { getContactInfo } from "@/lib/contact";
+// import { getLandingPageData } from "@/lib/landing";
 import { getIconByName } from "@/lib/icons";
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
-export default async function Home() {
-  const contactInfo = await getContactInfo();
-  const landingData = await getLandingPageData();
+type ServiceType = 'consulting' | 'data' | 'training';
+type KeyFigure = {
+  icon: string;
+  value: number;
+  label: string;
+};
+
+type Features = {
+  [key in ServiceType]: Record<string, string>;
+};
+
+export default function Home() {
+  // const contactInfo = await getContactInfo();
+  // const landingData = await getLandingPageData();
+  const t = useTranslations();
+  
+  // Accès aux services avec vérification de type
+  const services: ServiceType[] = ['consulting', 'data', 'training'];
+  const features: Features = {
+    consulting: t.raw('landing_page.services.consulting.features'),
+    data: t.raw('landing_page.services.data.features'),
+    training: t.raw('landing_page.services.training.features')
+  };
+
+  // Accès aux chiffres clés
+  const keyFigures: KeyFigure[] = ['clients', 'projects', 'experience', 'satisfaction'].map(key => ({
+    icon: t(`landing_page.key_figures.${key}.icon`),
+    value: Number(t(`landing_page.key_figures.${key}.value`)),
+    label: t(`landing_page.key_figures.${key}.label`)
+  }));
+
+  // Accès aux paragraphes et valeurs "about"
+  const aboutParagraphs: Record<string, string> = t.raw('landing_page.about.paragraphs');
+  const aboutValues: Record<string, { icon: string; title: string; description: string }> = t.raw('landing_page.about.values');
+  
+  // Accès aux FAQ
+  const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5'];
+  const faqItems = faqKeys.map(key => ({
+    question: t(`landing_page.faq.${key}.question`),
+    reponse: t(`landing_page.faq.${key}.reponse`)
+  }));
+
   
   return (
     <>
@@ -39,25 +80,25 @@ export default async function Home() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {landingData.hero.title}
+              {t("landing_page.hero.title")}
             </h1>
             <p className="text-xl mb-8 text-white">
-              {landingData.hero.description}
+              {t("landing_page.hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
                 <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                  Contactez-nous
+                  {t("common.contact_us")}
                 </Button>
               </Link>
               <Link href="/#services">
                 <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                  Nos services
+                  {t("landing_page.hero.services_button")}
                 </Button>
               </Link>
-              <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
+              <a href={t("landing_page.hero.booking.url")} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                  {contactInfo.booking.text}
+                  {t("landing_page.hero.booking.text")}
                 </Button>
               </a>
             </div>
@@ -69,38 +110,42 @@ export default async function Home() {
       <section id="services" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">Nos Services</h2>
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">
+              {t('landing_page.services.title')}
+            </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Des solutions sur mesure pour répondre à vos besoins en matière de technologie et d&apos;innovation
+              {t('landing_page.services.description')}
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {landingData.services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
+            {services.map((service) => (
+              <Card key={service} className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
                   <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
-                    <FontAwesomeIcon icon={getIconByName(service.icon)} />
+                    <FontAwesomeIcon icon={getIconByName(t(`landing_page.services.${service}.icon`))} />
                   </div>
-                  <CardTitle className="text-center dark:text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-center dark:text-white">
+                    {t(`landing_page.services.${service}.title`)}
+                  </CardTitle>
                   <CardDescription className="text-center dark:text-gray-400">
-                    {service.description}
+                    {t(`landing_page.services.${service}.description`)}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-gray-600 dark:text-gray-400">
                   <p className="mb-4">
-                    {service.details}
+                    {t(`landing_page.services.${service}.details`)}
                   </p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}>• {feature}</li>
+                    {features[service] && Object.entries(features[service]).map(([key, value]) => (
+                      <li key={key}>• {value}</li>
                     ))}
                   </ul>
                 </CardContent>
                 <CardFooter className="flex justify-center">
-                  <Link href={service.link}>
+                  <Link href={t(`landing_page.services.${service}.link`)}>
                     <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c]">
-                      En savoir plus
+                      {t('common.learn_more')}
                     </Button>
                   </Link>
                 </CardFooter>
@@ -114,7 +159,7 @@ export default async function Home() {
       <section id="key-figures" className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {landingData.key_figures.map((figure, index) => (
+            {keyFigures.map((figure, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <div className="text-[#00f65e] text-3xl mb-4 flex justify-center">
                   <FontAwesomeIcon icon={getIconByName(figure.icon)} />
@@ -134,21 +179,21 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">{landingData.about.title}</h2>
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">{t("landing_page.about.title")}</h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                {landingData.about.description}
+                {t("landing_page.about.description")}
               </p>
-              {landingData.about.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  {paragraph}
+              {Object.entries(aboutParagraphs).map(([key, text]: [string, string]) => (
+                <p key={key} className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                  {text}
                 </p>
               ))}
             </div>
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-6 dark:text-white">Nos valeurs</h3>
+              <h3 className="text-2xl font-bold mb-6 dark:text-white">{t("landing_page.about.values_title")}</h3>
               <ul className="space-y-4">
-                {landingData.about.values.map((value, index) => (
-                  <li key={index} className="flex items-start">
+                {Object.entries(aboutValues).map(([key, value]: [string, { icon: string; title: string; description: string }]) => (
+                  <li key={key} className="flex items-start">
                     <div className="text-[#00f65e] text-xl mr-4 mt-1">
                       <FontAwesomeIcon icon={getIconByName(value.icon)} />
                     </div>
@@ -170,15 +215,15 @@ export default async function Home() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">Questions fréquentes</h2>
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">{t("landing_page.faq.title")}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Tout ce que vous devez savoir sur nos services
+              {t("landing_page.faq.description")}
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              {landingData.faq.map((item, index) => (
+              {faqItems.map((item, index) => (
                 <AccordionItem key={index} value={`item-${index + 1}`} className="bg-white dark:bg-gray-800 rounded-lg">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
                     {item.question}
@@ -196,19 +241,19 @@ export default async function Home() {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 dark:text-white">{landingData.cta.title}</h2>
+          <h2 className="text-3xl font-bold mb-6 dark:text-white">{t("landing_page.cta.title")}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-            {landingData.cta.description}
+            {t("landing_page.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                Contactez-nous
+                {t("common.contact_us")}
               </Button>
             </Link>
-            <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
+            <a href={t("landing_page.cta.booking.url")} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                {contactInfo.booking.text}
+                {t("landing_page.cta.booking.text")}
               </Button>
             </a>
           </div>

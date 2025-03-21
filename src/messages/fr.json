@@ -1,109 +1,140 @@
 {
+  "common": {
+    "contact_us": "Contactez-nous",
+    "learn_more": "En savoir plus"
+  },
   "landing_page": {
     "hero": {
       "title": "Excellence IT & IA au service des entreprises",
-      "description": "Nous vous accompagnons dans votre transformation numérique avec des services de consulting IT, d'exploitation de données par l'IA et des formations pour les décideurs."
-  },
-  "services": {
-    "consulting": {
-      "title": "Consulting IT",
-      "description": "Expertise technique et accompagnement stratégique",
-      "details": "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.",
-      "features": [
-        "Développement de logiciel à la demande",
-        "Pilotage de la chaîne logicielle",
-        "Audit technique et amélioration",
-        "Déploiement d'infrastructure"
-      ]
-    },
-    "data": {
-      "title": "Exploitation de données avec l'IA",
-      "description": "Valorisez vos données grâce à l'intelligence artificielle",
-      "details": "Nous vous aidons à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées grâce à l'intelligence artificielle.",
-      "features": [
-        "Collecte et intégration de données",
-        "Stockage optimisé",
-        "Analyse prédictive",
-        "Tableaux de bord interactifs"
-      ]
-    },
-    "training": {
-      "title": "Formations",
-      "description": "Des formations techniques adaptées aux décideurs",
-      "details": "Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre les enjeux et les opportunités des technologies modernes.",
-      "features": [
-        "L'IA au service des décideurs",
-        "Automatisation des processus",
-        "Transformation numérique",
-        "Data-driven decision making"
-      ]
-    }
-  },
-  "key_figures": [
-    {
-      "value": 100,
-      "label": "Projets réalisés"
-    },
-    {
-      "value": 30,
-      "label": "Clients satisfaits"
-    },
-    {
-      "value": 15,
-      "label": "Technologies maîtrisées"
-    },
-    {
-      "value": 12,
-      "label": "Années d'expérience"
-    }
-  ],
-  "about": {
-    "title": "À propos de nous",
-    "description": "Notre entreprise est spécialisée dans les services IT et IA, avec une expertise particulière dans le développement de solutions sur mesure, l'exploitation de données et la formation des décideurs.",
-    "paragraphs": [
-      "Nous nous distinguons par notre approche pragmatique et notre capacité à traduire des concepts techniques complexes en solutions concrètes et accessibles.",
-      "Notre mission est de vous accompagner dans votre transformation numérique en vous fournissant les outils, les connaissances et l'expertise nécessaires pour réussir dans un monde en constante évolution."
-    ],
-    "values": [
-      {
-        "title": "Excellence",
-        "description": "Nous visons l'excellence dans chaque projet, en appliquant les meilleures pratiques et en restant à la pointe de l'innovation."
-      },
-      {
-        "title": "Collaboration",
-        "description": "Nous croyons en la puissance de la collaboration et travaillons en étroite relation avec nos clients pour atteindre leurs objectifs."
-      },
-      {
-        "title": "Innovation",
-        "description": "Nous explorons constamment de nouvelles technologies et approches pour offrir des solutions innovantes à nos clients."
+      "description": "Nous vous accompagnons dans votre transformation numérique avec des services de consulting IT, d'exploitation de données par l'IA et des formations pour les décideurs.",
+      "services_button": "Nos services",
+      "booking": {
+        "text": "Prendre rendez-vous",
+        "url": "https://calendly.com/votre-entreprise"
       }
-    ]
-  },
-  "faq": [
-    {
-      "question": "Comment démarrer une collaboration avec vous ?",
-      "reponse": "La première étape consiste à nous contacter pour un entretien initial où nous discuterons de vos besoins et objectifs. Nous vous proposerons ensuite une approche personnalisée et un devis détaillé."
     },
-    {
-      "question": "Quels types d'entreprises accompagnez-vous ?",
-      "reponse": "Nous travaillons avec des entreprises de toutes tailles, des startups aux grands groupes, dans divers secteurs d'activité. Notre approche est adaptée aux spécificités de chaque client."
+    "services": {
+      "title": "Nos Services",
+      "description": "Des solutions sur mesure pour répondre à vos besoins en matière de technologie et d'innovation",
+      "consulting": {
+        "icon": "server",
+        "title": "Consulting IT",
+        "description": "Expertise technique et accompagnement stratégique",
+        "details": "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la mise en production, en passant par l'audit et l'optimisation de vos infrastructures.",
+        "features": {
+          "feature1": "Développement de logiciel à la demande",
+          "feature2": "Pilotage de la chaîne logicielle",
+          "feature3": "Audit technique et amélioration",
+          "feature4": "Déploiement d'infrastructure"
+        },
+        "link": "/consulting-it"
+      },
+      "data": {
+        "icon": "database",
+        "title": "Exploitation de données avec l'IA",
+        "description": "Valorisez vos données grâce à l'intelligence artificielle",
+        "details": "Nous vous aidons à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées grâce à l'intelligence artificielle.",
+        "features": {
+          "feature1": "Collecte et intégration de données",
+          "feature2": "Stockage optimisé",
+          "feature3": "Analyse prédictive",
+          "feature4": "Tableaux de bord interactifs"
+        },
+        "link": "/data-ia"
+      },
+      "training": {
+        "icon": "graduation-cap",
+        "title": "Formations",
+        "description": "Des formations techniques adaptées aux décideurs",
+        "details": "Nos formations sont conçues spécifiquement pour les décideurs qui souhaitent comprendre les enjeux et les opportunités des technologies modernes.",
+        "features": {
+          "feature1": "L'IA au service des décideurs",
+          "feature2": "Automatisation des processus",
+          "feature3": "Transformation numérique",
+          "feature4": "Data-driven decision making"
+        },
+        "link": "/formation"
+      }
     },
-    {
-      "question": "Combien coûtent vos services ?",
-      "reponse": "Nos tarifs varient en fonction de la nature et de l'ampleur du projet. Nous proposons des formules adaptées à différents budgets et travaillons en toute transparence sur les coûts."
+    "key_figures": {
+      "clients": {
+        "icon": "users",
+        "value": "30",
+        "label": "Clients satisfaits"
+      },
+      "projects": {
+        "icon": "project-diagram",
+        "value": "100",
+        "label": "Projets réalisés"
+      },
+      "experience": {
+        "icon": "code-branch",
+        "value": "15",
+        "label": "Technologies maîtrisées"
+      },
+      "satisfaction": {
+        "icon": "award",
+        "value": "12",
+        "label": "Années d'expérience"
+      }
     },
-    {
-      "question": "Quelle est votre approche en matière de confidentialité ?",
-      "reponse": "Nous accordons une importance capitale à la confidentialité. Tous nos contrats incluent des clauses de confidentialité strictes, et nous mettons en œuvre des mesures de sécurité robustes pour protéger vos données."
+    "about": {
+      "title": "À propos de nous",
+      "description": "Notre entreprise est spécialisée dans les services IT et IA, avec une expertise particulière dans le développement de solutions sur mesure, l'exploitation de données et la formation des décideurs.",
+      "values_title": "Nos valeurs",
+      "paragraphs": {
+        "p1": "Nous nous distinguons par notre approche pragmatique et notre capacité à traduire des concepts techniques complexes en solutions concrètes et accessibles.",
+        "p2": "Notre mission est de vous accompagner dans votre transformation numérique en vous fournissant les outils, les connaissances et l'expertise nécessaires pour réussir dans un monde en constante évolution."
+      },
+      "values": {
+        "excellence": {
+          "icon": "award",
+          "title": "Excellence",
+          "description": "Nous visons l'excellence dans chaque projet, en appliquant les meilleures pratiques et en restant à la pointe de l'innovation."
+        },
+        "collaboration": {
+          "icon": "users",
+          "title": "Collaboration",
+          "description": "Nous croyons en la puissance de la collaboration et travaillons en étroite relation avec nos clients pour atteindre leurs objectifs."
+        },
+        "innovation": {
+          "icon": "code-branch",
+          "title": "Innovation",
+          "description": "Nous explorons constamment de nouvelles technologies et approches pour offrir des solutions innovantes à nos clients."
+        }
+      }
     },
-    {
-      "question": "Proposez-vous un suivi après la réalisation d'un projet ?",
-      "reponse": "Absolument ! Nous proposons des services de maintenance et de support pour assurer la pérennité et l'évolution de vos solutions. Nous restons disponibles pour vous accompagner sur le long terme."
-    }
-  ],
-  "cta": {
-    "title": "Prêt à transformer votre entreprise ?",
-      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs."
+    "faq": {
+      "title": "Questions fréquentes",
+      "description": "Tout ce que vous devez savoir sur nos services",
+      "q1": {
+        "question": "Comment démarrer une collaboration avec vous ?",
+        "reponse": "La première étape consiste à nous contacter pour un entretien initial où nous discuterons de vos besoins et objectifs. Nous vous proposerons ensuite une approche personnalisée et un devis détaillé."
+      },
+      "q2": {
+        "question": "Quels types d'entreprises accompagnez-vous ?",
+        "reponse": "Nous travaillons avec des entreprises de toutes tailles, des startups aux grands groupes, dans divers secteurs d'activité. Notre approche est adaptée aux spécificités de chaque client."
+      },
+      "q3": {
+        "question": "Combien coûtent vos services ?",
+        "reponse": "Nos tarifs varient en fonction de la nature et de l'ampleur du projet. Nous proposons des formules adaptées à différents budgets et travaillons en toute transparence sur les coûts."
+      },
+      "q4": {
+        "question": "Quelle est votre approche en matière de confidentialité ?",
+        "reponse": "Nous accordons une importance capitale à la confidentialité. Tous nos contrats incluent des clauses de confidentialité strictes, et nous mettons en œuvre des mesures de sécurité robustes pour protéger vos données."
+      },
+      "q5": {
+        "question": "Proposez-vous un suivi après la réalisation d'un projet ?",
+        "reponse": "Absolument ! Nous proposons des services de maintenance et de support pour assurer la pérennité et l'évolution de vos solutions. Nous restons disponibles pour vous accompagner sur le long terme."
+      }
+    },
+    "cta": {
+      "title": "Prêt à transformer votre entreprise ?",
+      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs.",
+      "booking": {
+        "text": "Prendre rendez-vous",
+        "url": "https://calendly.com/votre-entreprise"
+      }
     }
   }
 }

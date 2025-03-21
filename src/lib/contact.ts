@@ -39,7 +39,7 @@ export interface ContactInfo {
 
 export async function getContactInfo(): Promise<ContactInfo> {
   try {
-    const filePath = path.join(process.cwd(), 'src/app/(routes)/contact/contact.yaml');
+    const filePath = path.join(process.cwd(), 'src/app/[locale]/(routes)/contact/contact.yaml');
     const fileContents = await readFile(filePath, 'utf8');
     const data = yaml.load(fileContents) as ContactInfo;
     return data;
