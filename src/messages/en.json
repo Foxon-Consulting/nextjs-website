@@ -18,7 +18,7 @@
       "services_button": "Our services",
       "booking": {
         "text": "Book a meeting",
-        "url": "https://calendly.com/your-company"
+        "url": "https://book.morgen.so/foxonconsulting/meeting"
       }
   },
   "services": {
@@ -141,7 +141,7 @@
       "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals.",
       "booking": {
         "text": "Book a meeting",
-        "url": "https://calendly.com/your-company"
+        "url": "https://book.morgen.so/foxonconsulting/meeting"
       }
     }
   },
