@@ -2,7 +2,14 @@
   "common": {
     "contact_us": "Contact us",
     "learn_more": "Learn more",
-    "request_quote": "Request a quote"
+    "request_quote": "Request a quote",
+    "language": {
+      "select": "Select language",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
   },
   "landing_page": {
     "hero": {

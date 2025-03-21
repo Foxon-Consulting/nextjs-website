@@ -1,8 +1,15 @@
 {
   "common": {
-    "contact_us": "Contactez-nous",
+    "contact_us": "Nous contacter",
     "learn_more": "En savoir plus",
-    "request_quote": "Demander un devis"
+    "request_quote": "Demander un devis",
+    "language": {
+      "select": "Sélectionner la langue",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
   },
   "landing_page": {
     "hero": {
