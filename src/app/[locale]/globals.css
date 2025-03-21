@@ -149,12 +149,13 @@
 @layer components {
   .hero-pattern {
     position: relative;
-    background-color: #1a1a1a;
+    background-color: #000;
+    z-index: 1;
     overflow: hidden;
   }
   
   .dark .hero-pattern {
-    background-color: #000000;
+    background-color: #000;
   }
   
   .hero-pattern::after {
@@ -164,16 +165,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/hero-pattern.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: 1;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
   }
   
   .hero-pattern > * {
     position: relative;
-    z-index: 10;
+    z-index: 1;
   }
   
   /* Styles pour les icônes FontAwesome */
