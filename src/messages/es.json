@@ -1,0 +1,440 @@
+{
+  "common": {
+    "contact_us": "Contáctenos",
+    "learn_more": "Más información",
+    "request_quote": "Solicitar presupuesto",
+    "language": {
+      "select": "Seleccionar idioma",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "Excelencia en TI e IA para empresas",
+      "description": "Apoyamos su transformación digital con consultoría TI, explotación de datos con IA y formación para directivos.",
+      "services_button": "Nuestros servicios"
+    },
+    "services": {
+      "title": "Nuestros servicios",
+      "description": "Soluciones personalizadas para sus necesidades tecnológicas e innovadoras",
+      "consulting": {
+        "icon": "server",
+        "title": "Consultoría TI",
+        "description": "Experiencia técnica y apoyo estratégico",
+        "details": "Nuestro equipo de expertos le acompaña en todos sus proyectos TI, desde el desarrollo hasta la producción, incluyendo auditoría y optimización de infraestructuras.",
+        "features": {
+          "feature1": "Desarrollo de software personalizado",
+          "feature2": "Gestión de la cadena de software",
+          "feature3": "Auditoría técnica y mejora",
+          "feature4": "Despliegue de infraestructura"
+        },
+        "link": "/consulting-it"
+      },
+      "data": {
+        "icon": "database",
+        "title": "Explotación de datos con IA",
+        "description": "Aproveche sus datos mediante la inteligencia artificial",
+        "details": "Le ayudamos a sacar el máximo partido de sus datos para mejorar sus procesos y tomar decisiones informadas con inteligencia artificial.",
+        "features": {
+          "feature1": "Recopilación e integración de datos",
+          "feature2": "Almacenamiento optimizado",
+          "feature3": "Análisis predictivo",
+          "feature4": "Tableros interactivos"
+        },
+        "link": "/data-ia"
+      },
+      "training": {
+        "icon": "graduation-cap",
+        "title": "Formación",
+        "description": "Formación técnica para directivos",
+        "details": "Nuestros programas de formación están diseñados específicamente para directivos que desean comprender los desafíos y oportunidades de las tecnologías modernas.",
+        "features": {
+          "feature1": "IA para directivos",
+          "feature2": "Automatización de procesos",
+          "feature3": "Transformación digital",
+          "feature4": "Toma de decisiones basada en datos"
+        },
+        "link": "/training"
+      }
+    },
+    "key_figures": {
+      "clients": {
+        "icon": "users",
+        "value": "30",
+        "label": "Clientes satisfechos"
+      },
+      "projects": {
+        "icon": "project-diagram",
+        "value": "100",
+        "label": "Proyectos completados"
+      },
+      "experience": {
+        "icon": "code-branch",
+        "value": "15",
+        "label": "Tecnologías dominadas"
+      },
+      "satisfaction": {
+        "icon": "award",
+        "value": "12",
+        "label": "Años de experiencia"
+      }
+    },
+    "about": {
+      "title": "Sobre nosotros",
+      "description": "Nuestra empresa está especializada en servicios de TI e IA, con experiencia particular en el desarrollo de soluciones personalizadas, explotación de datos y formación de directivos.",
+      "values_title": "Nuestros valores",
+      "paragraphs": {
+        "p1": "Nos distinguimos por nuestro enfoque pragmático y nuestra capacidad para traducir conceptos técnicos complejos en soluciones concretas y accesibles.",
+        "p2": "Nuestra misión es acompañarle en su transformación digital proporcionándole las herramientas, el conocimiento y la experiencia necesarios para tener éxito en un mundo en constante evolución."
+      },
+      "values": {
+        "excellence": {
+          "icon": "award",
+          "title": "Excelencia",
+          "description": "Buscamos la excelencia en cada proyecto, aplicando las mejores prácticas y manteniéndonos a la vanguardia de la innovación."
+        },
+        "collaboration": {
+          "icon": "users",
+          "title": "Colaboración",
+          "description": "Creemos en el poder de la colaboración y trabajamos estrechamente con nuestros clientes para alcanzar sus objetivos."
+        },
+        "innovation": {
+          "icon": "code-branch",
+          "title": "Innovación",
+          "description": "Exploramos constantemente nuevas tecnologías y enfoques para ofrecer soluciones innovadoras a nuestros clientes."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "Todo lo que necesita saber sobre nuestros servicios",
+      "q1": {
+        "question": "¿Cómo comenzamos la colaboración?",
+        "reponse": "El primer paso es un contacto inicial para una conversación inicial donde discutiremos sus necesidades y objetivos. Luego propondremos un enfoque personalizado y una oferta detallada."
+      },
+      "q2": {
+        "question": "¿Con qué tipos de empresas trabajan?",
+        "reponse": "Trabajamos con empresas de todos los tamaños, desde startups hasta grandes corporaciones, en diversos sectores. Nuestro enfoque se adapta a las necesidades específicas de cada cliente."
+      },
+      "q3": {
+        "question": "¿Cuánto cuestan sus servicios?",
+        "reponse": "Nuestras tarifas varían según el tipo y alcance del proyecto. Ofrecemos soluciones para diferentes presupuestos y trabajamos con total transparencia en los costos."
+      },
+      "q4": {
+        "question": "¿Cómo manejan la confidencialidad?",
+        "reponse": "La confidencialidad es nuestra máxima prioridad. Todos nuestros contratos incluyen cláusulas estrictas de confidencialidad y aplicamos medidas de seguridad robustas para proteger sus datos."
+      },
+      "q5": {
+        "question": "¿Ofrecen soporte después de la finalización del proyecto?",
+        "reponse": "¡Absolutamente! Ofrecemos servicios de mantenimiento y soporte para garantizar la longevidad y evolución de sus soluciones. Permanecemos disponibles a largo plazo."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para transformar su empresa?",
+      "description": "Contáctenos hoy para discutir sus necesidades y descubrir cómo podemos ayudarle a alcanzar sus objetivos."
+    }
+  },
+  "consulting_page": {
+    "hero": {
+      "title": "Consultoría TI",
+      "description": "Experiencia técnica y apoyo para sus proyectos TI. Le ayudamos en el desarrollo, gestión y optimización de sus soluciones de software."
+    },
+    "services": {
+      "title": "Nuestros servicios de consultoría TI",
+      "description": "Nuestro equipo de expertos le acompaña en todos sus proyectos TI, desde el desarrollo hasta la producción, incluyendo auditoría y optimización de infraestructuras.",
+      "items": [
+        {
+          "title": "Desarrollo de software personalizado",
+          "description": "Diseño y desarrollo de soluciones de software a medida, adaptadas a sus necesidades específicas."
+        },
+        {
+          "title": "Gestión de la cadena de software",
+          "description": "Implementación y optimización de su cadena de desarrollo, desde la idea hasta la producción."
+        },
+        {
+          "title": "Auditoría técnica y mejora",
+          "description": "Análisis de sus sistemas existentes y recomendaciones para mejorar el rendimiento y la seguridad."
+        },
+        {
+          "title": "Despliegue de infraestructura",
+          "description": "Diseño e implementación de infraestructuras cloud seguras, escalables y de alto rendimiento."
+        }
+      ]
+    },
+    "process": {
+      "title": "Nuestro proceso",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Análisis de necesidades",
+          "description": "Comprensión profunda de sus objetivos y limitaciones"
+        },
+        {
+          "number": 2,
+          "title": "Diseño de solución",
+          "description": "Desarrollo de una arquitectura y estrategia personalizada"
+        },
+        {
+          "number": 3,
+          "title": "Desarrollo y pruebas",
+          "description": "Implementación ágil con ciclos regulares de retroalimentación"
+        },
+        {
+          "number": 4,
+          "title": "Despliegue y soporte",
+          "description": "Puesta en producción y apoyo continuo"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Tecnologías utilizadas",
+      "categories": {
+        "development": "Desarrollo",
+        "devops": "DevOps",
+        "cloud": "Cloud"
+      }
+    },
+    "case_studies": {
+      "title": "Casos de estudio",
+      "items": [
+        {
+          "title": "Auditoría de pipeline CI/CD para migración a infraestructura cloud",
+          "description": "Análisis de pipelines CI/CD existentes y recomendaciones para mejorar la calidad y seguridad del pipeline. Apoyo en la migración a Azure.",
+          "technologies": ["Jenkins", "GitHub Actions", "Azure", "Kubernetes"]
+        },
+        {
+          "title": "Despliegue de solución ERP en AWS",
+          "description": "Despliegue de una solución ERP en AWS con arquitectura de alta disponibilidad y escalable.",
+          "technologies": ["AWS", "Terraform", "MariaDB", "Github Actions"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para transformar su infraestructura TI?",
+      "description": "Contáctenos hoy para discutir sus necesidades de consultoría TI"
+    }
+  },
+  "data_ia_page": {
+    "hero": {
+      "title": "Explotación de datos con IA",
+      "description": "Transforme sus datos en conocimientos estratégicos con nuestras soluciones de IA personalizadas."
+    },
+    "services": {
+      "title": "Nuestros servicios de datos",
+      "description": "Nuestro equipo de expertos en ciencia de datos e IA le ayuda a sacar el máximo partido de sus datos para mejorar sus procesos y tomar decisiones informadas.",
+      "items": [
+        {
+          "title": "Recopilación e integración de datos",
+          "description": "Implementación de sistemas para recopilar e integrar datos de diversas fuentes."
+        },
+        {
+          "title": "Almacenamiento optimizado y seguro",
+          "description": "Diseño de arquitecturas de almacenamiento de alto rendimiento y seguras para sus datos."
+        },
+        {
+          "title": "Análisis predictivo y prescriptivo",
+          "description": "Desarrollo de modelos de IA para predecir tendencias y recomendar acciones."
+        },
+        {
+          "title": "Tableros interactivos",
+          "description": "Creación de visualizaciones interactivas para explorar y comprender sus datos."
+        }
+      ]
+    },
+    "process": {
+      "title": "Nuestro proceso de datos",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Recopilación",
+          "description": "Identificación y recolección de datos relevantes para su negocio"
+        },
+        {
+          "number": 2,
+          "title": "Procesamiento",
+          "description": "Limpieza, transformación y enriquecimiento de datos brutos"
+        },
+        {
+          "number": 3,
+          "title": "Análisis",
+          "description": "Aplicación de algoritmos de IA para extraer conocimientos relevantes"
+        },
+        {
+          "number": 4,
+          "title": "Visualización",
+          "description": "Presentación de resultados en forma de tableros interactivos"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Tecnologías utilizadas"
+    },
+    "case_studies": {
+      "title": "Casos de estudio",
+      "items": [
+        {
+          "title": "Mantenimiento predictivo para la industria",
+          "description": "Desarrollo de un sistema de mantenimiento predictivo utilizando sensores IoT y algoritmos de IA para predecir fallos de equipos antes de que ocurran.",
+          "technologies": ["Python", "TensorFlow", "IoT", "Azure", "Power BI"]
+        },
+        {
+          "title": "Optimización de la cadena de suministro",
+          "description": "Creación de un sistema de optimización de la cadena de suministro utilizando aprendizaje automático para la previsión de la demanda y la optimización del inventario.",
+          "technologies": ["Python", "Scikit-learn", "Tableau", "AWS", "PostgreSQL"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para aprovechar sus datos?",
+      "description": "Contáctenos hoy para discutir sus necesidades de datos y descubrir cómo podemos ayudarle a sacar el máximo partido de ellos."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contáctenos",
+      "description": "Estamos aquí para responder sus preguntas y apoyar sus proyectos"
+    },
+    "booking": {
+      "description": "Programe una llamada de 30 minutos con uno de nuestros expertos. Discutiremos sus necesidades y propondremos las mejores soluciones."
+    },
+    "form": {
+      "title": "Envíenos un mensaje",
+      "description": "¿Prefiere escribirnos? Utilice el formulario a continuación y le responderemos lo antes posible."
+    },
+    "info": {
+      "address": {
+        "title": "Dirección"
+      },
+      "email": {
+        "title": "Correo"
+      },
+      "phone": {
+        "title": "Teléfono"
+      }
+    }
+  },
+  "formation_page": {
+    "hero": {
+      "title": "Formación para directivos",
+      "description": "Formación técnica para directivos para comprender y aprovechar el potencial de la IA y la automatización en su empresa.",
+      "video": "/videos/formation.mp4"
+    },
+    "formations": {
+      "title": "Nuestros programas de formación",
+      "items": [
+        {
+          "title": "IA para directivos",
+          "icon": "faLightbulb",
+          "duration": "3 días",
+          "description": "Una formación completa para comprender los fundamentos de la IA, sus aplicaciones empresariales concretas y sus implicaciones estratégicas para su sector.",
+          "modules": [
+            "Introducción a los conceptos clave de la IA",
+            "Aplicaciones sectoriales y casos de estudio",
+            "Estrategias de integración de IA"
+          ]
+        },
+        {
+          "title": "Automatización de procesos",
+          "icon": "faRobot",
+          "duration": "3 días",
+          "description": "Descubra las herramientas modernas de automatización y su potencial para optimizar sus procesos empresariales.",
+          "modules": [
+            "Visión general de las tecnologías de automatización",
+            "Identificación de procesos automatizables",
+            "Metodología de implementación"
+          ]
+        },
+        {
+          "title": "Blockchain para directivos",
+          "icon": "faLink",
+          "duration": "2 días",
+          "description": "Domine los conceptos clave de blockchain y descubra cómo esta tecnología puede transformar su sector y crear nuevas oportunidades estratégicas.",
+          "modules": [
+            "Fundamentos de blockchain y tecnologías distribuidas",
+            "Casos de uso sectoriales y potencial de disrupción",
+            "Estrategias de integración y gobernanza de proyectos blockchain"
+          ]
+        }
+      ]
+    },
+    "pedagogie": {
+      "title": "Nuestro enfoque pedagógico",
+      "items": [
+        {
+          "step": 1,
+          "title": "Simplificación",
+          "description": "Hacemos accesibles los conceptos técnicos complejos"
+        },
+        {
+          "step": 2,
+          "title": "Casos prácticos",
+          "description": "Utilizamos ejemplos concretos de su sector"
+        },
+        {
+          "step": 3,
+          "title": "Interactividad",
+          "description": "Nuestros talleres fomentan el intercambio y la participación activa"
+        },
+        {
+          "step": 4,
+          "title": "Seguimiento personalizado",
+          "description": "Le apoyamos después de la formación en la implementación práctica"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Referencias",
+      "subtitle": "Lo que dicen nuestros clientes sobre nuestras formaciones",
+      "items": [
+        {
+          "content": "Para la gestión de grandes eventos, fortalecimos nuestra infraestructura TI con un enfoque DevOps. El apoyo técnico nos ayudó a optimizar la gestión de recursos, automatizar procesos y garantizar la continuidad del servicio, reduciendo riesgos y mejorando la capacidad de respuesta.",
+          "author": "Julien Cugniez",
+          "position": "CEO",
+          "company": "Director Indigomaze"
+        },
+        {
+          "content": "Gracias a la formación impartida por FOXON CONSULTING, pude comprender y utilizar mejor la IA en mi profesión de TI/Finanzas. Las herramientas y métodos proporcionados me permitieron automatizar tareas, optimizar mis análisis y aumentar mi productividad. ¡Una formación clara, concreta y esencial para mayor eficiencia!",
+          "author": "Pierre Croissant",
+          "position": "CEO Tutasson Conseil Limited"
+        },
+        {
+          "content": "El equipo de FOXON me ofreció una formación personalizada en gestión de proyectos TI y desarrollo DevOps. El formador mostró gran atención, comprendió mis necesidades y demostró una verdadera pedagogía en la transmisión de sus enseñanzas. La información y materiales de formación recibidos me son útiles diariamente y me permiten ser más efectivo en mis diversos proyectos.",
+          "author": "Guillaume D.",
+          "position": "Freelance"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Se requieren conocimientos técnicos previos?",
+          "reponse": "No, nuestras formaciones están diseñadas específicamente para directivos sin formación técnica. Hacemos accesibles los conceptos complejos mediante un lenguaje claro y ejemplos concretos."
+        },
+        {
+          "question": "¿Se pueden personalizar las formaciones?",
+          "reponse": "¡Absolutamente! Adaptamos el contenido de nuestras formaciones a su sector, desafíos específicos y objetivos estratégicos. Contáctenos para discutir sus necesidades particulares."
+        },
+        {
+          "question": "¿Ofrecen formaciones in-company?",
+          "reponse": "Sí, ofrecemos formaciones in-company que permiten adaptar el contenido a su contexto específico y formar a varios empleados simultáneamente. Esta es a menudo la solución más efectiva para equipos directivos."
+        },
+        {
+          "question": "¿Cuál es el número ideal de participantes?",
+          "reponse": "Para garantizar una experiencia de aprendizaje óptima y fomentar las interacciones, recomendamos grupos de 5 a 10 participantes. Esto permite que cada uno se beneficie de atención personalizada mientras disfruta de un rico intercambio."
+        },
+        {
+          "question": "¿Hay seguimiento después de la formación?",
+          "reponse": "Sí, ofrecemos seguimiento que incluye sesiones de preguntas y respuestas, recursos adicionales y acceso a nuestros expertos para ayudarle en la implementación práctica del conocimiento adquirido."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para formar a sus equipos?",
+      "description": "Contáctenos para discutir sus necesidades específicas y descubrir cómo nuestra formación puede transformar su enfoque de la IA y la automatización."
+    }
+  }
+} 

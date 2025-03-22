@@ -1,0 +1,440 @@
+{
+  "common": {
+    "contact_us": "Contact us",
+    "learn_more": "Learn more",
+    "request_quote": "Request a quote",
+    "language": {
+      "select": "Select language",
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "landing_page": {
+    "hero": {
+      "title": "IT & AI Excellence for Business",
+      "description": "We support your digital transformation with IT consulting services, AI-powered data exploitation, and training for decision-makers.",
+      "services_button": "Our services"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Tailored solutions to meet your technology and innovation needs",
+      "consulting": {
+        "icon": "server",
+        "title": "IT Consulting",
+        "description": "Technical expertise and strategic support",
+        "details": "Our team of experts supports you in all your IT projects, from development to production, including auditing and infrastructure optimization.",
+        "features": {
+          "feature1": "Custom software development",
+          "feature2": "Software chain management",
+          "feature3": "Technical audit and improvement",
+          "feature4": "Infrastructure deployment"
+        },
+        "link": "/consulting-it"
+      },
+      "data": {
+        "icon": "database",
+        "title": "Data Exploitation with AI",
+        "description": "Leverage your data through artificial intelligence",
+        "details": "We help you make the most of your data to improve your processes and make informed decisions using artificial intelligence.",
+        "features": {
+          "feature1": "Data collection and integration",
+          "feature2": "Optimized storage",
+          "feature3": "Predictive analysis",
+          "feature4": "Interactive dashboards"
+        },
+        "link": "/data-ia"
+      },
+      "training": {
+        "icon": "graduation-cap",
+        "title": "Training",
+        "description": "Technical training tailored for decision-makers",
+        "details": "Our training programs are specifically designed for decision-makers who want to understand the challenges and opportunities of modern technologies.",
+        "features": {
+          "feature1": "AI for decision-makers",
+          "feature2": "Process automation",
+          "feature3": "Digital transformation",
+          "feature4": "Data-driven decision making"
+        },
+        "link": "/training"
+      }
+    },
+    "key_figures": {
+      "clients": {
+        "icon": "users",
+        "value": "30",
+        "label": "Satisfied Clients"
+      },
+      "projects": {
+        "icon": "project-diagram",
+        "value": "100",
+        "label": "Completed Projects"
+      },
+      "experience": {
+        "icon": "code-branch",
+        "value": "15",
+        "label": "Technologies Mastered"
+      },
+      "satisfaction": {
+        "icon": "award",
+        "value": "12",
+        "label": "Years of Experience"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Our company specializes in IT and AI services, with particular expertise in custom solution development, data exploitation, and decision-maker training.",
+      "values_title": "Our Values",
+      "paragraphs": {
+        "p1": "We stand out through our pragmatic approach and our ability to translate complex technical concepts into concrete and accessible solutions.",
+        "p2": "Our mission is to support you in your digital transformation by providing the tools, knowledge, and expertise needed to succeed in an ever-evolving world."
+      },
+      "values": {
+        "excellence": {
+          "icon": "award",
+          "title": "Excellence",
+          "description": "We strive for excellence in every project, applying best practices and staying at the forefront of innovation."
+        },
+        "collaboration": {
+          "icon": "users",
+          "title": "Collaboration",
+          "description": "We believe in the power of collaboration and work closely with our clients to achieve their goals."
+        },
+        "innovation": {
+          "icon": "code-branch",
+          "title": "Innovation",
+          "description": "We constantly explore new technologies and approaches to deliver innovative solutions to our clients."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about our services",
+      "q1": {
+        "question": "How do we start working together?",
+        "reponse": "The first step is to contact us for an initial meeting where we'll discuss your needs and objectives. We'll then propose a personalized approach and a detailed quote."
+      },
+      "q2": {
+        "question": "What types of companies do you work with?",
+        "reponse": "We work with companies of all sizes, from startups to large corporations, across various sectors. Our approach is tailored to each client's specific needs."
+      },
+      "q3": {
+        "question": "How much do your services cost?",
+        "reponse": "Our rates vary depending on the nature and scope of the project. We offer solutions adapted to different budgets and work with complete transparency on costs."
+      },
+      "q4": {
+        "question": "What is your approach to confidentiality?",
+        "reponse": "We place paramount importance on confidentiality. All our contracts include strict confidentiality clauses, and we implement robust security measures to protect your data."
+      },
+      "q5": {
+        "question": "Do you provide support after project completion?",
+        "reponse": "Absolutely! We offer maintenance and support services to ensure the longevity and evolution of your solutions. We remain available to support you in the long term."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals."
+    }
+  },
+  "consulting_page": {
+    "hero": {
+      "title": "IT Consulting",
+      "description": "Technical expertise and strategic support for your IT projects. We help you develop, manage and optimize your software solutions."
+    },
+    "services": {
+      "title": "Our IT Consulting Services",
+      "description": "Our team of experts supports you in all your IT projects, from development to production, including auditing and infrastructure optimization.",
+      "items": [
+        {
+          "title": "Custom Software Development",
+          "description": "Design and development of tailor-made software solutions adapted to your specific needs."
+        },
+        {
+          "title": "Software Chain Management",
+          "description": "Implementation and optimization of your development chain, from idea to production."
+        },
+        {
+          "title": "Technical Audit and Improvement",
+          "description": "Analysis of your existing systems and recommendations to improve performance and security."
+        },
+        {
+          "title": "Infrastructure Deployment",
+          "description": "Design and implementation of secure, scalable, and high-performance cloud infrastructures."
+        }
+      ]
+    },
+    "process": {
+      "title": "Our Process",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Needs Analysis",
+          "description": "Deep understanding of your objectives and constraints"
+        },
+        {
+          "number": 2,
+          "title": "Solution Design",
+          "description": "Development of a tailored architecture and strategy"
+        },
+        {
+          "number": 3,
+          "title": "Development & Testing",
+          "description": "Agile implementation with regular feedback cycles"
+        },
+        {
+          "number": 4,
+          "title": "Deployment & Support",
+          "description": "Production deployment and continuous support"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Technologies Used",
+      "categories": {
+        "development": "Development",
+        "devops": "DevOps",
+        "cloud": "Cloud"
+      }
+    },
+    "case_studies": {
+      "title": "Case Studies",
+      "items": [
+        {
+          "title": "CI/CD Pipeline Audit for Cloud Infrastructure Migration",
+          "description": "Analysis of existing CI/CD pipelines and recommendations to improve pipeline quality and security. Support for Azure migration.",
+          "technologies": ["Jenkins", "GitHub Actions", "Azure", "Kubernetes"]
+        },
+        {
+          "title": "ERP Solution Deployment on AWS",
+          "description": "Deployment of an ERP solution on AWS with a highly available and scalable architecture.",
+          "technologies": ["AWS", "Terraform", "MariaDB", "Github Actions"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Transform Your IT Infrastructure?",
+      "description": "Contact us today to discuss your IT consulting needs"
+    }
+  },
+  "data_ia_page": {
+    "hero": {
+      "title": "Data Exploitation with AI",
+      "description": "Transform your data into strategic insights with our custom AI solutions."
+    },
+    "services": {
+      "title": "Our Data Services",
+      "description": "Our team of data science and AI experts helps you make the most of your data to improve your processes and make informed decisions.",
+      "items": [
+        {
+          "title": "Data Collection and Integration",
+          "description": "Implementation of data collection and integration systems from various sources."
+        },
+        {
+          "title": "Optimized and Secure Storage",
+          "description": "Design of high-performance and secure storage architectures for your data."
+        },
+        {
+          "title": "Predictive and Prescriptive Analysis",
+          "description": "Development of AI models to predict trends and recommend actions."
+        },
+        {
+          "title": "Interactive Dashboards",
+          "description": "Creation of interactive visualizations to explore and understand your data."
+        }
+      ]
+    },
+    "process": {
+      "title": "Our Data Process",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Collection",
+          "description": "Identification and collection of relevant data for your business"
+        },
+        {
+          "number": 2,
+          "title": "Processing",
+          "description": "Cleaning, transformation, and enrichment of raw data"
+        },
+        {
+          "number": 3,
+          "title": "Analysis",
+          "description": "Application of AI algorithms to extract relevant insights"
+        },
+        {
+          "number": 4,
+          "title": "Visualization",
+          "description": "Presentation of results through interactive dashboards"
+        }
+      ]
+    },
+    "technologies": {
+      "title": "Technologies Used"
+    },
+    "case_studies": {
+      "title": "Case Studies",
+      "items": [
+        {
+          "title": "Predictive Maintenance for Industry",
+          "description": "Development of a predictive maintenance system using IoT sensors and AI algorithms to predict equipment failures before they occur.",
+          "technologies": ["Python", "TensorFlow", "IoT", "Azure", "Power BI"]
+        },
+        {
+          "title": "Supply Chain Optimization",
+          "description": "Creation of a supply chain optimization system using machine learning to forecast demand and optimize inventory levels.",
+          "technologies": ["Python", "Scikit-learn", "Tableau", "AWS", "PostgreSQL"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Leverage Your Data?",
+      "description": "Contact us today to discuss your data needs and discover how we can help you make the most of your data."
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "We're here to answer your questions and support your projects"
+    },
+    "booking": {
+      "description": "Schedule a 30-minute call with one of our experts. We'll discuss your needs and propose the best solutions."
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Prefer to write to us? Use the form below and we'll get back to you as soon as possible."
+    },
+    "info": {
+      "address": {
+        "title": "Address"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      }
+    }
+  },
+  "formation_page": {
+    "hero": {
+      "title": "Training for Decision Makers",
+      "description": "Technical training tailored for decision makers to understand and leverage the potential of AI and automation in your business.",
+      "video": "/videos/formation.mp4"
+    },
+    "formations": {
+      "title": "Our Training Programs",
+      "items": [
+        {
+          "title": "AI for Decision Makers",
+          "icon": "faLightbulb",
+          "duration": "3 days",
+          "description": "A comprehensive training to understand AI fundamentals, its concrete business applications, and its strategic impact on your industry.",
+          "modules": [
+            "Introduction to key AI concepts",
+            "Industry applications and case studies",
+            "AI integration strategies"
+          ]
+        },
+        {
+          "title": "Process Automation",
+          "icon": "faRobot",
+          "duration": "3 days",
+          "description": "Discover modern automation tools and their potential to optimize your business processes.",
+          "modules": [
+            "Overview of automation technologies",
+            "Identifying automatable processes",
+            "Implementation methodology"
+          ]
+        },
+        {
+          "title": "Blockchain for Decision Makers",
+          "icon": "faLink",
+          "duration": "2 days",
+          "description": "Master key blockchain concepts and discover how this technology can transform your industry and create new strategic opportunities.",
+          "modules": [
+            "Fundamentals of blockchain and distributed technologies",
+            "Industry use cases and disruption potential",
+            "Integration strategies and blockchain project governance"
+          ]
+        }
+      ]
+    },
+    "pedagogie": {
+      "title": "Our Pedagogical Approach",
+      "items": [
+        {
+          "step": 1,
+          "title": "Simplification",
+          "description": "We make complex technical concepts accessible"
+        },
+        {
+          "step": 2,
+          "title": "Practical Cases",
+          "description": "We use concrete examples adapted to your industry"
+        },
+        {
+          "step": 3,
+          "title": "Interactivity",
+          "description": "Our workshops promote exchanges and active participation"
+        },
+        {
+          "step": 4,
+          "title": "Personalized Follow-up",
+          "description": "We support you after training for practical implementation"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "subtitle": "What our clients say about our training",
+      "items": [
+        {
+          "content": "To manage large-scale events, we strengthened our IT infrastructure with a DevOps approach. The technical support helped us optimize resource management, automate processes, and ensure service continuity, while reducing risks and improving responsiveness.",
+          "author": "Julien Cugniez",
+          "position": "CEO",
+          "company": "Director Indigomaze"
+        },
+        {
+          "content": "Thanks to the training provided by FOXON CONSULTING, I was able to better understand and leverage AI in my IT/finance profession. The tools and methods taught allowed me to automate tasks, optimize my analyses, and improve my productivity. A clear, concrete, and essential training for gaining efficiency!",
+          "author": "Pierre Croissant",
+          "position": "CEO Tutasson Conseil Limited"
+        },
+        {
+          "content": "The FOXON team provided me with personalized training on IT project management and DevOps development. The trainer showed great listening skills, understood my needs, and demonstrated real pedagogy in transmitting their teachings. The information and educational materials received are now useful to me daily and allow me to be more effective in my various projects.",
+          "author": "Guillaume D.",
+          "position": "Independent"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Do I need prior technical knowledge?",
+          "reponse": "No, our training programs are specifically designed for decision makers without technical background. We make complex concepts accessible using clear language and concrete examples."
+        },
+        {
+          "question": "Can the training be customized?",
+          "reponse": "Absolutely! We adapt the content of our training to your industry, specific challenges, and strategic objectives. Contact us to discuss your particular needs."
+        },
+        {
+          "question": "Do you offer in-house training?",
+          "reponse": "Yes, we offer in-house training, which allows us to adapt the content to your specific context and train multiple employees simultaneously. This is often the most effective solution for management teams."
+        },
+        {
+          "question": "What is the ideal number of participants?",
+          "reponse": "To ensure an optimal learning experience and promote interactions, we recommend groups of 5 to 10 participants. This allows everyone to benefit from personalized attention while taking advantage of rich exchanges."
+        },
+        {
+          "question": "Is there follow-up after the training?",
+          "reponse": "Yes, we offer post-training support that includes Q&A sessions, additional resources, and access to our experts to help you put the acquired knowledge into practice."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Train Your Teams?",
+      "description": "Contact us to discuss your specific needs and discover how our training can transform your approach to AI and automation."
+    }
+  }
+}
