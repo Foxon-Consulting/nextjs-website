@@ -30,15 +30,15 @@ export async function Footer() {
               Expertise IT & IA au service de votre transformation numérique
             </p>
             <div className="flex space-x-4">
-              <Link href={contactInfo.social_media.twitter} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+              {/* <Link href={contactInfo.social_media.twitter} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5" />
-              </Link>
+              </Link> */}
               <Link href={contactInfo.social_media.linkedin} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
               </Link>
-              <Link href={contactInfo.social_media.facebook} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+              {/* <Link href={contactInfo.social_media.facebook} className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                 <FontAwesomeIcon icon={faFacebook} className="h-5 w-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
           

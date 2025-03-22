@@ -15,11 +15,7 @@
     "hero": {
       "title": "Excellence IT & IA pour les Entreprises",
       "description": "Nous accompagnons votre transformation numérique avec des services de conseil IT, d'exploitation de données avec l'IA et de formation pour décideurs.",
-      "services_button": "Nos services",
-      "booking": {
-        "text": "Prendre rendez-vous",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "services_button": "Nos services"
   },
   "services": {
       "title": "Nos Services",
@@ -138,11 +134,7 @@
     },
     "cta": {
       "title": "Prêt à Transformer Votre Entreprise ?",
-      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs.",
-      "booking": {
-        "text": "Prendre rendez-vous",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "description": "Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider à atteindre vos objectifs."
     }
   },
   "consulting_page": {
@@ -173,7 +165,7 @@
       ]
     },
     "process": {
-      "title": "Notre Processus",
+      "title": "Notre Processus de Conseil IT",
       "steps": [
         {
           "number": 1,
@@ -303,14 +295,14 @@
   "contact_page": {
     "hero": {
       "title": "Contactez-nous",
-      "description": "Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous accompagner dans vos projets."
+      "description": "Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets"
+    },
+    "booking": {
+      "description": "Prenez rendez-vous pour un appel de 30 minutes avec l'un de nos experts. Nous discuterons de vos besoins et vous proposerons les meilleures solutions."
     },
     "form": {
       "title": "Envoyez-nous un message",
-      "name": "Votre nom",
-      "email": "Votre email",
-      "message": "Votre message",
-      "submit": "Envoyer"
+      "description": "Vous préférez nous écrire ? Utilisez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais."
     },
     "info": {
       "address": {
@@ -440,7 +432,7 @@
         }
       ]
     },
-    "cta": {
+  "cta": {
       "title": "Prêt à former vos équipes ?",
       "description": "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos formations peuvent transformer votre approche de l'IA et de l'automatisation."
     }

@@ -15,11 +15,7 @@
     "hero": {
       "title": "Excelencia en TI e IA para empresas",
       "description": "Apoyamos su transformación digital con consultoría TI, explotación de datos con IA y formación para directivos.",
-      "services_button": "Nuestros servicios",
-      "booking": {
-        "text": "Agendar una cita",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "services_button": "Nuestros servicios"
     },
     "services": {
       "title": "Nuestros servicios",
@@ -138,11 +134,7 @@
     },
     "cta": {
       "title": "¿Listo para transformar su empresa?",
-      "description": "Contáctenos hoy para discutir sus necesidades y descubrir cómo podemos ayudarle a alcanzar sus objetivos.",
-      "booking": {
-        "text": "Agendar una cita",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "description": "Contáctenos hoy para discutir sus necesidades y descubrir cómo podemos ayudarle a alcanzar sus objetivos."
     }
   },
   "consulting_page": {
@@ -302,22 +294,22 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Contacto",
-      "description": "Nuestro equipo de expertos está a su disposición para responder a sus preguntas y apoyarle en sus proyectos."
+      "title": "Contáctenos",
+      "description": "Estamos aquí para responder sus preguntas y apoyar sus proyectos"
+    },
+    "booking": {
+      "description": "Programe una llamada de 30 minutos con uno de nuestros expertos. Discutiremos sus necesidades y propondremos las mejores soluciones."
     },
     "form": {
       "title": "Envíenos un mensaje",
-      "name": "Su nombre",
-      "email": "Su correo electrónico",
-      "message": "Su mensaje",
-      "submit": "Enviar"
+      "description": "¿Prefiere escribirnos? Utilice el formulario a continuación y le responderemos lo antes posible."
     },
     "info": {
       "address": {
         "title": "Dirección"
       },
       "email": {
-        "title": "Correo electrónico"
+        "title": "Correo"
       },
       "phone": {
         "title": "Teléfono"

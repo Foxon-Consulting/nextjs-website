@@ -15,20 +15,16 @@
     "hero": {
       "title": "IT & AI Excellence for Business",
       "description": "We support your digital transformation with IT consulting services, AI-powered data exploitation, and training for decision-makers.",
-      "services_button": "Our services",
-      "booking": {
-        "text": "Book a meeting",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
-  },
-  "services": {
+      "services_button": "Our services"
+    },
+    "services": {
       "title": "Our Services",
       "description": "Tailored solutions to meet your technology and innovation needs",
-    "consulting": {
+      "consulting": {
         "icon": "server",
-      "title": "IT Consulting",
-      "description": "Technical expertise and strategic support",
-      "details": "Our team of experts supports you in all your IT projects, from development to production, including auditing and infrastructure optimization.",
+        "title": "IT Consulting",
+        "description": "Technical expertise and strategic support",
+        "details": "Our team of experts supports you in all your IT projects, from development to production, including auditing and infrastructure optimization.",
         "features": {
           "feature1": "Custom software development",
           "feature2": "Software chain management",
@@ -36,12 +32,12 @@
           "feature4": "Infrastructure deployment"
         },
         "link": "/consulting-it"
-    },
-    "data": {
+      },
+      "data": {
         "icon": "database",
-      "title": "Data Exploitation with AI",
-      "description": "Leverage your data through artificial intelligence",
-      "details": "We help you make the most of your data to improve your processes and make informed decisions using artificial intelligence.",
+        "title": "Data Exploitation with AI",
+        "description": "Leverage your data through artificial intelligence",
+        "details": "We help you make the most of your data to improve your processes and make informed decisions using artificial intelligence.",
         "features": {
           "feature1": "Data collection and integration",
           "feature2": "Optimized storage",
@@ -49,12 +45,12 @@
           "feature4": "Interactive dashboards"
         },
         "link": "/data-ia"
-    },
-    "training": {
+      },
+      "training": {
         "icon": "graduation-cap",
-      "title": "Training",
-      "description": "Technical training tailored for decision-makers",
-      "details": "Our training programs are specifically designed for decision-makers who want to understand the challenges and opportunities of modern technologies.",
+        "title": "Training",
+        "description": "Technical training tailored for decision-makers",
+        "details": "Our training programs are specifically designed for decision-makers who want to understand the challenges and opportunities of modern technologies.",
         "features": {
           "feature1": "AI for decision-makers",
           "feature2": "Process automation",
@@ -68,8 +64,8 @@
       "clients": {
         "icon": "users",
         "value": "30",
-      "label": "Satisfied Clients"
-    },
+        "label": "Satisfied Clients"
+      },
       "projects": {
         "icon": "project-diagram",
         "value": "100",
@@ -83,12 +79,12 @@
       "satisfaction": {
         "icon": "award",
         "value": "12",
-      "label": "Years of Experience"
-    }
+        "label": "Years of Experience"
+      }
     },
-  "about": {
-    "title": "About Us",
-    "description": "Our company specializes in IT and AI services, with particular expertise in custom solution development, data exploitation, and decision-maker training.",
+    "about": {
+      "title": "About Us",
+      "description": "Our company specializes in IT and AI services, with particular expertise in custom solution development, data exploitation, and decision-maker training.",
       "values_title": "Our Values",
       "paragraphs": {
         "p1": "We stand out through our pragmatic approach and our ability to translate complex technical concepts into concrete and accessible solutions.",
@@ -97,18 +93,18 @@
       "values": {
         "excellence": {
           "icon": "award",
-        "title": "Excellence",
-        "description": "We strive for excellence in every project, applying best practices and staying at the forefront of innovation."
-      },
+          "title": "Excellence",
+          "description": "We strive for excellence in every project, applying best practices and staying at the forefront of innovation."
+        },
         "collaboration": {
           "icon": "users",
-        "title": "Collaboration",
-        "description": "We believe in the power of collaboration and work closely with our clients to achieve their goals."
-      },
+          "title": "Collaboration",
+          "description": "We believe in the power of collaboration and work closely with our clients to achieve their goals."
+        },
         "innovation": {
           "icon": "code-branch",
-        "title": "Innovation",
-        "description": "We constantly explore new technologies and approaches to deliver innovative solutions to our clients."
+          "title": "Innovation",
+          "description": "We constantly explore new technologies and approaches to deliver innovative solutions to our clients."
         }
       }
     },
@@ -116,33 +112,29 @@
       "title": "Frequently Asked Questions",
       "description": "Everything you need to know about our services",
       "q1": {
-      "question": "How do we start working together?",
-      "reponse": "The first step is to contact us for an initial meeting where we'll discuss your needs and objectives. We'll then propose a personalized approach and a detailed quote."
-    },
+        "question": "How do we start working together?",
+        "reponse": "The first step is to contact us for an initial meeting where we'll discuss your needs and objectives. We'll then propose a personalized approach and a detailed quote."
+      },
       "q2": {
-      "question": "What types of companies do you work with?",
-      "reponse": "We work with companies of all sizes, from startups to large corporations, across various sectors. Our approach is tailored to each client's specific needs."
-    },
+        "question": "What types of companies do you work with?",
+        "reponse": "We work with companies of all sizes, from startups to large corporations, across various sectors. Our approach is tailored to each client's specific needs."
+      },
       "q3": {
-      "question": "How much do your services cost?",
-      "reponse": "Our rates vary depending on the nature and scope of the project. We offer solutions adapted to different budgets and work with complete transparency on costs."
-    },
+        "question": "How much do your services cost?",
+        "reponse": "Our rates vary depending on the nature and scope of the project. We offer solutions adapted to different budgets and work with complete transparency on costs."
+      },
       "q4": {
-      "question": "What is your approach to confidentiality?",
-      "reponse": "We place paramount importance on confidentiality. All our contracts include strict confidentiality clauses, and we implement robust security measures to protect your data."
-    },
+        "question": "What is your approach to confidentiality?",
+        "reponse": "We place paramount importance on confidentiality. All our contracts include strict confidentiality clauses, and we implement robust security measures to protect your data."
+      },
       "q5": {
-      "question": "Do you provide support after project completion?",
-      "reponse": "Absolutely! We offer maintenance and support services to ensure the longevity and evolution of your solutions. We remain available to support you in the long term."
-    }
-    },
-  "cta": {
-    "title": "Ready to Transform Your Business?",
-      "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals.",
-      "booking": {
-        "text": "Book a meeting",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
+        "question": "Do you provide support after project completion?",
+        "reponse": "Absolutely! We offer maintenance and support services to ensure the longevity and evolution of your solutions. We remain available to support you in the long term."
       }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals."
     }
   },
   "consulting_page": {
@@ -303,14 +295,14 @@
   "contact_page": {
     "hero": {
       "title": "Contact Us",
-      "description": "Our team of experts is at your disposal to answer your questions and support you in your projects."
+      "description": "We're here to answer your questions and support your projects"
+    },
+    "booking": {
+      "description": "Schedule a 30-minute call with one of our experts. We'll discuss your needs and propose the best solutions."
     },
     "form": {
       "title": "Send us a message",
-      "name": "Your name",
-      "email": "Your email",
-      "message": "Your message",
-      "submit": "Send"
+      "description": "Prefer to write to us? Use the form below and we'll get back to you as soon as possible."
     },
     "info": {
       "address": {

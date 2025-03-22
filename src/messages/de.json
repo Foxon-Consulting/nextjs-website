@@ -15,11 +15,7 @@
     "hero": {
       "title": "IT & KI Exzellenz für Unternehmen",
       "description": "Wir unterstützen Ihre digitale Transformation mit IT-Beratung, KI-gestützter Datennutzung und Schulungen für Entscheidungsträger.",
-      "services_button": "Unsere Dienstleistungen",
-      "booking": {
-        "text": "Termin vereinbaren",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "services_button": "Unsere Dienstleistungen"
     },
     "services": {
       "title": "Unsere Dienstleistungen",
@@ -138,11 +134,7 @@
     },
     "cta": {
       "title": "Bereit, Ihr Unternehmen zu transformieren?",
-      "description": "Kontaktieren Sie uns noch heute, um Ihre Bedürfnisse zu besprechen und zu entdecken, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.",
-      "booking": {
-        "text": "Termin vereinbaren",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "description": "Kontaktieren Sie uns noch heute, um Ihre Bedürfnisse zu besprechen und zu entdecken, wie wir Ihnen helfen können, Ihre Ziele zu erreichen."
     }
   },
   "consulting_page": {
@@ -302,15 +294,15 @@
   },
   "contact_page": {
     "hero": {
-      "title": "Kontakt",
-      "description": "Unser Expertenteam steht Ihnen zur Verfügung, um Ihre Fragen zu beantworten und Sie bei Ihren Projekten zu unterstützen."
+      "title": "Kontaktieren Sie uns",
+      "description": "Wir sind hier, um Ihre Fragen zu beantworten und Ihre Projekte zu unterstützen"
+    },
+    "booking": {
+      "description": "Vereinbaren Sie einen 30-minütigen Anruf mit einem unserer Experten. Wir besprechen Ihre Bedürfnisse und schlagen die besten Lösungen vor."
     },
     "form": {
       "title": "Senden Sie uns eine Nachricht",
-      "name": "Ihr Name",
-      "email": "Ihre E-Mail",
-      "message": "Ihre Nachricht",
-      "submit": "Senden"
+      "description": "Sie möchten uns lieber schreiben? Nutzen Sie das untenstehende Formular und wir melden uns schnellstmöglich bei Ihnen."
     },
     "info": {
       "address": {

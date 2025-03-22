@@ -101,7 +101,7 @@ export default async function Formation() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('formations.title')}</h2>
           
@@ -152,7 +152,7 @@ export default async function Formation() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-900">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 dark:text-white">{t('testimonials.title')}</h2>
@@ -185,14 +185,14 @@ export default async function Formation() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('faq.title')}</h2>
           
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faq.map((item: { question: string; reponse: string }, index: number) => (
-                <AccordionItem key={index} value={`item-${index + 1}`} className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionItem key={index} value={`item-${index + 1}`} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 mb-4 last:mb-0">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
                     {item.question}
                   </AccordionTrigger>

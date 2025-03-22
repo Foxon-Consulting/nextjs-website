@@ -77,7 +77,7 @@ export default function Home() {
           ></div>
         </div>
         
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container relative z-10 mx-auto px-4 flex items-center min-h-[60vh]">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t("landing_page.hero.title")}
@@ -96,11 +96,6 @@ export default function Home() {
                   {t("landing_page.hero.services_button")}
                 </Button>
               </Link>
-              <a href={t("landing_page.hero.booking.url")} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                  {t("landing_page.hero.booking.text")}
-                </Button>
-              </a>
             </div>
           </div>
         </div>
@@ -222,9 +217,13 @@ export default function Home() {
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible>
               {faqItems.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index + 1}`} className="bg-white dark:bg-gray-800 rounded-lg">
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index + 1}`} 
+                  className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 mb-4 last:mb-0"
+                >
                   <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
                     {item.question}
                   </AccordionTrigger>
@@ -251,11 +250,6 @@ export default function Home() {
                 {t("common.contact_us")}
               </Button>
             </Link>
-            <a href={t("landing_page.cta.booking.url")} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-[#00f65e] text-gray-900 hover:bg-[#f1f55c] px-8 py-3 rounded-full text-lg">
-                {t("landing_page.cta.booking.text")}
-              </Button>
-            </a>
           </div>
         </div>
       </section>
