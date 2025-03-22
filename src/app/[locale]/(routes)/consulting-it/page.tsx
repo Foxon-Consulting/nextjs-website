@@ -1,16 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCloud,
-  faCheckCircle
+  faCheckCircle,
+  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import { 
   faJs,
-  faNodeJs,
   faPython,
   faJava,
   faReact,
   faAngular,
-  faVuejs,
   faAws,
   faDocker,
   faGitAlt
@@ -147,11 +146,15 @@ export default function ConsultingIT() {
               <h3 className="text-2xl font-bold mb-6 dark:text-white">{name}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {getTechnologiesByCategory(key).map((tech, techIndex) => {
-                  const { icon, iconColor } = getTechnologyIcon(tech);
+                  const { icon, iconColor, isCustomIcon } = getTechnologyIcon(tech);
                   return (
                     <div key={techIndex} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
                       <div style={{ color: iconColor }} className="text-4xl mb-4 h-[1.5em] flex items-center justify-center">
-                        <FontAwesomeIcon icon={icon} className="w-[1em] h-[1em]" />
+                        {isCustomIcon ? (
+                          <img src={icon as string} alt={tech} className="w-[1em] h-[1em]" />
+                        ) : (
+                          <FontAwesomeIcon icon={icon as IconDefinition} className="w-[1em] h-[1em]" />
+                        )}
                       </div>
                       <h3 className="font-bold dark:text-white">{tech}</h3>
                     </div>
@@ -208,9 +211,9 @@ export default function ConsultingIT() {
 function getTechnologiesByCategory(category: string): string[] {
   switch(category) {
     case 'development':
-      return ['JavaScript', 'TypeScript', 'Python', 'Java', 'React', 'Angular', 'Vue.js', 'Node.js'];
+      return ['C++', 'Python', 'Java','JavaScript', 'TypeScript', 'React', 'NextJS', 'Tauri'];
     case 'devops':
-      return ['Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'Git'];
+      return ['Git', 'GitHub Actions', 'Gitlab', 'Jenkins', 'Docker', 'Kubernetes', 'Helm', 'Terraform' ];
     case 'cloud':
       return ['AWS', 'Azure', 'GCP'];
     default:
@@ -219,8 +222,11 @@ function getTechnologiesByCategory(category: string): string[] {
 }
 
 // Fonction utilitaire pour obtenir l'icône et la couleur d'une technologie
-function getTechnologyIcon(tech: string): { icon: IconDefinition; iconColor: string } {
+function getTechnologyIcon(tech: string): { icon: IconDefinition | string; iconColor: string; isCustomIcon?: boolean } {
   switch(tech.toLowerCase()) {
+    case 'c++':
+      return { icon: '/icons/tech/cplusplus.svg', iconColor: "#007ACC", isCustomIcon: true };
+
     case 'javascript':
       return { icon: faJs, iconColor: "#F7DF1E" };
     case 'typescript':
@@ -231,31 +237,37 @@ function getTechnologyIcon(tech: string): { icon: IconDefinition; iconColor: str
       return { icon: faJava, iconColor: "#007396" };
     case 'react':
     case 'reactjs':
-    case 'nextjs':
       return { icon: faReact, iconColor: "#61DAFB" };
-    case 'angular':
-      return { icon: faAngular, iconColor: "#DD0031" };
-    case 'vue':
-    case 'vuejs':
-      return { icon: faVuejs, iconColor: "#4FC08D" };
+    case 'nextjs':
+      return { icon: '/icons/tech/nextjs.svg', iconColor: "#000000", isCustomIcon: true };
     case 'node':
     case 'nodejs':
-      return { icon: faNodeJs, iconColor: "#339933" };
+      return { icon: faCode, iconColor: "#68a063" };
     case 'aws':
       return { icon: faAws, iconColor: "#FF9900" };
     case 'azure':
-      return { icon: faCloud, iconColor: "#0078D4" };
+      return { icon: '/icons/tech/azure.svg', iconColor: "#0078D4", isCustomIcon: true };
     case 'gcp':
-      return { icon: faCloud, iconColor: "#4285F4" };
+      return { icon: '/icons/tech/gcp.svg', iconColor: "#4285F4", isCustomIcon: true };
     case 'docker':
       return { icon: faDocker, iconColor: "#2496ED" };
     case 'kubernetes':
     case 'k8s':
-      return { icon: faCloud, iconColor: "#326CE5" };
+      return { icon: '/icons/tech/kubernetes.svg', iconColor: "#326CE5", isCustomIcon: true };
+    case 'helm':
+      return { icon: '/icons/tech/helm.svg', iconColor: "#007ACC", isCustomIcon: true };
+    case 'terraform':
+      return { icon: '/icons/tech/terraform.svg', iconColor: "#5c4ee5", isCustomIcon: true };
     case 'git':
-    case 'github':
-    case 'github actions':
       return { icon: faGitAlt, iconColor: "#F05032" };
+    case 'gitlab':
+      return { icon: '/icons/tech/gitlab.svg', iconColor: "#E24329", isCustomIcon: true };
+    case 'github actions':
+      return { icon: '/icons/tech/githubactions.svg', iconColor: "#181717", isCustomIcon: true };
+    case 'jenkins':
+      return { icon: '/icons/tech/jenkins.svg', iconColor: "#335061", isCustomIcon: true };
+    case 'tauri':
+      return { icon: '/icons/tech/tauri.svg', iconColor: "#242424", isCustomIcon: true };
     default:
       return { icon: faCheckCircle, iconColor: "#00f65e" };
   }
