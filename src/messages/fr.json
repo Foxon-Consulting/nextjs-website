@@ -16,14 +16,14 @@
       "title": "Excellence IT & IA pour les Entreprises",
       "description": "Nous accompagnons votre transformation numérique avec des services de conseil IT, d'exploitation de données avec l'IA et de formation pour décideurs.",
       "services_button": "Nos services"
-    },
-    "services": {
+  },
+  "services": {
       "title": "Nos Services",
       "description": "Des solutions sur mesure pour répondre à vos besoins technologiques et d'innovation",
-      "consulting": {
+    "consulting": {
         "icon": "server",
         "title": "Conseil IT",
-        "description": "Expertise technique et accompagnement stratégique",
+      "description": "Expertise technique et accompagnement stratégique",
         "details": "Notre équipe d'experts vous accompagne dans tous vos projets IT, du développement à la production, en passant par l'audit et l'optimisation de vos infrastructures.",
         "features": {
           "feature1": "Développement logiciel sur mesure",
@@ -32,12 +32,12 @@
           "feature4": "Déploiement d'infrastructure"
         },
         "link": "/consulting-it"
-      },
-      "data": {
+    },
+    "data": {
         "icon": "database",
-        "title": "Exploitation de données avec l'IA",
-        "description": "Valorisez vos données grâce à l'intelligence artificielle",
-        "details": "Nous vous aidons à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées grâce à l'intelligence artificielle.",
+      "title": "Exploitation de données avec l'IA",
+      "description": "Valorisez vos données grâce à l'intelligence artificielle",
+      "details": "Nous vous aidons à tirer le meilleur parti de vos données pour améliorer vos processus et prendre des décisions éclairées grâce à l'intelligence artificielle.",
         "features": {
           "feature1": "Collecte et intégration de données",
           "feature2": "Stockage optimisé",
@@ -432,7 +432,7 @@
         }
       ]
     },
-    "cta": {
+  "cta": {
       "title": "Prêt à former vos équipes ?",
       "description": "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos formations peuvent transformer votre approche de l'IA et de l'automatisation."
     }
