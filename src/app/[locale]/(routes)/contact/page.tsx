@@ -15,12 +15,13 @@ export default async function ContactPage() {
   
   return (
     <>
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      {/* Section Prise de rendez-vous */}
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4 dark:text-white">{t('hero.title')}</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
-              {t('hero.description')}
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+              {t('booking.description')}
             </p>
             <div className="flex justify-center">
               <a href={contactInfo.booking.url} target="_blank" rel="noopener noreferrer">
@@ -30,6 +31,18 @@ export default async function ContactPage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Section Contact par email */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">{t('form.title')}</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+              {t('form.description')}
+            </p>
+          </div>
           
           <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
             <ContactForm />
@@ -37,7 +50,8 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 dark:bg-gray-950">
+      {/* Section Informations de contact */}
+      <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">

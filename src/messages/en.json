@@ -15,11 +15,12 @@
     "hero": {
       "title": "IT & AI Excellence for Business",
       "description": "We support your digital transformation with IT consulting services, AI-powered data exploitation, and training for decision-makers.",
-      "services_button": "Our services",
-      "booking": {
-        "text": "Book a meeting",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
+      "services_button": "Our services"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals."
+    }
   },
   "services": {
       "title": "Our Services",
@@ -136,15 +137,6 @@
       "reponse": "Absolutely! We offer maintenance and support services to ensure the longevity and evolution of your solutions. We remain available to support you in the long term."
     }
     },
-  "cta": {
-    "title": "Ready to Transform Your Business?",
-      "description": "Contact us today to discuss your needs and discover how we can help you achieve your goals.",
-      "booking": {
-        "text": "Book a meeting",
-        "url": "https://book.morgen.so/foxonconsulting/meeting"
-      }
-    }
-  },
   "consulting_page": {
     "hero": {
       "title": "IT Consulting",
@@ -303,14 +295,14 @@
   "contact_page": {
     "hero": {
       "title": "Contact Us",
-      "description": "Our team of experts is at your disposal to answer your questions and support you in your projects."
+      "description": "We're here to answer your questions and support your projects"
+    },
+    "booking": {
+      "description": "Schedule a 30-minute call with one of our experts. We'll discuss your needs and propose the best solutions."
     },
     "form": {
       "title": "Send us a message",
-      "name": "Your name",
-      "email": "Your email",
-      "message": "Your message",
-      "submit": "Send"
+      "description": "Prefer to write to us? Use the form below and we'll get back to you as soon as possible."
     },
     "info": {
       "address": {
