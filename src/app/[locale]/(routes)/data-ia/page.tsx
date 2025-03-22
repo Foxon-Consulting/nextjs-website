@@ -3,13 +3,11 @@ import {
   faCheckCircle,
   faCode 
 } from "@fortawesome/free-solid-svg-icons";
-import { 
-  faPython,
-} from "@fortawesome/free-brands-svg-icons";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import Image from 'next/image';
 
 // Types pour les services
 interface Service {
@@ -140,7 +138,13 @@ export default function DataIA() {
                 <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
                   <div style={{ color: iconColor }} className="text-4xl mb-4 h-[1.5em] flex items-center justify-center">
                     {isCustomIcon ? (
-                      <img src={icon as string} alt={tech} className="w-[1em] h-[1em]" />
+                      <Image 
+                        src={icon as string} 
+                        alt={tech} 
+                        width={24} 
+                        height={24}
+                        className="w-[1em] h-[1em]" 
+                      />
                     ) : (
                       <FontAwesomeIcon icon={icon as IconDefinition} className="w-[1em] h-[1em]" />
                     )}
