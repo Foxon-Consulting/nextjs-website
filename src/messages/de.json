@@ -9,6 +9,20 @@
       "en": "English",
       "de": "Deutsch",
       "es": "Español"
+    },
+    "navigation": {
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "contact": "Kontakt",
+      "consulting_it": "IT-Beratung",
+      "data_ia": "Datenauswertung mit KI",
+      "training": "Schulungen"
+    },
+    "footer": {
+      "description": "IT- und KI-Expertise im Dienste Ihrer digitalen Transformation",
+      "services": "Dienstleistungen",
+      "contact": "Kontakt",
+      "copyright": "Alle Rechte vorbehalten"
     }
   },
   "landing_page": {
