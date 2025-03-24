@@ -9,6 +9,20 @@
       "en": "English",
       "de": "Deutsch",
       "es": "Español"
+    },
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact",
+      "consulting_it": "IT Consulting",
+      "data_ia": "Data Exploitation with AI",
+      "training": "Training"
+    },
+    "footer": {
+      "description": "IT & AI expertise at the service of your digital transformation",
+      "services": "Services",
+      "contact": "Contact",
+      "copyright": "All rights reserved"
     }
   },
   "landing_page": {

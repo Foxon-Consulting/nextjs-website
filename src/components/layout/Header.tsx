@@ -70,7 +70,7 @@ export function Header() {
               href="/" 
               className={`text-sm font-medium ${isActive('/') ? activeClass : inactiveClass}`}
             >
-              Accueil
+              {t('navigation.home')}
             </Link>
             
             <DropdownMenu>
@@ -81,7 +81,7 @@ export function Header() {
                     isServicePage() ? activeClass : inactiveClass
                   }`}
                 >
-                  Services <FontAwesomeIcon icon={faChevronDown} className="ml-1 h-3 w-3" />
+                  {t('navigation.services')} <FontAwesomeIcon icon={faChevronDown} className="ml-1 h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-md dark:bg-gray-900 dark:border-gray-800">
@@ -90,7 +90,7 @@ export function Header() {
                     href="/consulting-it" 
                     className={`cursor-pointer ${isActive('/consulting-it') ? 'text-[#00f65e] font-semibold' : 'text-gray-800 dark:text-gray-200'}`}
                   >
-                    Consulting IT
+                    {t('navigation.consulting_it')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800">
@@ -98,7 +98,7 @@ export function Header() {
                     href="/data-ia" 
                     className={`cursor-pointer ${isActive('/data-ia') ? 'text-[#00f65e] font-semibold' : 'text-gray-800 dark:text-gray-200'}`}
                   >
-                    Exploitation de données avec l&apos;IA
+                    {t('navigation.data_ia')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800">
@@ -106,7 +106,7 @@ export function Header() {
                     href="/formation" 
                     className={`cursor-pointer ${isActive('/formation') ? 'text-[#00f65e] font-semibold' : 'text-gray-800 dark:text-gray-200'}`}
                   >
-                    Formations
+                    {t('navigation.training')}
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -116,7 +116,7 @@ export function Header() {
               href="/contact" 
               className={`text-sm font-medium ${isActive('/contact') ? activeClass : inactiveClass}`}
             >
-              Contact
+              {t('navigation.contact')}
             </Link>
           </nav>
           
@@ -188,31 +188,31 @@ export function Header() {
                   href="/" 
                   className={`text-sm font-medium ${isActive('/') ? activeClass : inactiveClass}`}
                 >
-                  Accueil
+                  {t('navigation.home')}
                 </Link>
                 
                 <div className="space-y-3">
                   <p className={`text-sm font-medium ${
                     isServicePage() ? activeClass : 'text-gray-800 dark:text-gray-200'
-                  }`}>Services</p>
+                  }`}>{t('navigation.services')}</p>
                   <div className="pl-4 space-y-2">
                     <Link 
                       href="/consulting-it" 
                       className={`block text-sm ${isActive('/consulting-it') ? activeClass : inactiveClass}`}
                     >
-                      Consulting IT
+                      {t('navigation.consulting_it')}
                     </Link>
                     <Link 
                       href="/data-ia" 
                       className={`block text-sm ${isActive('/data-ia') ? activeClass : inactiveClass}`}
                     >
-                      Exploitation de données avec l&apos;IA
+                      {t('navigation.data_ia')}
                     </Link>
                     <Link 
                       href="/formation" 
                       className={`block text-sm ${isActive('/formation') ? activeClass : inactiveClass}`}
                     >
-                      Formations
+                      {t('navigation.training')}
                     </Link>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export function Header() {
                   href="/contact" 
                   className={`text-sm font-medium ${isActive('/contact') ? activeClass : inactiveClass}`}
                 >
-                  Contact
+                  {t('navigation.contact')}
                 </Link>
 
                 {/* Language Selector Mobile */}
