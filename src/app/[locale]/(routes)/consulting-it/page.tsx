@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
+import {
   faCheckCircle,
   faCode
 } from "@fortawesome/free-solid-svg-icons";
-import { 
+import {
   faJs,
   faPython,
   faJava,
@@ -46,40 +46,40 @@ export const metadata = {
 export default function ConsultingIT() {
   const t = useTranslations('consulting_page');
   const commonT = useTranslations('common');
-  
+
   // Accès aux services
   const services = t.raw('services.items') as Service[];
-  
+
   // Accès aux étapes du processus
   const processSteps = t.raw('process.steps') as ProcessStep[];
 
   // Accès aux études de cas
   const caseStudies = t.raw('case_studies.items') as CaseStudy[];
-  
+
   return (
     <>
       {/* Hero Section with Video Background */}
       <section className="relative py-20 consulting-header service-header overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <video 
+          <video
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
           >
             <source src="/videos/consulting_it.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
-          <div 
-            className="absolute inset-0 z-0" 
-            style={{ 
+          <div
+            className="absolute inset-0 z-0"
+            style={{
               background: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
             }}
           ></div>
         </div>
-        
+
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">{t('hero.title')}</h1>
@@ -98,7 +98,7 @@ export default function ConsultingIT() {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
               {t('services.description')}
             </p>
-            
+
             <div className="space-y-6">
               {services.map((service: Service, index: number) => (
                 <div key={index} className="flex items-start">
@@ -122,7 +122,7 @@ export default function ConsultingIT() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('process.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step: ProcessStep, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
@@ -139,7 +139,7 @@ export default function ConsultingIT() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('technologies.title')}</h2>
-          
+
           {Object.entries(t.raw('technologies.categories') as Record<string, string>).map(([key, name], categoryIndex) => (
             <div key={categoryIndex} className="mb-12">
               <h3 className="text-2xl font-bold mb-6 dark:text-white">{name}</h3>
@@ -150,12 +150,12 @@ export default function ConsultingIT() {
                     <div key={techIndex} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
                       <div style={{ color: iconColor }} className="text-4xl mb-4 h-[1.5em] flex items-center justify-center">
                         {isCustomIcon ? (
-                          <Image 
-                            src={icon as string} 
-                            alt={tech} 
-                            width={24} 
+                          <Image
+                            src={icon as string}
+                            alt={tech}
+                            width={24}
                             height={24}
-                            className="w-[1em] h-[1em]" 
+                            className="w-[1em] h-[1em]"
                           />
                         ) : (
                           <FontAwesomeIcon icon={icon as IconDefinition} className="w-[1em] h-[1em]" />
@@ -175,7 +175,7 @@ export default function ConsultingIT() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('case_studies.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((study: CaseStudy, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
@@ -276,4 +276,4 @@ function getTechnologyIcon(tech: string): { icon: IconDefinition | string; iconC
     default:
       return { icon: faCheckCircle, iconColor: "#00f65e" };
   }
-} 
+}

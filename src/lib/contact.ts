@@ -45,7 +45,7 @@ export async function getContactInfo(): Promise<ContactInfo> {
     return data;
   } catch (error) {
     console.error('Erreur lors du chargement des informations de contact:', error);
-    
+
     // Retourner des données par défaut en cas d'erreur
     return {
       company_name: "Votre Entreprise",
@@ -74,4 +74,4 @@ export async function getContactInfo(): Promise<ContactInfo> {
       }
     };
   }
-} 
+}

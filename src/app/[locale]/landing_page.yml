@@ -17,7 +17,7 @@ services:
       - "Audit technique et amélioration"
       - "Déploiement d'infrastructure"
     link: "/consulting-it"
-  
+
   - title: "Exploitation de données avec l'IA"
     icon: "faDatabase"
     description: "Valorisez vos données grâce à l'intelligence artificielle"
@@ -28,7 +28,7 @@ services:
       - "Analyse prédictive"
       - "Tableaux de bord interactifs"
     link: "/data-ia"
-  
+
   - title: "Formations"
     icon: "faGraduationCap"
     description: "Des formations techniques adaptées aux décideurs"
@@ -45,15 +45,15 @@ key_figures:
   - icon: "faProjectDiagram"
     value: 100
     label: "Projets réalisés"
-  
+
   - icon: "faUsers"
     value: 30
     label: "Clients satisfaits"
-  
+
   - icon: "faCodeBranch"
     value: 15
     label: "Technologies maîtrisées"
-  
+
   - icon: "faAward"
     value: 12
     label: "Années d'expérience"
@@ -69,11 +69,11 @@ about:
     - title: "Excellence"
       icon: "faAward"
       description: "Nous visons l'excellence dans chaque projet, en appliquant les meilleures pratiques et en restant à la pointe de l'innovation."
-    
+
     - title: "Collaboration"
       icon: "faUsers"
       description: "Nous croyons en la puissance de la collaboration et travaillons en étroite relation avec nos clients pour atteindre leurs objectifs."
-    
+
     - title: "Innovation"
       icon: "faCodeBranch"
       description: "Nous explorons constamment de nouvelles technologies et approches pour offrir des solutions innovantes à nos clients."
@@ -82,16 +82,16 @@ about:
 faq:
   - question: "Comment démarrer une collaboration avec vous ?"
     reponse: "La première étape consiste à nous contacter pour un entretien initial où nous discuterons de vos besoins et objectifs. Nous vous proposerons ensuite une approche personnalisée et un devis détaillé."
-  
+
   - question: "Quels types d'entreprises accompagnez-vous ?"
     reponse: "Nous travaillons avec des entreprises de toutes tailles, des startups aux grands groupes, dans divers secteurs d'activité. Notre approche est adaptée aux spécificités de chaque client."
-  
+
   - question: "Combien coûtent vos services ?"
     reponse: "Nos tarifs varient en fonction de la nature et de l'ampleur du projet. Nous proposons des formules adaptées à différents budgets et travaillons en toute transparence sur les coûts."
-  
+
   - question: "Quelle est votre approche en matière de confidentialité ?"
     reponse: "Nous accordons une importance capitale à la confidentialité. Tous nos contrats incluent des clauses de confidentialité strictes, et nous mettons en œuvre des mesures de sécurité robustes pour protéger vos données."
-  
+
   - question: "Proposez-vous un suivi après la réalisation d'un projet ?"
     reponse: "Absolument ! Nous proposons des services de maintenance et de support pour assurer la pérennité et l'évolution de vos solutions. Nous restons disponibles pour vous accompagner sur le long terme."
 

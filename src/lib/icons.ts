@@ -1,7 +1,7 @@
-import { 
-  faProjectDiagram, 
-  faUsers, 
-  faCodeBranch, 
+import {
+  faProjectDiagram,
+  faUsers,
+  faCodeBranch,
   faAward,
   faServer,
   faDatabase,
@@ -47,4 +47,4 @@ export function getIconByName(iconName: string) {
     default:
       return faCheckCircle; // Icône par défaut
   }
-} 
+}

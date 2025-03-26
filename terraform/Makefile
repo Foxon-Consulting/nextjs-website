@@ -12,7 +12,7 @@ ifeq (, $(shell which terraform))
 	$(error "No terraform in $(PATH), consider installing terraform")
 endif
 
-init: 
+init:
 	@echo "Initializing terraform"
 	terraform init -backend-config="amplify.tfbackend" -reconfigure
 

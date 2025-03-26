@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
+import {
   faCheckCircle,
-  faCode 
+  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from 'next-intl';
@@ -37,40 +37,40 @@ export const metadata = {
 export default function DataIA() {
   const t = useTranslations('data_ia_page');
   const commonT = useTranslations('common');
-  
+
   // Accès aux services
   const services = t.raw('services.items') as Service[];
-  
+
   // Accès aux étapes du processus
   const processSteps = t.raw('process.steps') as ProcessStep[];
 
   // Accès aux études de cas
   const caseStudies = t.raw('case_studies.items') as CaseStudy[];
-  
+
   return (
     <>
       {/* Hero Section with Video Background */}
       <section className="relative py-20 data-ia-header service-header overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <video 
+          <video
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
           >
             <source src="/videos/data_exploitation.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
-          <div 
-            className="absolute inset-0 z-0" 
-            style={{ 
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
             }}
           ></div>
         </div>
-        
+
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">{t('hero.title')}</h1>
@@ -89,7 +89,7 @@ export default function DataIA() {
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               {t('services.description')}
             </p>
-            
+
             <div className="space-y-6">
               {services.map((service: { title: string; description: string }, index: number) => (
                 <div key={index} className="flex items-start">
@@ -113,7 +113,7 @@ export default function DataIA() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('process.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step: { number: number; title: string; description: string }, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
@@ -130,7 +130,7 @@ export default function DataIA() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('technologies.title')}</h2>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {getTechnologies().map((tech: string, index: number) => {
               const { icon, iconColor, isCustomIcon } = getTechnologyIcon(tech);
@@ -138,12 +138,12 @@ export default function DataIA() {
                 <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
                   <div style={{ color: iconColor }} className="text-4xl mb-4 h-[1.5em] flex items-center justify-center">
                     {isCustomIcon ? (
-                      <Image 
-                        src={icon as string} 
-                        alt={tech} 
-                        width={24} 
+                      <Image
+                        src={icon as string}
+                        alt={tech}
+                        width={24}
                         height={24}
-                        className="w-[1em] h-[1em]" 
+                        className="w-[1em] h-[1em]"
                       />
                     ) : (
                       <FontAwesomeIcon icon={icon as IconDefinition} className="w-[1em] h-[1em]" />
@@ -161,7 +161,7 @@ export default function DataIA() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('case_studies.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((study: CaseStudy, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">

@@ -26,7 +26,7 @@ social_media:
 # Prise de rendez-vous
 booking:
   url: "https://book.morgen.so/foxonconsulting/meeting"
-  text: "Prendre rendez-vous" 
+  text: "Prendre rendez-vous"
 
 # Configuration SMTP (informations non sensibles)
 email_smtp:
@@ -35,4 +35,4 @@ email_smtp:
   secure: false
   from_email: "contact@foxonconsulting.com"
   from_name: "Formulaire de Contact FOXON"
-  to_email: "mehdi.halitim@foxonconsulting.com" 
+  to_email: "mehdi.halitim@foxonconsulting.com"

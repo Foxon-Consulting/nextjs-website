@@ -69,10 +69,10 @@ ${data.message}
     };
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'email:", error);
-    
+
     return {
       success: false,
       message: "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ultérieurement."
     };
   }
-} 
+}

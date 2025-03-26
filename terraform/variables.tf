@@ -62,4 +62,3 @@ variable "prd_branch_name" {
   type        = string
   default     = "main"
 }
-

@@ -14,15 +14,15 @@ services:
     - title: "Développement de logiciel à la demande"
       icon: "faCheckCircle"
       description: "Conception et développement de solutions logicielles sur mesure, adaptées à vos besoins spécifiques."
-    
+
     - title: "Pilotage de la chaîne logicielle"
       icon: "faCheckCircle"
       description: "Mise en place et optimisation de votre chaîne de développement, de l'idée à la production."
-    
+
     - title: "Audit technique et amélioration"
       icon: "faCheckCircle"
       description: "Analyse de vos systèmes existants et recommandations pour améliorer la performance et la sécurité."
-    
+
     - title: "Déploiement d'infrastructure"
       icon: "faCheckCircle"
       description: "Conception et mise en place d'infrastructures cloud sécurisées, évolutives et performantes."
@@ -34,15 +34,15 @@ process:
     - number: 1
       title: "Analyse des besoins"
       description: "Compréhension approfondie de vos objectifs et contraintes"
-    
+
     - number: 2
       title: "Conception de la solution"
       description: "Élaboration d'une architecture et d'une stratégie sur mesure"
-    
+
     - number: 3
       title: "Développement & Tests"
       description: "Mise en œuvre agile avec cycles de feedback réguliers"
-    
+
     - number: 4
       title: "Déploiement & Support"
       description: "Mise en production et accompagnement continu"
@@ -57,21 +57,21 @@ Technologies:
     - "Vue.js"
     - "HTML5"
     - "CSS3"
-  
+
   - Backend:
     - "Node.js"
     - "Python"
     - "Java"
     - "C++"
     - "C#"
-  
+
   - Base de données:
     - "PostgreSQL"
     - "MySQL"
     - "MongoDB"
     - "MariaDB"
     - "SQLite"
-  
+
   - DevOps:
     - "Docker"
     - "Kubernetes"
@@ -80,7 +80,7 @@ Technologies:
     - "GitHub Actions"
     - "Terraform"
     - "Ansible"
-  
+
   - Cloud:
     - "AWS"
     - "Azure"
@@ -103,7 +103,7 @@ Etude de cas:
     - Terraform
     - MariaDB
     - Github Actions
-      
+
 
 
 # Section CTA

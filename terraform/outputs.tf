@@ -18,4 +18,3 @@ output "amplify_app_arn" {
   description = "ARN de l'application Amplify"
   value       = module.amplify_app.amplify_app_arn
 }
-
