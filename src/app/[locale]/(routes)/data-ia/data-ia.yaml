@@ -14,15 +14,15 @@ services:
     - title: "Collecte et intégration de données"
       icon: "faCheckCircle"
       description: "Mise en place de systèmes de collecte et d'intégration de données provenant de sources diverses."
-    
+
     - title: "Stockage optimisé et sécurisé"
       icon: "faCheckCircle"
       description: "Conception d'architectures de stockage performantes et sécurisées pour vos données."
-    
+
     - title: "Analyse prédictive et prescriptive"
       icon: "faCheckCircle"
       description: "Développement de modèles d'IA pour prédire les tendances et recommander des actions."
-    
+
     - title: "Tableaux de bord interactifs"
       icon: "faCheckCircle"
       description: "Création de visualisations interactives pour explorer et comprendre vos données."
@@ -34,15 +34,15 @@ process:
     - number: 1
       title: "Collecte"
       description: "Identification et collecte des données pertinentes pour votre activité"
-    
+
     - number: 2
       title: "Traitement"
       description: "Nettoyage, transformation et enrichissement des données brutes"
-    
+
     - number: 3
       title: "Analyse"
       description: "Application d'algorithmes d'IA pour extraire des insights pertinents"
-    
+
     - number: 4
       title: "Visualisation"
       description: "Présentation des résultats sous forme de tableaux de bord interactifs"
@@ -68,7 +68,7 @@ Technologies:
 # Section Études de cas
 Etude de cas:
   - Développement d'agents d'analyse de documents administratifs:
-    - description: 
+    - description:
         Développement d'agents d'analyse de documents internes à une entreprise technologique.
     - technologies:
       - Python
@@ -77,7 +77,7 @@ Etude de cas:
       - Ollama
       - LangChain
   - Développement d'agents d'analyse de documents juridique:
-    - description: 
+    - description:
         Fine-tuning et Optimisationde modèles de LLMs sur des documents légaux pour cabinets d'avocats.
     - technologies:
       - AWS SageMaker

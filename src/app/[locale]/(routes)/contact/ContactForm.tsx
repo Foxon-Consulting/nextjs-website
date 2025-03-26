@@ -46,7 +46,7 @@ export default function ContactForm() {
       });
 
       const data = await response.json();
-      
+
       setResult({
         success: data.success,
         message: data.message,
@@ -74,10 +74,10 @@ export default function ContactForm() {
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
       {result && (
-        <div 
+        <div
           className={`p-4 mb-4 rounded-md ${
-            result.success 
-              ? 'bg-green-50 text-green-800 border border-green-200 dark:bg-green-900/20 dark:text-green-300' 
+            result.success
+              ? 'bg-green-50 text-green-800 border border-green-200 dark:bg-green-900/20 dark:text-green-300'
               : 'bg-red-50 text-red-800 border border-red-200 dark:bg-red-900/20 dark:text-red-300'
           }`}
         >
@@ -152,7 +152,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <Button 
+        <Button
           type="submit"
           disabled={isSubmitting}
           className="w-full md:w-auto bg-[#00f65e] hover:bg-[#f1f55c] text-gray-900 hover:text-gray-900 font-medium px-6 py-3 rounded-full"
@@ -162,4 +162,4 @@ export default function ContactForm() {
       </div>
     </form>
   );
-} 
+}

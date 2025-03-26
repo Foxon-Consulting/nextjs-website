@@ -66,17 +66,17 @@ export async function getLandingPageData(): Promise<LandingPageData> {
     const filePath = path.join(process.cwd(), 'src/app/landing_page.yml');
     const fileContents = await readFile(filePath, 'utf8');
     const data = yaml.load(fileContents) as LandingPageData;
-    
+
     // Vérifier la structure du fichier YAML
     if (!data || !data.hero || !data.services || !Array.isArray(data.services)) {
       console.error('Structure du fichier YAML incorrecte');
       throw new Error('Structure du fichier YAML incorrecte');
     }
-    
+
     return data;
   } catch (error) {
     console.error('Erreur lors du chargement du fichier YAML de la page d\'accueil:', error);
-    
+
     // Retourner des données par défaut en cas d'erreur
     return {
       hero: {
@@ -219,4 +219,4 @@ export async function getLandingPageData(): Promise<LandingPageData> {
       }
     };
   }
-} 
+}

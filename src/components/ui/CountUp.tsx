@@ -26,11 +26,11 @@ export function CountUp({
   const formatNumber = (num: number): string => {
     const fixedNum = num.toFixed(decimals);
     const parts = fixedNum.toString().split(".");
-    
+
     if (separator) {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     }
-    
+
     return parts.join(".");
   };
 
@@ -40,14 +40,14 @@ export function CountUp({
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
-          
+
           const startTime = Date.now();
           const startValue = 0;
-          
+
           const updateCount = () => {
             const currentTime = Date.now();
             const elapsedTime = currentTime - startTime;
-            
+
             if (elapsedTime < duration) {
               // Utiliser une fonction d'accélération pour un effet plus naturel
               const progress = easeOutQuad(elapsedTime / duration);
@@ -58,7 +58,7 @@ export function CountUp({
               setCount(end);
             }
           };
-          
+
           requestAnimationFrame(updateCount);
         }
       },
@@ -92,4 +92,4 @@ export function CountUp({
       {suffix}
     </span>
   );
-} 
+}

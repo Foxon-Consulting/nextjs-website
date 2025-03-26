@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function ContactPage() {
   const contactInfo = await getContactInfo();
   const t = await getTranslations('contact_page');
-  
+
   return (
     <>
       {/* Section Prise de rendez-vous */}
@@ -43,7 +43,7 @@ export default async function ContactPage() {
               {t('form.description')}
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
             <ContactForm />
           </div>
@@ -61,7 +61,7 @@ export default async function ContactPage() {
                 {contactInfo.address.postal_code} {contactInfo.address.city}, {contactInfo.address.country}
               </p>
             </div>
-            
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
               <h3 className="text-xl font-bold mb-3 dark:text-white">{t('info.email.title')}</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -69,7 +69,7 @@ export default async function ContactPage() {
                 {contactInfo.email.support}
               </p>
             </div>
-            
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
               <h3 className="text-xl font-bold mb-3 dark:text-white">{t('info.phone.title')}</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -82,4 +82,4 @@ export default async function ContactPage() {
       </section>
     </>
   );
-} 
+}

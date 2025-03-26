@@ -156,11 +156,11 @@
     background-color: #1a1a1a;
     overflow: hidden;
   }
-  
+
   .dark .hero-pattern {
     background-color: #000000;
   }
-  
+
   .hero-pattern::after {
     content: '';
     position: absolute;
@@ -174,48 +174,48 @@
     opacity: 0.2;
     z-index: 1;
   }
-  
+
   .hero-pattern > * {
     position: relative;
     z-index: 10;
   }
-  
+
   /* Styles pour les icônes FontAwesome */
   .svg-inline--fa {
     height: 1em !important;
     width: 1em !important;
     vertical-align: -0.125em !important;
   }
-  
+
   /* Tailles spécifiques pour les icônes */
   .text-3xl .svg-inline--fa {
     height: 1.875rem !important;
     width: 1.875rem !important;
   }
-  
+
   .text-xl .svg-inline--fa {
     height: 1.25rem !important;
     width: 1.25rem !important;
   }
-  
+
   .h-5 .svg-inline--fa,
   .h-5.svg-inline--fa {
     height: 1.25rem !important;
     width: 1.25rem !important;
   }
-  
+
   .h-6 .svg-inline--fa,
   .h-6.svg-inline--fa {
     height: 1.5rem !important;
     width: 1.5rem !important;
   }
-  
+
   .h-3 .svg-inline--fa,
   .h-3.svg-inline--fa {
     height: 0.75rem !important;
     width: 0.75rem !important;
   }
-  
+
   .service-header {
     position: relative;
     background-color: #1a1a1a;
@@ -231,51 +231,51 @@
     background-color: #1a1a1a;
     overflow: hidden;
   }
-  
+
   .dark .consulting-header {
     background-color: #000000;
   }
-  
+
   .data-ia-header {
     position: relative;
     background-color: #1a1a1a;
     overflow: hidden;
   }
-  
+
   .dark .data-ia-header {
     background-color: #000000;
   }
-  
+
   .formation-header {
     position: relative;
     background-color: #1a1a1a;
     overflow: hidden;
   }
-  
+
   .dark .formation-header {
     background-color: #000000;
   }
-  
+
   .footer-background {
     position: relative;
     background-color: #f5f5f5;
     overflow: hidden;
   }
-  
+
   .dark .footer-background {
     background-color: #111111;
   }
-  
+
   .btn-primary {
     background-color: var(--primary);
     color: var(--text-dark);
   }
-  
+
   .btn-outline {
     border: 2px solid var(--primary);
     color: var(--primary);
   }
-  
+
   .gradient-primary {
     background: linear-gradient(90deg, var(--primary) 0%, var(--primary-hover) 100%);
   }

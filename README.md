@@ -1,7 +1,5 @@
 # Site Web Services IT & IA
 
-Ce projet est un site web moderne pour une entreprise proposant des services de consulting IT, d'exploitation de données avec l'IA et des formations pour les décideurs.
-
 ## Technologies utilisées
 
 - [Next.js](https://nextjs.org/) - Framework React pour le développement web
@@ -144,7 +142,7 @@ prefixlist = ["www", "app"]
 3. **Déploiement continu** :
    - Le système est configuré pour le déploiement automatique :
      * Chaque commit sur la branche `uat` déclenche automatiquement un déploiement dans l'environnement UAT
-     * Chaque commit sur la branche `main` (ou votre branche de production configurée) déclenche automatiquement un déploiement en production
+     * Chaque commit sur la branche `prd` (ou votre branche de production configurée) déclenche automatiquement un déploiement en production
    - Vous pouvez suivre l'état des déploiements directement depuis la console AWS Amplify
 
 ## Personnalisation

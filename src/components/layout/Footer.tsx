@@ -26,25 +26,25 @@ interface ContactInfo {
 
 function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
   const t = useTranslations('common');
-  
+
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Image 
-              src="/images/logo/new/GREEN-BLACK-C.png" 
-              alt="Logo" 
-              width={150} 
-              height={40} 
-              className="h-10 w-auto mb-4 dark:hidden" 
+            <Image
+              src="/images/logo/new/GREEN-BLACK-C.png"
+              alt="Logo"
+              width={150}
+              height={40}
+              className="h-10 w-auto mb-4 dark:hidden"
             />
-            <Image 
-              src="/images/logo/new/GREEN-WHITE-C.png" 
-              alt="Logo" 
-              width={150} 
-              height={40} 
-              className="h-10 w-auto mb-4 hidden dark:block" 
+            <Image
+              src="/images/logo/new/GREEN-WHITE-C.png"
+              alt="Logo"
+              width={150}
+              height={40}
+              className="h-10 w-auto mb-4 hidden dark:block"
             />
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               {t('footer.description')}
@@ -61,7 +61,7 @@ function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
               </Link> */}
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-bold text-lg mb-4 dark:text-white">{t('footer.services')}</h3>
             <ul className="space-y-2">
@@ -82,7 +82,7 @@ function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-bold text-lg mb-4 dark:text-white">{t('footer.contact')}</h3>
             <address className="not-italic text-gray-600 dark:text-gray-400">
@@ -97,7 +97,7 @@ function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
             </address>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-gray-600 dark:text-gray-400">
           <p>&copy; {new Date().getFullYear()} {contactInfo.company_name}. {t('footer.copyright')}</p>
         </div>
@@ -109,4 +109,4 @@ function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
 export async function Footer() {
   const contactInfo = await getContactInfo();
   return <FooterContent contactInfo={contactInfo} />;
-} 
+}

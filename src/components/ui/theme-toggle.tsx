@@ -25,19 +25,19 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-white border border-gray-200 shadow-md dark:bg-gray-900 dark:border-gray-800">
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("light")}
           className="text-gray-800 hover:bg-gray-100 focus:bg-gray-100 dark:text-gray-200 dark:focus:bg-gray-800 dark:focus:text-white dark:hover:bg-gray-800"
         >
           Clair
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="text-gray-800 hover:bg-gray-100 focus:bg-gray-100 dark:text-gray-200 dark:focus:bg-gray-800 dark:focus:text-white dark:hover:bg-gray-800"
         >
           Sombre
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="text-gray-800 hover:bg-gray-100 focus:bg-gray-100 dark:text-gray-200 dark:focus:bg-gray-800 dark:focus:text-white dark:hover:bg-gray-800"
         >
@@ -46,4 +46,4 @@ export function ThemeToggle() {
       </DropdownMenuContent>
     </DropdownMenu>
   )
-} 
+}

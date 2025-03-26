@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faLightbulb, 
-  faRobot, 
+import {
+  faLightbulb,
+  faRobot,
   faCheckCircle,
   faChartLine
 } from "@fortawesome/free-solid-svg-icons";
@@ -57,7 +57,7 @@ function getIconComponent(iconName: string) {
 export default async function Formation() {
   const t = await getTranslations('formation_page');
   const commonT = await getTranslations('common');
-  
+
   // Récupération des données depuis les traductions
   const hero = t.raw('hero');
   const formations = t.raw('formations.items');
@@ -65,31 +65,31 @@ export default async function Formation() {
   const testimonials = t.raw('testimonials.items');
   const faq = t.raw('faq.items');
   const cta = t.raw('cta');
-  
+
   return (
     <>
       {/* Hero Section with Video Background */}
       <section className="relative py-20 formation-header service-header overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <video 
+          <video
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
           >
             <source src={hero.video} type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
-          <div 
-            className="absolute inset-0 z-0" 
-            style={{ 
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
             }}
           ></div>
         </div>
-        
+
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">{hero.title}</h1>
@@ -104,7 +104,7 @@ export default async function Formation() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('formations.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {formations.map((formation: Formation, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
@@ -138,7 +138,7 @@ export default async function Formation() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('pedagogie.title')}</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pedagogie.map((item: PedagogieItem, index: number) => (
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
@@ -160,7 +160,7 @@ export default async function Formation() {
               {t('testimonials.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial: Testimonial, index: number) => (
               <Card key={index} className="dark:bg-gray-800 dark:border-gray-700">
@@ -188,7 +188,7 @@ export default async function Formation() {
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('faq.title')}</h2>
-          
+
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faq.map((item: { question: string; reponse: string }, index: number) => (
@@ -222,4 +222,4 @@ export default async function Formation() {
       </section>
     </>
   );
-} 
+}

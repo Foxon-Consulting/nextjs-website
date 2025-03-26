@@ -25,7 +25,7 @@ export default function Home() {
   // const contactInfo = await getContactInfo();
   // const landingData = await getLandingPageData();
   const t = useTranslations();
-  
+
   // Accès aux services avec vérification de type
   const services: ServiceType[] = ['consulting', 'data', 'training'];
   const features: Features = {
@@ -44,7 +44,7 @@ export default function Home() {
   // Accès aux paragraphes et valeurs "about"
   const aboutParagraphs: Record<string, string> = t.raw('landing_page.about.paragraphs');
   const aboutValues: Record<string, { icon: string; title: string; description: string }> = t.raw('landing_page.about.values');
-  
+
   // Accès aux FAQ
   const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5'];
   const faqItems = faqKeys.map(key => ({
@@ -52,31 +52,31 @@ export default function Home() {
     reponse: t(`landing_page.faq.${key}.reponse`)
   }));
 
-  
+
   return (
     <>
       {/* Hero Section */}
       <section className="relative py-20 hero-pattern text-white overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <video 
+          <video
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
           >
             <source src="/videos/landing_page.mp4" type="video/mp4" />
           </video>
           {/* Overlay avec gradient linéaire */}
-          <div 
-            className="absolute inset-0 z-0" 
-            style={{ 
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" 
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
             }}
           ></div>
         </div>
-        
+
         <div className="container relative z-10 mx-auto px-4 flex items-center min-h-[60vh]">
           <div className="max-w-3xl">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -112,7 +112,7 @@ export default function Home() {
               {t('landing_page.services.description')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card key={service} className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
@@ -215,13 +215,13 @@ export default function Home() {
               {t("landing_page.faq.description")}
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible>
               {faqItems.map((item, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index + 1}`} 
+                <AccordionItem
+                  key={index}
+                  value={`item-${index + 1}`}
                   className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 mb-4 last:mb-0"
                 >
                   <AccordionTrigger className="px-6 py-4 hover:no-underline dark:text-white">
