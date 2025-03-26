@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/Foxon-Consulting/nextjs-website/compare/0.2.0...1.0.0) (2025-03-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* :memo: add readme for release
+
+### Features
+
+* :memo: add readme for release ([d6d7d6b](https://github.com/Foxon-Consulting/nextjs-website/commit/d6d7d6bd195fbc432aba1f033476de4c59e819dc))
+
 ## [0.2.0](https://github.com/Foxon-Consulting/nextjs-website/compare/v0.1.0...0.2.0) (2025-03-26)
 
 
