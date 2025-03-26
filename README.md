@@ -2,11 +2,14 @@
 
 ## Technologies utilisées
 
-- [Next.js](https://nextjs.org/) - Framework React pour le développement web
-- [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript typé
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitaire
+- [Next.js](https://nextjs.org/) - Framework React pour le développement web (v15.2.0)
+- [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript typé (v5)
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitaire (v4)
 - [Shadcn UI](https://ui.shadcn.com/) - Composants UI réutilisables
 - [Font Awesome](https://fontawesome.com/) - Bibliothèque d'icônes
+- [Next-intl](https://next-intl-docs.vercel.app/) - Solution d'internationalisation pour Next.js
+- [React Hook Form](https://react-hook-form.com/) - Gestion des formulaires
+- [Zod](https://zod.dev/) - Validation de données typées
 
 ## Structure du projet
 
@@ -14,23 +17,43 @@
 nextjs_website/
 ├── src/
 │   ├── app/
-│   │   ├── (routes)/
-│   │   │   ├── consulting-it/
-│   │   │   ├── data-ia/
-│   │   │   └── formation/
-│   │   ├── layout.tsx
-│   │   └── page.tsx
+│   │   ├── [locale]/
+│   │   │   ├── (routes)/
+│   │   │   │   ├── consulting-it/
+│   │   │   │   ├── data-ia/
+│   │   │   │   └── formation/
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   └── api/
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Header.tsx
-│   │   │   └── Footer.tsx
-│   │   ├── sections/
 │   │   └── ui/
+│   ├── i18n/
+│   │   ├── navigation.ts
+│   │   ├── request.ts
+│   │   └── routing.ts
+│   ├── messages/
+│   │   ├── fr.json
+│   │   ├── en.json
+│   │   ├── de.json
+│   │   └── es.json
 │   └── lib/
 ├── public/
-│   └── images/
+│   ├── images/
+│   ├── videos/
+│   └── icons/
 └── ...
 ```
+
+## Internationalisation
+
+Le site est disponible en quatre langues :
+- Français (fr) - langue par défaut
+- Anglais (en)
+- Allemand (de)
+- Espagnol (es)
+
+L'internationalisation est gérée via la bibliothèque `next-intl`. Les fichiers de traduction sont situés dans le dossier `src/messages/`.
 
 ## Pages du site
 
@@ -145,16 +168,30 @@ prefixlist = ["www", "app"]
      * Chaque commit sur la branche `prd` (ou votre branche de production configurée) déclenche automatiquement un déploiement en production
    - Vous pouvez suivre l'état des déploiements directement depuis la console AWS Amplify
 
+## Scripts disponibles
+
+- `npm run dev` : Démarre le serveur de développement avec Turbopack
+- `npm run build` : Crée une version de production de l'application
+- `npm run start` : Démarre le serveur de production
+- `npm run lint` : Exécute ESLint pour vérifier le code
+
 ## Personnalisation
 
 ### Couleurs
 
 Les couleurs principales du site sont définies dans le fichier `tailwind.config.js` :
 
-- `primary-yellow`: #f1f55c
-- `primary-green`: #00f65e
+- `primary-yellow`: #f1f55c (rgb(241, 245, 92))
+- `primary-green`: #00f65e (rgb(0, 246, 94))
 - `dark`: #121212
 - `light`: #ffffff
+- `gray`: #f5f5f5
+- `gray-dark`: #333333
+- `gray-light`: #eeeeee
+
+Le site utilise également des dégradés :
+- `gradient-primary`: Dégradé de primary-green à primary-yellow
+- `gradient-dark`: Dégradé de dark à gray-dark
 
 ### Polices
 
