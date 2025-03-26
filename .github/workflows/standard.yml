@@ -12,8 +12,16 @@ on:
       - published
 
 jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pre-commit
+        uses: Foxon-Consulting/github-actions/integration/common/pre-commit@main
+
   releasing:
     runs-on: ubuntu-latest
+    needs:
+      - pre-commit
     if: github.ref == 'refs/heads/main'
     steps:
       - name: releasing
