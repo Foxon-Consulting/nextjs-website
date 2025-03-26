@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Foxon-Consulting/nextjs-website/compare/1.0.0...1.0.1) (2025-03-26)
+
+
+### Bug Fixes
+
+* résolution des conflits dans Footer.tsx ([04dce5b](https://github.com/Foxon-Consulting/nextjs-website/commit/04dce5bdb4d7543793475a3afe1930b68c920bc0))
+
 ## [1.0.0](https://github.com/Foxon-Consulting/nextjs-website/compare/0.2.0...1.0.0) (2025-03-26)
 
 
