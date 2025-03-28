@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckCircle,
-  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import Image from 'next/image';
+import TechGrid from '@/components/tech-grid';
 
 // Types pour les services
 interface Service {
@@ -127,35 +125,7 @@ export default function DataIA() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">{t('technologies.title')}</h2>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {getTechnologies().map((tech: string, index: number) => {
-              const { icon, iconColor, isCustomIcon } = getTechnologyIcon(tech);
-              return (
-                <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center transition-transform hover:scale-105">
-                  <div style={{ color: iconColor }} className="text-4xl mb-4 h-[1.5em] flex items-center justify-center">
-                    {isCustomIcon ? (
-                      <Image
-                        src={icon as string}
-                        alt={tech}
-                        width={24}
-                        height={24}
-                        className="w-[1em] h-[1em]"
-                      />
-                    ) : (
-                      <FontAwesomeIcon icon={icon as IconDefinition} className="w-[1em] h-[1em]" />
-                    )}
-                  </div>
-                  <h3 className="font-bold dark:text-white">{tech}</h3>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <TechGrid title={t('technologies.title')} />
 
       {/* Case Studies Section */}
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
@@ -194,45 +164,4 @@ export default function DataIA() {
       </section>
     </>
   );
-}
-
-// Fonction utilitaire pour obtenir les technologies
-function getTechnologies(): string[] {
-  return [
-    "Anthropic",
-    "Hugging Face",
-    "Ollama",
-    "TensorFlow",
-    "PyTorch",
-    "Langchain",
-    "CrewAI",
-    "AWS Bedrock",
-    "AWS SageMaker",
-  ];
-}
-
-// Fonction utilitaire pour obtenir l'icône et la couleur d'une technologie
-function getTechnologyIcon(tech: string): { icon: IconDefinition | string; iconColor: string; isCustomIcon?: boolean } {
-  switch(tech.toLowerCase()) {
-    case 'anthropic':
-      return { icon: '/icons/tech/anthropic.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'hugging face':
-      return { icon: '/icons/tech/huggingface.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'tensorflow':
-      return { icon: '/icons/tech/tensorflow.svg', iconColor: "#FF6F00", isCustomIcon: true };
-    case 'pytorch':
-      return { icon: '/icons/tech/pytorch.svg', iconColor: "#EE4C2C", isCustomIcon: true };
-    case 'langchain':
-      return { icon: '/icons/tech/langchain.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'ollama':
-      return { icon: '/icons/tech/ollama.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'crewai':
-      return { icon: '/icons/tech/crewai-color.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'aws bedrock':
-      return { icon: '/icons/tech/aws-bedrock.svg', iconColor: "#00f65e", isCustomIcon: true };
-    case 'aws sagemaker':
-      return { icon: '/icons/tech/aws-sagemaker.svg', iconColor: "#00f65e", isCustomIcon: true };
-    default:
-      return { icon: faCode, iconColor: "#00f65e" };
-  }
 }
