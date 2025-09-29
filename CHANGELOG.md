@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/Foxon-Consulting/nextjs-website/compare/1.0.1...1.0.2) (2025-09-29)
+
+
+### Bug Fixes
+
+* :bricks: add client component for technology ([#14](https://github.com/Foxon-Consulting/nextjs-website/issues/14)) ([2cf7ecd](https://github.com/Foxon-Consulting/nextjs-website/commit/2cf7ecdbace8e8c43f4772a46416ccaf30db773e))
+* :bug: fix link issue to training ([#16](https://github.com/Foxon-Consulting/nextjs-website/issues/16)) ([f5a2cea](https://github.com/Foxon-Consulting/nextjs-website/commit/f5a2ceae749efcb13c535d0942faab88b7cfe6ce))
+
 ## [1.0.1](https://github.com/Foxon-Consulting/nextjs-website/compare/1.0.0...1.0.1) (2025-03-26)
 
 
