@@ -60,7 +60,7 @@ L'internationalisation est gérée via la bibliothèque `next-intl`. Les fichier
 1. **Page d'accueil (/)** - Présentation générale de l'entreprise et aperçu des services
 2. **Consulting IT (/consulting-it)** - Services de consulting IT
 3. **Exploitation de données avec l'IA (/data-ia)** - Services d'exploitation de données avec l'IA
-4. **Formations (/formation)** - Formations pour les décideurs
+4. **Formations (/training)** - Formations pour les décideurs
 
 ## Installation
 
