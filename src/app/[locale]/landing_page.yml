@@ -38,7 +38,7 @@ services:
       - "Automatisation des processus"
       - "Transformation numérique"
       - "Data-driven decision making"
-    link: "/formation"
+    link: "/training"
 
 # Section Chiffres clés
 key_figures:

@@ -37,7 +37,7 @@ export function Header() {
 
     return pathname.startsWith('/consulting-it') ||
            pathname.startsWith('/data-ia') ||
-           pathname.startsWith('/formation');
+           pathname.startsWith('/training');
   };
 
   const activeClass = "text-[#00f65e] font-semibold";
@@ -103,8 +103,8 @@ export function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800">
                   <Link
-                    href="/formation"
-                    className={`cursor-pointer ${isActive('/formation') ? 'text-[#00f65e] font-semibold' : 'text-gray-800 dark:text-gray-200'}`}
+                    href="/training"
+                    className={`cursor-pointer ${isActive('/training') ? 'text-[#00f65e] font-semibold' : 'text-gray-800 dark:text-gray-200'}`}
                   >
                     {t('navigation.training')}
                   </Link>
@@ -209,8 +209,8 @@ export function Header() {
                       {t('navigation.data_ia')}
                     </Link>
                     <Link
-                      href="/formation"
-                      className={`block text-sm ${isActive('/formation') ? activeClass : inactiveClass}`}
+                      href="/training"
+                      className={`block text-sm ${isActive('/training') ? activeClass : inactiveClass}`}
                     >
                       {t('navigation.training')}
                     </Link>

@@ -121,7 +121,7 @@ export async function getLandingPageData(): Promise<LandingPageData> {
             "Transformation numérique",
             "Data-driven decision making"
           ],
-          link: "/formation"
+          link: "/training"
         }
       ],
       key_figures: [

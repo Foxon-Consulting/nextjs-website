@@ -76,7 +76,7 @@ function FooterContent({ contactInfo }: { contactInfo: ContactInfo }) {
                 </Link>
               </li>
               <li>
-                <Link href="/formation" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
+                <Link href="/training" className="text-gray-600 dark:text-gray-400 hover:text-[#00f65e]">
                   {t('navigation.training')}
                 </Link>
               </li>
