@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3](https://github.com/Foxon-Consulting/nextjs-website/compare/1.0.2...1.0.3) (2025-12-10)
+
+
+### Bug Fixes
+
+* :bug: fix promise instead of locale ([5524365](https://github.com/Foxon-Consulting/nextjs-website/commit/55243653fa871655547bb5f50d11f21652c234f6))
+* :lock: CVE-2025-55182 (React2Shell) - change react-dom versions ([7a137e9](https://github.com/Foxon-Consulting/nextjs-website/commit/7a137e9d7967ce54838e3d09635a481ce07ac93d))
+* :pushpin: sync package and package-lock.json ([95bb194](https://github.com/Foxon-Consulting/nextjs-website/commit/95bb194ebd65a0679cc9d28cabddac5a8a87e5eb))
+
 ## [1.0.2](https://github.com/Foxon-Consulting/nextjs-website/compare/1.0.1...1.0.2) (2025-09-29)
 
 
